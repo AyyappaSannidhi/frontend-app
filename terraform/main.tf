@@ -5,7 +5,11 @@ resource "aws_s3_bucket" "website" {
 
 resource "aws_s3_bucket_versioning" "website_versioning" {
   bucket = aws_s3_bucket.website.id
-  enabled = false
+
+  # Set the versioning status
+  versioning_configuration {
+    status = "Suspended"  # Use "Enabled" if you want versioning to be on
+  }
 }
 
 resource "aws_s3_bucket_website_configuration" "website" {
