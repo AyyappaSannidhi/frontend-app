@@ -2,11 +2,6 @@
 resource "aws_s3_bucket" "website" {
   bucket = var.s3_bucket_name
 
-  # Disable Block Public Access settings for this bucket
-  block_public_acls = false
-  ignore_public_acls = true
-  block_public_policy = false
-
   versioning {
     enabled = false
   }
@@ -34,6 +29,14 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
       }
     ]
   })
+}
+
+# Block Public Access settings for this bucket
+resource "aws_s3_bucket_public_access_block" "public_access_block" {
+  bucket                  = aws_s3_bucket.website.id
+  block_public_acls      = false
+  ignore_public_acls     = true
+  block_public_policy     = false
 }
 
 resource "aws_route53_record" "www" {
