@@ -4,8 +4,6 @@ resource "aws_s3_bucket" "website" {
     index_document = "index.html"
     error_document = "error.html"
   }
-  # Set the ownership configuration
-  object_ownership = "BucketOwnerEnforced"
 }
 
 resource "aws_s3_bucket_policy" "bucket_policy" {
