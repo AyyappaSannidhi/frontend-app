@@ -1,17 +1,23 @@
 # S3 Bucket for static website hosting
 resource "aws_s3_bucket" "website" {
   bucket = var.s3_bucket_name
+}
 
-  versioning {
-    enabled = false
-  }
+resource "aws_s3_bucket_versioning" "website_versioning" {
+  bucket = aws_s3_bucket.website.id
+  enabled = false
 }
 
 resource "aws_s3_bucket_website_configuration" "website" {
   bucket = aws_s3_bucket.website.id
 
-  index_document = "index.html"
-  error_document = "error.html"
+  index_document {
+    suffix = "index.html"
+  }
+
+  error_document {
+    key = "error.html"
+  }
 }
 
 resource "aws_s3_bucket_policy" "bucket_policy" {
