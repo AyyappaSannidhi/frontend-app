@@ -1,9 +1,22 @@
+# S3 Bucket for static website hosting
 resource "aws_s3_bucket" "website" {
   bucket = var.s3_bucket_name
-  website {
-    index_document = "index.html"
-    error_document = "error.html"
+
+  # Disable Block Public Access settings for this bucket
+  block_public_acls = false
+  ignore_public_acls = true
+  block_public_policy = false
+
+  versioning {
+    enabled = false
   }
+}
+
+resource "aws_s3_bucket_website_configuration" "website" {
+  bucket = aws_s3_bucket.website.id
+
+  index_document = "index.html"
+  error_document = "error.html"
 }
 
 resource "aws_s3_bucket_policy" "bucket_policy" {
@@ -25,7 +38,7 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
 
 resource "aws_route53_record" "www" {
   zone_id = var.hosted_zone_id
-  name     = var.domain_name
+  name     = "www.${var.domain_name}"
   type     = "A"
 
   alias {
@@ -37,7 +50,7 @@ resource "aws_route53_record" "www" {
 
 resource "aws_route53_record" "root" {
   zone_id = var.hosted_zone_id
-  name     = ""
+  name     = "${var.domain_name}"
   type     = "A"
 
   alias {
