@@ -41,17 +41,33 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
   })
 }
 
-# Block Public Access settings for this bucket
-resource "aws_s3_bucket_public_access_block" "public_access_block" {
-  bucket                  = aws_s3_bucket.website.id
-  block_public_acls      = false
-  ignore_public_acls     = true
-  block_public_policy     = false
+
+# Data source to check if the root record already exists
+data "aws_route53_record" "root" {
+  zone_id = var.hosted_zone_id
+  name     = "${var.domain_name}"
+  type     = "A"
+
+  # This will only return a record if it exists
+  depends_on = [aws_s3_bucket.website]
 }
 
-resource "aws_route53_record" "www" {
+# Data source to check if the www record already exists
+data "aws_route53_record" "www" {
   zone_id = var.hosted_zone_id
   name     = "www.${var.domain_name}"
+  type     = "A"
+
+  # This will only return a record if it exists
+  depends_on = [aws_s3_bucket.website]
+}
+
+# Create the root Route 53 record only if it doesn't exist
+resource "aws_route53_record" "root" {
+  count = length(data.aws_route53_record.root) == 0 ? 1 : 0
+
+  zone_id = var.hosted_zone_id
+  name     = var.domain_name
   type     = "A"
 
   alias {
@@ -61,9 +77,12 @@ resource "aws_route53_record" "www" {
   }
 }
 
-resource "aws_route53_record" "root" {
+# Create the www Route 53 record only if it doesn't exist
+resource "aws_route53_record" "www" {
+  count = length(data.aws_route53_record.www) == 0 ? 1 : 0
+
   zone_id = var.hosted_zone_id
-  name     = "${var.domain_name}"
+  name     = "www.${var.domain_name}"
   type     = "A"
 
   alias {
