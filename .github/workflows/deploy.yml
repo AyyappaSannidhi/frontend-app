@@ -49,4 +49,4 @@ jobs:
 
       - name: Sync files to S3
         run: |
-          aws s3 sync ./dist s3://ayyappasannidhi.org --delete
+          aws s3 sync ./dist s3://www.ayyappasannidhi.org --delete
