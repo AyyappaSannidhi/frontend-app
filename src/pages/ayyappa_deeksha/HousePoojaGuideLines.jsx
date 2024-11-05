@@ -1,8 +1,5 @@
-import { useLanguage } from '../../context/LanguageContext';
-
 
 const HousePoojaGuideLines = () => {
-  const { language } = useLanguage();
   const Heading = "HousePoojaGuideLines"
   return (
 <div className="flex flex-col items-center justify-center h-64 bg-gray-100">

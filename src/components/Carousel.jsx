@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // For navigation on click
+import LazyImageWrapper from "./LazyImageWrapper";
+import routes from "../js/routes";
 
 const Carousel = ({ images, autoSlide = true, autoSlideInterval = 5000 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,11 +49,11 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 5000 }) => {
 
   // Handle image click to navigate to '/image_gallery'
   const handleImageClick = () => {
-    navigate("/image_gallery");
+    navigate(routes.pictureGalleryRoute);
   };
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto h-[200px] flex items-center justify-center overflow-hidden">
+    <div className="relative lg:w-[95%]  mx-auto h-[300px] flex items-center justify-center overflow-hidden">
       {/* Custom Arrow Buttons (Left) */}
       <button
         onClick={prevSlide}
@@ -75,11 +77,11 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 5000 }) => {
             onClick={handleImageClick} // On image click, navigate to '/image_gallery'
             style={{ width: `calc(100% / ${visibleImages})` }}
           >
-            <img
+            <LazyImageWrapper
               src={img}
               loading="lazy"
               alt={`Slide ${index + 1}`}
-              className="w-full h-[150px] object-cover border-4 border-orange-500 rounded-md shadow-lg"
+              className="w-full h-[250px] object-cover border-4 border-orange-500 rounded-md shadow-lg"
             />
           </div>
         ))}

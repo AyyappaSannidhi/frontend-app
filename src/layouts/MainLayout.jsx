@@ -5,15 +5,17 @@ import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer";
 import ScrollingBanner from "../components/ScrollingBanner"
 import NavBar from "../components/NavBar";
+import BackToTopButton from "../components/BackTopButton";
 
 
 const MainLayout = () => {
   return (
     <>
       <NavBar/>
-      <ToastContainer />
       <ScrollingBanner/>
-      <Outlet />
+      <ToastContainer />
+      <BackToTopButton/>
+      <Outlet style={{ paddingTop: "2.5rem" }} />
       <Footer />
     </>
   );

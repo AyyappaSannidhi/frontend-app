@@ -1,16 +1,4 @@
-const translations = {
-    sriAyppaSwamySevaSannidhi: {
-        en: "Sri Ayyappa Swamy Seva Sannidhi",
-        kn: "ಶ್ರೀ ಅಯ್ಯಪ್ಪ ಸ್ವಾಮಿ ಸೇವಾ ಸನ್ನಿಧಿ",
-        te: "శ్రీ అయ్యప్ప స్వామి సేవా సన్నిధి",
-    },
-
-    ScrollingBannerText: {
-        en: "Swamiye Saranam Ayyappa ! 🚀 Website is still under development",
-        kn: "ಸ್ವಾಮಿಯೇ ಶರಣಂ ಅಯ್ಯಪ್ಪ! 🚀 ವೆಬ್‌ಸೈಟ್ ಇನ್ನೂ ಅಭಿವೃದ್ಧಿ ಹಂತದಲ್ಲಿದೆ",
-        te: "స్వామియే శరణం అయ్యప్ప! 🚀 వెబ్‌సైట్ ఇంకా అభివృద్ధిలో ఉంది",
-    },
-
+const menuTranslations = {
     home: {
         en: "Home",
         kn: "ಮನೆ",
@@ -28,17 +16,30 @@ const translations = {
         kn: "ಮಂಡಳಿಯ ಸದಸ್ಯರು",
         te: "బోర్డు సభ్యులు",
     },
+    faq: {
+        en: "FAQ",
+        kn: "FAQ",
+        te: "FAQ",
+    },
 
     gallery: {
         en: "Gallery",
         kn: "ಗ್ಯಾಲರಿ",
         te: "గ్యాలరీ",
     },
+    
+    alankaraSchedule : {
+        en:"Alankara Schedule",
+        kn:"ಆಯಪ್ಪ ದೀಕ್ಷಾ",
+        te:"ఆయప్ప దీక్ష",
+    },
+
     poojaSchedule:{
         en:"Pooja Schedule",
         kn:"ಪೂಜಾ ವೇಳಾಪಟ್ಟಿ",
         te:"పూజా షెడ్యూల్",
     },
+    
 
     pictureGallery:{
         en:"Picture Gallery",
@@ -51,6 +52,7 @@ const translations = {
         kn:"ವೀಡಿಯೊ ಗ್ಯಾಲರಿ",
         te:"వీడియో గ్యాలరీ",
     },
+
 
     ayyappaDeeksha : {
         en:"Ayappa Deeksha",
@@ -106,43 +108,34 @@ const translations = {
         te:"దానం చేయండి",
     },
 
-    quickLinks : {
-        en:"Quick Links",
-        kn:"ತ್ವರಿತ ಲಿಂಕ್‌ಗಳು",
-        te:"త్వరిత లింక్‌లు",
+     logIn: {
+        en:"Log In",
+        kn:"Log In",
+        te:"Log In",
+    },
+    registrations:{
+        en:"Registrations",
+        kn:"Registrations",
+        te:"Registrations",
     },
 
-    Information : {
-        en:"Information",
-        kn:"ಮಾಹಿತಿ",
-        te:"సమాచారం",
+    malaDharanaRegistration:{
+        en:"Mala Dharana Registration",
+        kn:"Mala Dharana Registration",
+        te:"Mala Dharana Registration",
     },
 
-    termsAndConditions : {
-        en:"Terms & Conditions",
-        kn:"ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು",
-        te:"నిబంధనలు & షరతులు",
+    irumudiYatraRegistration:{
+        en:"Irumudi Yatra Registration",
+        kn:"Irumudi Yatra Registration",
+        te:"Irumudi Yatra Registration",
     },
 
-    privacyAndDisclaimer : {
-        en:"Privacy and Disclaimer",
-        kn:"ಗೌಪ್ಯತೆ ಮತ್ತು ಹಕ್ಕು ನಿರಾಕರಣೆ",
-        te:"గోప్యత మరియు నిరాకరణ",
+    housePoojaRequest : {
+        en:"House Pooja Request",
+        kn:"house Pooja Request",
+        te:"house Pooja Request",
     },
+}
 
-    donationPolicy : {
-        en:"Donation Policy",
-        kn:"ದೇಣಿಗೆ ನೀತಿ",
-        te:"విరాళం విధానం",
-    },
-
-    readMore : {
-        en:"Read More",
-        kn:"ಮುಂದೆ ಓದಿ",
-        te:"మరింత చదవండి",
-    },
-
-  };
-
-
-  export default translations;
+export default menuTranslations;

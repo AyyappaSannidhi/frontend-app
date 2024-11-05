@@ -1,8 +1,6 @@
-import { useLanguage } from '../../context/LanguageContext';
 
 
 const About = () => {
-  const { language } = useLanguage();
   const Heading = "About"
   return (
 <div className="flex flex-col items-center justify-center h-64 bg-gray-100">

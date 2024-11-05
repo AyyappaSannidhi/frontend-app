@@ -1,0 +1,31 @@
+/* Loader.css */
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem; /* Adjusted margin */
+}
+
+.loader div {
+  border-radius: 9999px; /* Fully rounded */
+  background: linear-gradient(to right, #f97316, #f59e0b); /* Gradient background */
+  width: 15px;
+  height: 15px;
+  margin: 0 5px; /* Adds horizontal spacing between dots */
+  animation: dotFlow 1.2s infinite ease-in-out;
+}
+
+@keyframes dotFlow {
+  0% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+  50% {
+      transform: scale(1.5); /* Increase size at the midpoint */
+      opacity: 1; /* Fully opaque at the midpoint */
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0.5; /* Fade out slightly */
+  }
+}
