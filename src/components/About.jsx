@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import translations from "../js/translations";
+import translations from "../js/translations/mainTranslations";
 import routes from "../js/routes";
-import { useLanguage } from '../context/LanguageContext';
 import Heading from '../components/Heading'
 import TextBlock from '../components/TextBlock'
 import Button from '../components/Button'
+import LazyImageWrapper from "./LazyImageWrapper";
+import { useSelector } from 'react-redux';
 
 
 const About = ({ heading, textPoints, imageUrl }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const { language } = useLanguage();
+  const language = useSelector((state) => state.language.currentLanguage); // Redux selector for language
 
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const About = ({ heading, textPoints, imageUrl }) => {
   return (
     <>
       {isMobile ? (
-        <div className="flex flex-col items-center mt-12 p-6 space-y-6">
+        <div className="flex flex-col items-center p-6 space-y-6">
           <TextSection
             headingEnglish={heading}
             textEnglish={textPoints}
@@ -54,7 +55,7 @@ const About = ({ heading, textPoints, imageUrl }) => {
 
 const TextSection = ({ headingEnglish, textEnglish,language }) => {
   return (
-    <div className="flex flex-col items-start text-left space-y-4 mt-8 w-full md:w-1/2 flex-grow">
+    <div className="flex flex-col items-start text-left space-y-4 mt-28 w-full md:w-1/2 flex-grow">
       <Heading heading= {headingEnglish} />
       <TextBlock textPoints = {textEnglish} />
       <Button text= {translations.readMore[language]} url= {routes.aboutRoute}/>
@@ -64,14 +65,13 @@ const TextSection = ({ headingEnglish, textEnglish,language }) => {
 
 const ImageSection = ({ imageUrl }) => {
   return (
-    <div className="flex items-center justify-center p-4 w-full md:w-1/2 flex-grow">
+    <div className="flex items-center justify-center p-4 w-full md:w-1/2 flex-grow mt-28">
       <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
-        <img
-          src={imageUrl}
-          alt={imageUrl}
-          loading="lazy"
-          className="w-full h-full object-contain"
-        />
+      <LazyImageWrapper
+      src={imageUrl}
+      alt={imageUrl}
+      className="w-full h-full"
+    />
       </div>
     </div>
   );

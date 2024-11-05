@@ -7,13 +7,15 @@
 @tailwind utilities;
 
 
-
 .font-playfair {
   font-family: 'Playfair Display', serif;
 }
 
 body {
-  @apply bg-white text-gray-300 font-inter; /* Changed bg-[#111] to bg-white */
+  @apply bg-white text-gray-300 font-inter;
+  margin: 0;
+  padding: 0; 
+  /* Changed bg-[#111] to bg-white */
 }
 
 @layer components {
@@ -30,3 +32,4 @@ body {
     @apply flex items-center justify-between;
   }
 }
+

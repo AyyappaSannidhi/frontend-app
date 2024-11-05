@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function MenuComponent({ Menus }) {
-
   const [isOpen, setIsOpen] = useState(false);
   const [clicked, setClicked] = useState(null);
   const menuRef = useRef();
@@ -62,7 +62,11 @@ export default function MenuComponent({ Menus }) {
     <div ref={menuRef}>
       {/* Mobile Menu */}
       <button className="lg:hidden z-[999] relative" onClick={toggleDrawer}>
-        {isOpen ? <X /> : <Menu />}
+        {isOpen ? (
+          <FontAwesomeIcon icon={faTimes} size="lg" />
+        ) : (
+          <FontAwesomeIcon icon={faBars} size="lg" />
+        )}
       </button>
 
       <motion.div
@@ -79,13 +83,15 @@ export default function MenuComponent({ Menus }) {
               <li key={menu.name}>
                 <span
                   aria-expanded={isClicked}
-                  className="flex-center-between p-4 hover:bg-orange-500 rounded-md cursor-pointer relative text-lg font-semibold"
+                  className="uppercase flex-center-between p-4 hover:bg-orange-500 rounded-md cursor-pointer relative text-lg font-semibold"
                   onClick={() => handleMenuClick(i)} // Handle click for both menus and submenus
                 >
                   {menu.name}
                   {hasSubMenu && (
-                    <ChevronDown
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
                       className={`ml-auto transition-transform duration-200 ${isClicked ? "rotate-180" : ""}`}
+                      size="lg"
                     />
                   )}
                 </span>
@@ -103,7 +109,7 @@ export default function MenuComponent({ Menus }) {
                         className="p-3 flex-center hover:bg-orange-500 rounded-md gap-x-2 cursor-pointer text-black"
                         onClick={() => handleSubMenuClick(submenu.url)} // Navigate on submenu click
                       >
-                        <Link to={submenu.url} className="text-black">
+                        <Link to={submenu.url} className="uppercase text-black">
                           {submenu.name}
                         </Link>
                       </li>
@@ -124,13 +130,15 @@ export default function MenuComponent({ Menus }) {
           return (
             <div key={menu.name} className="relative">
               <span
-                className={`p-4 hover:bg-orange-500 rounded-md cursor-pointer text-lg font-semibold`}
+                className={`p-4 uppercase hover:bg-orange-500 rounded-md cursor-pointer text-lg font-semibold`}
                 onClick={() => handleMenuClick(i)} // Handle click for both menus and submenus
               >
                 {menu.name}
                 {hasSubMenu && (
-                  <ChevronDown
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
                     className={`ml-auto transition-transform duration-200 ${clicked === i ? "rotate-180" : ""}`}
+                    size="lg" // Set icon size here
                   />
                 )}
               </span>
@@ -142,7 +150,7 @@ export default function MenuComponent({ Menus }) {
                       className="p-3 flex-center hover:bg-orange-500 rounded-md gap-x-2 cursor-pointer text-black"
                       onClick={() => handleSubMenuClick(submenu.url)} // Navigate on submenu click
                     >
-                      <Link to={submenu.url} className="text-black">
+                      <Link to={submenu.url} className="text-black uppercase">
                         {submenu.name}
                       </Link>
                     </li>

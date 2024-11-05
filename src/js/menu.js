@@ -1,9 +1,10 @@
-import translations from './translations';
-import { useLanguage } from '../context/LanguageContext';
+import translations from './translations/mainTranslations';
 import routes from '../js/routes'
+import { useSelector } from 'react-redux';
+
 
 export const useNavbarMenu = () =>{
-  const { language } = useLanguage();
+  const language = useSelector((state) => state.language.currentLanguage); // Redux selector for language
 
   return [
     {
@@ -21,6 +22,14 @@ export const useNavbarMenu = () =>{
         {
           name : translations.boardMembers[language],
           url: routes.boardMembersRoute,
+        },
+        {
+          name : translations.faq[language],
+          url: routes.faqRoute,
+        },
+        {
+          name : translations.contactUs[language],
+          url: routes.contactRoute,
         },
       ],
       gridCols: 1,
@@ -40,6 +49,26 @@ export const useNavbarMenu = () =>{
       ],
       gridCols: 1,
     },
+
+    {
+      name : translations.registrations[language],
+      subMenu: [
+        {
+          name : translations.malaDharanaRegistration[language],
+          url:routes.malaDharanaRegistrationRoute
+        },
+        {
+          name : translations.irumudiYatraRegistration[language],
+          url:routes.irumudiYatraRegistrationRoute
+        },
+        {
+          name : translations.housePoojaRequest[language],
+          url:routes.housePoojaRequestRoute
+        },
+      ],
+      gridCols: 1,
+    },
+
     {
       name: translations.poojaSchedule[language],
       url : routes.poojaScheduleRoute
@@ -60,13 +89,6 @@ export const useNavbarMenu = () =>{
           name : translations.stepsOfDeeksha[language],
           url:routes.stepsOfDeekshaRoute
         },
-      ],
-      gridCols: 1,
-    },
-  
-    {
-      name : translations.guideLines[language],
-      subMenu: [
         {
           name : translations.guidelinesToDeeksha[language],
           url: routes.guidelinesToDeekshaRoute
@@ -80,87 +102,8 @@ export const useNavbarMenu = () =>{
     },
   
     {
-      name : translations.contactUs[language],
-      url: routes.contactRoute
+      name : translations.Donate[language],
+      url: routes.donateRoute
     },
   ]
 }
-
-
-// custom hook
-const useFooterMenu = () => {
-  const { language } = useLanguage();
-
-  return [
-    {
-      title: translations.quickLinks[language],
-      links: [
-        {
-          text: translations.about[language],
-          url: routes.contactRoute,
-        },
-        {
-          text: translations.boardMembers[language],
-          url: routes.boardMembersRoute,
-        },
-        {
-          text: translations.contactUs[language],
-          url: routes.contactRoute,
-        },
-      ],
-    },
-    {
-      title: translations.ayyappaDeeksha[language],
-      links: [
-        {
-          text: translations.sriSwamyAyyappaMala[language],
-          url: routes.contactRoute,
-        },
-        {
-          text: translations.ayyappaDhyanamJapam[language],
-          url: routes.contactRoute,
-        },
-        {
-          text: translations.stepsOfDeeksha[language],
-          url: routes.contactRoute,
-        },
-      ],
-    },
-    {
-      title: translations.guideLines[language],
-      links: [
-        {
-          text: translations.guidelinesToDeeksha[language],
-          url: routes.contactRoute,
-        },
-        {
-          text: translations.housePoojaGuidelines[language],
-          url: routes.contactRoute,
-        },
-
-      ],
-    },
-    {
-      title: translations.Information[language],
-      links: [
-        {
-          text: translations.termsAndConditions[language],
-          url: routes.contactRoute,
-        },
-        {
-          text: translations.privacyAndDisclaimer[language],
-          url: routes.contactRoute,
-        },
-        {
-          text: translations.donationPolicy[language],
-          url: routes.contactRoute,
-        },
-        
-      ],
-    },
-    
-  ];
-};
-
-export default useFooterMenu;
-  

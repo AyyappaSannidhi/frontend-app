@@ -1,8 +1,6 @@
-import { useLanguage } from '../../context/LanguageContext';
 
 
 const StepsDeeksha = () => {
-  const { language } = useLanguage();
   const Heading = "Sri Swamy Ayyappa Mala"
   return (
 <div className="flex flex-col items-center justify-center h-64 bg-gray-100">

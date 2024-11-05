@@ -1,14 +1,12 @@
 import React from "react";
-import translations from "../js/translations";
-import { useLanguage } from "../context/LanguageContext"; 
+import translations from "../js/translations/mainTranslations";
 
 const ScrollingBanner = () => {
 
-  const { language } = useLanguage();
-  const scrollingText = translations.ScrollingBannerText[language];
+  const scrollingText = translations.ScrollingBannerText['en'];
     return (
-      <div className="overflow-hidden w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white text-lg font-semibold h-10 flex items-center mt-16">
-        <div
+<div className="overflow-hidden fixed w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white text-lg font-semibold h-10 flex items-center z-40" style={{ top: "4rem" }}>
+      <div
           className="inline-flex animate-scroll space-x-8"
           style={{
             whiteSpace: "nowrap",
