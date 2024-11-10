@@ -9,7 +9,7 @@ env:
   AWS_REGION: us-east-1
 
 jobs:
-  deploy-to-test:
+  terraform-to-test:
     runs-on: ubuntu-latest
     environment: test  # Reference to the test environment in your repository settings
     steps:
@@ -28,11 +28,11 @@ jobs:
         with:
           terraform_version: 1.0.0
 
-      - name: Terraform Init
+      - name: Terraform Init (Test)
         run: terraform init
         working-directory: ./terraform
 
-      - name: Terraform Plan
+      - name: Terraform Plan (Test)
         env:
           TF_VAR_s3_bucket_name: ${{ secrets.TEST_S3_BUCKET_NAME }} 
           TF_VAR_allowed_ips: ${{ secrets.ALLOWED_IPS }} 
@@ -46,15 +46,23 @@ jobs:
         run: terraform apply -auto-approve
         working-directory: ./terraform
 
+  build-and-deploy-to-test:
+    runs-on: ubuntu-latest
+    needs: terraform-to-test
+    environment: test  # Reference to the test environment
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Build and Upload to Test S3
         run: |
           npm install
           npm run build
           aws s3 sync ./dist s3://${{ secrets.TEST_S3_BUCKET_NAME }} --delete
 
-  deploy-to-prod:
+  terraform-to-prod:
     runs-on: ubuntu-latest
-    needs: deploy-to-test
+    needs: build-and-deploy-to-test  # Ensure test deploy happens before prod
     environment:
       name: production  # Reference to the production environment in your repository settings
       url: https://www.ayyappasannidhi.com  # Optional: A URL for the production environment
@@ -74,11 +82,11 @@ jobs:
         with:
           terraform_version: 1.0.0
 
-      - name: Terraform Init
+      - name: Terraform Init (Production)
         run: terraform init
         working-directory: ./terraform
 
-      - name: Terraform Plan
+      - name: Terraform Plan (Production)
         env:
           TF_VAR_s3_bucket_name: ${{ secrets.PROD_S3_BUCKET_NAME }} 
           TF_VAR_allowed_ips: ${{ secrets.ALLOWED_IPS }} 
@@ -91,6 +99,14 @@ jobs:
           TF_VAR_allowed_ips: ${{ secrets.ALLOWED_IPS }}
         run: terraform apply -auto-approve
         working-directory: ./terraform
+
+  build-and-deploy-to-prod:
+    runs-on: ubuntu-latest
+    needs: terraform-to-prod
+    environment: production  # Reference to the production environment
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Build and Upload to Production S3
         run: |
