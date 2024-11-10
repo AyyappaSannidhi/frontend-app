@@ -5,68 +5,97 @@ on:
     branches:
       - main
 
+env:
+  AWS_REGION: us-east-1
+
 jobs:
-  terraform-setup:
+  deploy-to-test:
     runs-on: ubuntu-latest
+    environment: test
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Configure AWS credentials
+      - name: Configure AWS credentials for test
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_REGION }}
 
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v1
         with:
-          terraform_version: 1.0.0  # Specify the Terraform version
+          terraform_version: 1.0.0
 
       - name: Terraform Init
         run: terraform init
         working-directory: ./terraform
 
       - name: Terraform Plan
+        env:
+          TF_VAR_s3_bucket_name: ${{ secrets.TEST_S3_BUCKET_NAME }} 
+          TF_VAR_allowed_ips: ${{ secrets.ALLOWED_IPS }} 
         run: terraform plan
         working-directory: ./terraform
 
-      - name: Terraform Apply
+      - name: Terraform Apply to Test
+        env:
+          TF_VAR_s3_bucket_name: ${{ secrets.TEST_S3_BUCKET_NAME }}
+          TF_VAR_allowed_ips: ${{ secrets.ALLOWED_IPS }}
         run: terraform apply -auto-approve
         working-directory: ./terraform
 
-  build-and-upload:
-    runs-on: ubuntu-latest
-    needs: terraform-setup  # Ensure this job runs after Terraform setup
+      - name: Build and Upload to Test S3
+        run: |
+          npm install
+          npm run build
+          aws s3 sync ./dist s3://${{ secrets.TEST_S3_BUCKET_NAME }} --delete
 
+  deploy-to-prod:
+    runs-on: ubuntu-latest
+    needs: deploy-to-test
+    environment:
+      name: production
+      protection_rules:
+        - type: required_approvals
+      url: https://www.ayyappasannidhi.com 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
-
-      - name: Configure AWS credentials
+      - name: Configure AWS credentials for production
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: ${{ env.AWS_REGION }}
 
-      - name: Sync files to S3
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.0.0
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: ./terraform
+
+      - name: Terraform Plan
+        env:
+          TF_VAR_s3_bucket_name: ${{ secrets.PROD_S3_BUCKET_NAME }} 
+          TF_VAR_allowed_ips: ${{ secrets.ALLOWED_IPS }} 
+        run: terraform plan
+        working-directory: ./terraform
+
+      - name: Terraform Apply to Production
+        env:
+          TF_VAR_s3_bucket_name: ${{ secrets.PROD_S3_BUCKET_NAME }}
+          TF_VAR_allowed_ips: ${{ secrets.ALLOWED_IPS }}
+        run: terraform apply -auto-approve
+        working-directory: ./terraform
+
+      - name: Build and Upload to Production S3
         run: |
-          if [ -d "./dist" ]; then
-            aws s3 sync ./dist s3://www.ayyappasannidhi.org --delete
-          else
-            echo "The ./dist directory does not exist. Check the build step output path."
-            exit 1
-          fi
+          npm install
+          npm run build
+          aws s3 sync ./dist s3://${{ secrets.PROD_S3_BUCKET_NAME }} --delete
