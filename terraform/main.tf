@@ -35,7 +35,7 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
         Principal = "*"
         Action    = "s3:GetObject"
         Resource  = "${aws_s3_bucket.website.arn}/*"
-        Condition = local.condition
+        Condition = local.condition != null ? local.condition : {}
       }
     ]
   })
@@ -43,7 +43,7 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
 
 locals {
   # Conditionally set the condition block based on whether it's a test environment
-  condition = var.environment == "test" ? {} : {
+  condition = var.environment == "test" ? null : {
     IpAddress = {
       "aws:SourceIp" = var.s3_ip_addresses
     }
