@@ -11,7 +11,7 @@ env:
 jobs:
   deploy-to-test:
     runs-on: ubuntu-latest
-    environment: test
+    environment: test  # Reference to the test environment in your repository settings
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -56,10 +56,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy-to-test
     environment:
-      name: production
-      protection_rules:
-        - type: required_approvals
-      url: https://www.ayyappasannidhi.com 
+      name: production  # Reference to the production environment in your repository settings
+      url: https://www.ayyappasannidhi.com  # Optional: A URL for the production environment
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
