@@ -6,9 +6,8 @@ resource "aws_s3_bucket" "website" {
 resource "aws_s3_bucket_versioning" "website_versioning" {
   bucket = aws_s3_bucket.website.id
 
-  # Set the versioning status
   versioning_configuration {
-    status = "Suspended"  # Use "Enabled" if you want versioning to be on
+    status = "Suspended"
   }
 }
 
@@ -37,7 +36,7 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
         Action    = "s3:GetObject"
         Resource  = "${aws_s3_bucket.website.arn}/*"
         Condition = {
-          "aws:SourceIp" = join(",", var.allowed_ips)
+          "aws:SourceIp" = var.allowed_ips
         }
       }
     ]
