@@ -35,7 +35,7 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
         Principal = "*"
         Action    = "s3:GetObject"
         Resource  = "${aws_s3_bucket.website.arn}/*"
-        Condition = local.condition
+        Condition = local.condition != null ? local.condition : {}
       }
     ]
   })
