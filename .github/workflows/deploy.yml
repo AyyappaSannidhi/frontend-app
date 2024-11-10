@@ -34,6 +34,7 @@ jobs:
 
       - name: Terraform Plan (Test)
         env:
+          TF_VAR_environment: "test"
           TF_VAR_s3_bucket_name: ${{ secrets.TEST_S3_BUCKET_NAME }} 
         run: terraform plan
         working-directory: ./terraform
@@ -93,6 +94,7 @@ jobs:
 
       - name: Terraform Plan (Production)
         env:
+          TF_VAR_environment: "production"
           TF_VAR_s3_bucket_name: ${{ secrets.PROD_S3_BUCKET_NAME }} 
         run: terraform plan
         working-directory: ./terraform
