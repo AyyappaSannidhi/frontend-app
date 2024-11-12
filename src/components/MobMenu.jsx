@@ -70,7 +70,7 @@ export default function MenuComponent({ Menus }) {
       </button>
 
       <motion.div
-        className="fixed left-0 right-0 top-16 h-full bg-white text-black p-6 pb-20 overflow-hidden"
+        className="fixed left-0 right-0 top-16 h-full bg-white text-black p-6 pb-20 overflow-hidden mt-16"
         initial={{ x: "-100%" }}
         animate={{ x: isOpen ? "0%" : "-100%" }}
       >

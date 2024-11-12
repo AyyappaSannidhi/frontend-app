@@ -1,18 +1,24 @@
 import translations from "../../js/translations/mainTranslations";
+import TabMenu from '../../components/TabMenu'
 import { useSelector } from 'react-redux';
-
+import { makeTextBold } from "../../components/common";
+import { dontInMala, dosInMala,faqMenuItems } from "../../js/data";
 
 const Faq = () => {
-  const language = useSelector((state) => state.language.currentLanguage);
+  const language =useSelector((state) => state.language.currentLanguage);
+  
   return (
-    <div className="flex flex-col items-center justify-center h-64 bg-gray-100">
-    <h1 className="text-3xl font-bold text-gray-800">
-      {translations.frequentlyAskedQuestions[language]}
-    </h1>
-    <h2 className="text-2xl font-bold text-gray-800 mt-12">Under Development</h2>
-    <h3 className="text-1xl font-bold text-gray-800 mt-2">Check After Sometime</h3>
+    <div >
+    <TabMenu
+        heading={translations.frequentlyAskedQuestions[language]}
+        dosContent={makeTextBold(dosInMala[language])}
+        dontsContent={makeTextBold(dontInMala[language])}
+        menuItems={faqMenuItems[language]}
+      />
     </div>
   )
+
+  
 }
 
 export default Faq;

@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="flex flex-row flex-wrap items-center justify-between gap-y-6 gap-x-12 text-center text-white"> {/* Changed text color to white */}
         <div className="flex items-center"> {/* Use flexbox to align items */}
           <img src={logo} alt="company logo" className="w-10 mr-2" /> {/* Add a margin to the right of the image */}
-            <p>Sri Ayyappa Seva Sannidhi (SASS)</p>
+            <p>Sri Ayyappa Swamy Seva Sannidhi (SASSS)</p>
         </div>
         
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
@@ -79,7 +79,7 @@ const Footer = () => {
 
       <div className="text-center font-normal">
         <p className="text-white">
-          &copy; {new Date().getFullYear()} Sri Ayyappa Seva Sannidhi (SASS). All Rights Reserved
+          &copy; {new Date().getFullYear()} Sri Ayyappa Swamy Seva Sannidhi (SASSS). All Rights Reserved
           <br />Developed by Sode Kiran Avinash
         </p>
       </div>

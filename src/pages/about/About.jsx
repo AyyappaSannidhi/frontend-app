@@ -1,13 +1,21 @@
-
+import TextWithImage from "../../components/TextWithImage"
+import AboutImage from "../../assets/images/main.jpg";
+import {  HomeText } from "../../js/data";
+import { useSelector } from 'react-redux';
+import translations from "../../js/translations/mainTranslations";
 
 const About = () => {
-  const Heading = "About"
-  return (
-<div className="flex flex-col items-center justify-center h-64 bg-gray-100">
-  <h1 className="text-3xl font-bold text-gray-800">{Heading}</h1>
-  <h2 className="text-2xl font-bold text-gray-800 mt-12">Under Development</h2>
-  <h3 className="text-1xl font-bold text-gray-800 mt-2">Check After Sometime</h3>
-</div>
+const language = useSelector((state) => state.language.currentLanguage); // Redux selector for language
+
+return (
+  <div>
+    <TextWithImage
+          heading={translations.SASSS[language]}
+          textPoints={HomeText[language]}
+          imageUrl={AboutImage}
+        />
+    </div>
+  
   )
 }
 

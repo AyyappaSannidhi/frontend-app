@@ -11,8 +11,14 @@ const menuTranslations = {
         te: "గురించి",
     },
 
-    boardMembers: {
-        en: "Board Members",
+    SASSS: {
+        en: "Sri Ayyappa Seva Sannidhi(SASSS)",
+        kn: "ಬಗ್ಗೆ",
+        te: "గురించి",
+    },
+
+    commmitteMembers: {
+        en: "Commmitte Members",
         kn: "ಮಂಡಳಿಯ ಸದಸ್ಯರು",
         te: "బోర్డు సభ్యులు",
     },
@@ -32,6 +38,18 @@ const menuTranslations = {
         en:"Alankara Schedule",
         kn:"ಆಯಪ್ಪ ದೀಕ್ಷಾ",
         te:"ఆయప్ప దీక్ష",
+    },
+
+    sevaDetails:{
+        en:"Seva Details",
+        kn:"ಸೇವಾ ವಿವರಗಳು",
+        te:"సేవ వివరాలు",
+    },
+
+    templeSeva:{
+        en:"Temple Seva",
+        kn:"Registrations",
+        te:"Registrations",
     },
 
     poojaSchedule:{
@@ -108,6 +126,12 @@ const menuTranslations = {
         te:"దానం చేయండి",
     },
 
+    poojaSponsors : {
+        en:"Pooja Sponsors",
+        kn:"ದಾನ ಮಾಡಿ",
+        te:"దానం చేయండి",
+    },
+
      logIn: {
         en:"Log In",
         kn:"Log In",
@@ -115,8 +139,8 @@ const menuTranslations = {
     },
     registrations:{
         en:"Registrations",
-        kn:"Registrations",
-        te:"Registrations",
+        kn:"ನೋಂದಣಿಗಳು",
+        te:"నమోదులు",
     },
 
     malaDharanaRegistration:{
@@ -133,6 +157,11 @@ const menuTranslations = {
 
     housePoojaRequest : {
         en:"House Pooja Request",
+        kn:"house Pooja Request",
+        te:"house Pooja Request",
+    },
+    kumaraSwamySeva :{
+        en:"Kumara Swamy Seva",
         kn:"house Pooja Request",
         te:"house Pooja Request",
     },

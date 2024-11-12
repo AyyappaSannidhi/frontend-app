@@ -111,8 +111,8 @@ const translations = {
     },
     frequentlyAskedQuestions : {
         en:"Frequently Asked Questions (FAQ)",
-        kn:"frequentlyAskedQuestions",
-        te:"frequentlyAskedQuestions",
+        kn:"ಪೂರ್ಣವಾಗಿ ಕೇಳಲಾದ ಪ್ರಶ್ನೆಗಳು (FAQ)",
+        te:"నిత్యం అడిగే ప్రశ్నలు (FAQ)",
     },
   };
 

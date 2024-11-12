@@ -5,7 +5,7 @@ const ScrollingBanner = () => {
 
   const scrollingText = translations.ScrollingBannerText['en'];
     return (
-<div className="overflow-hidden fixed w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white text-lg font-semibold h-10 flex items-center z-40" style={{ top: "4rem" }}>
+<div className="overflow-hidden fixed w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white text-lg font-semibold h-10 flex items-center z-20" style={{ top: "5.7rem" }}>
       <div
           className="inline-flex animate-scroll space-x-8"
           style={{

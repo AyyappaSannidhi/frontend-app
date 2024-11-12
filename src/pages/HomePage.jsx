@@ -1,19 +1,28 @@
 import AboutImage from "../assets/images/main.jpg";
 import Images from "../js/carousel";
-import About from "../components/About";
+import TextWithImage from "../components/TextWithImage";
 import Hero from "../components/Hero";
 import translations from "../js/translations/mainTranslations";
-import { HomeHeading, HomeText, dontInMala, dosInMala } from "../js/data";
+import { 
+  HomeHeading, 
+  HomeText,
+  dontInMala, 
+  dosInMala,
+  faqMenuItems 
+} from "../js/data";
 import TwoTable from "../components/TwoTable";
-import Faq from "../components/Faq";
+import TabMenu from "../components/TabMenu";
 import { useSelector } from 'react-redux';
 import { selectAlankaraSchedule } from '../store/slice/alankaraSlice';
 import { selectPoojaTimings } from '../store/slice/poojaTimingsSlice';
+import { makeTextBold } from "../components/common";
+import LazyImageWrapper from "../components/LazyImageWrapper";
+import  BannerImage from '../assets/images/banner.png'
+
 
 
 const HomePage = () => {
-  const language = useSelector((state) => state.language.currentLanguage); // Redux selector for language
-
+  const language = useSelector((state) => state.language.currentLanguage);
   const alankaraSchedule = useSelector(selectAlankaraSchedule);
   const poojaTimings = useSelector(selectPoojaTimings);
 
@@ -34,17 +43,22 @@ const HomePage = () => {
 
   return (
     <div>
-      <About
+      <LazyImageWrapper src={BannerImage}/>
+      <TextWithImage
         heading={HomeHeading[language]}
         textPoints={HomeText[language]}
         imageUrl={AboutImage}
+        fullList={false}
       />
 
-      <Faq
+      <TabMenu
         heading={translations.frequentlyAskedQuestions[language]}
-        dosContent={dosInMala[language]}
-        dontsContent={dontInMala[language]}
+        dosContent={makeTextBold(dosInMala[language])}
+        dontsContent={makeTextBold(dontInMala[language])}
         length={3}
+        backGround="bg-gray-100"
+        fullList={false}
+        menuItems = {faqMenuItems[language]}
       />
 
       <TwoTable
@@ -57,6 +71,8 @@ const HomePage = () => {
         table1={alankaraSchedule}
         table2={poojaTimings}
       />
+
+
 
       <Hero
         heading={translations.pictureGallery[language]}
