@@ -34,11 +34,11 @@ export default function DesktopMenu({ menu }) {
     >
       <Link
         to={menu.url || "#"}
-        className="text-sm flex-center gap-0.5 uppercase hover:bg-orange-500 cursor-pointer px-1 py-1 rounded-xl font-bold text-white"
+        className="text-ms h-14 flex-center gap-0.5 uppercase hover:bg-orange-600 cursor-pointer px-1 py-1 rounded-md font-bold text-white"
       >
         {menu.name} 
         {/* Remove or conditionally hide ChevronDown */}
-        {hasSubMenu && false && <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />}
+        {hasSubMenu && false && <ChevronDown className="mt-[0.9px] group-hover/link:rotate-180 duration-200" />}
       </Link>
 
       {hasSubMenu && (

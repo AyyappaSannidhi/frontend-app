@@ -20,8 +20,8 @@ export const useNavbarMenu = () =>{
           url: routes.aboutRoute
         },
         {
-          name : translations.boardMembers[language],
-          url: routes.boardMembersRoute,
+          name : translations.commmitteMembers[language],
+          url: routes.committeMembers,
         },
         {
           name : translations.faq[language],
@@ -70,8 +70,18 @@ export const useNavbarMenu = () =>{
     },
 
     {
-      name: translations.poojaSchedule[language],
-      url : routes.poojaScheduleRoute
+      name : translations.sevaDetails[language],
+      subMenu: [
+        {
+          name : translations.templeSeva[language],
+          url:routes.templeSevaRoute
+        },
+        {
+          name : translations.kumaraSwamySeva[language],
+          url:routes.kumaraSwamySevaRoute
+        },
+      ],
+      gridCols: 1,
     },
   
     {
@@ -102,8 +112,9 @@ export const useNavbarMenu = () =>{
     },
   
     {
-      name : translations.Donate[language],
-      url: routes.donateRoute
+      name : translations.poojaSponsors[language],
+      url: routes.poojaSponsorsRoute
     },
+
   ]
 }

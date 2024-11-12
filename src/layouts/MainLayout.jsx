@@ -7,6 +7,7 @@ import ScrollingBanner from "../components/ScrollingBanner"
 import NavBar from "../components/NavBar";
 import BackToTopButton from "../components/BackTopButton";
 import ScrollToTop from "../components/ScrollToTop";
+import AddTopMargin from '../components/AddTopMargin'
 
 
 const MainLayout = () => {
@@ -17,6 +18,7 @@ const MainLayout = () => {
       <ScrollingBanner/>
       <ToastContainer />
       <BackToTopButton/>
+      <AddTopMargin/>
       <Outlet style={{ paddingTop: "2.5rem" }} />
       <Footer />
     </>
