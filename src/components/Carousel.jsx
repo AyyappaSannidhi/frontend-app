@@ -53,7 +53,7 @@ const Carousel = ({ images, autoSlide = true, autoSlideInterval = 5000 }) => {
   };
 
   return (
-    <div className="relative lg:w-[95%]  mx-auto h-[300px] flex items-center justify-center overflow-hidden">
+    <div className="relative lg:w-[95%] mx-auto h-[300px] flex items-center justify-center overflow-hidden">
       {/* Custom Arrow Buttons (Left) */}
       <button
         onClick={prevSlide}

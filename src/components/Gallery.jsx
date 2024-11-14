@@ -2,21 +2,18 @@ import { useState } from 'react';
 import Modal from 'react-modal';
 import Images from "../js/carousel"; // Import your images from a separate file
 import Heading from './Heading';
-import translations from '../js/translations/mainTranslations';
-import { useSelector } from 'react-redux';
 import LazyImageWrapper from '../components/LazyImageWrapper';
+import { useTranslation } from 'react-i18next';
 
-// Sample images array (replace with your own images)
 const images = Images;
 
-// Set the app element for accessibility (required by react-modal)
 Modal.setAppElement('#root');
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [zoom, setZoom] = useState(1); // Default zoom level
-  const language = useSelector((state) => state.language.currentLanguage); // Redux selector for language
 
   // Open modal and set selected image index
   const openModal = (index) => {
@@ -49,8 +46,8 @@ const Gallery = () => {
   const resetZoom = () => setZoom(1);
 
   return (
-    <div className="flex flex-col items-center mt-32">
-      <Heading heading={translations.pictureGallery[language]} />
+    <div className="flex flex-col items-center mt-40">
+      <Heading heading={t('common.pictureGallery')} />
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-y-8 gap-x-4 p-4 w-full max-w-7xl"> {/* Responsive grid */}
         {images.map((image, index) => (
           <div

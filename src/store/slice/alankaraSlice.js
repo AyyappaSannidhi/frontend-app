@@ -1,49 +1,49 @@
 import { createSlice } from "@reduxjs/toolkit";
-import translations from "../../js/translations/mainTranslations";
+import i18n from 'i18next';
 
-// Function to generate alankaraSchedule based on language
-const generateAlankaraSchedule = (language) => {
-    return [
-      {
-        col1: "",
-        col2: translations.monday[language],
-        col3: "Anjaneya swamy",
-      },
-      {
-        col1: "",
-        col2: translations.tuesday[language],
-        col3: "Anjaneya swamy",
-      },
-      {
-        col1: "",
-        col2: translations.wednesday[language],
-        col3: "Anjaneya swamy",
-      },
-      {
-        col1: "",
-        col2: translations.thursday[language],
-        col3: "Anjaneya swamy",
-      },
-      {
-        col1: "",
-        col2: translations.friday[language],
-        col3: "Anjaneya swamy",
-      },
-      {
-        col1: "",
-        col2: translations.saturday[language],
-        col3: "Anjaneya swamy",
-      },
-      {
-        col1: "",
-        col2: translations.sunday[language],
-        col3: "Anjaneya swamy",
-      },
-    ];
-  };
+// Function to generate alankaraSchedule based on the current language
+const generateAlankaraSchedule = () => {
+  return [
+    {
+      col1: "",
+      col2: i18n.t('common.monday'),
+      col3: "Anjaneya swamy",
+    },
+    {
+      col1: "",
+      col2: i18n.t('common.tuesday'),
+      col3: "Anjaneya swamy",
+    },
+    {
+      col1: "",
+      col2: i18n.t('common.wednesday'),
+      col3: "Anjaneya swamy",
+    },
+    {
+      col1: "",
+      col2: i18n.t('common.thursday'),
+      col3: "Anjaneya swamy",
+    },
+    {
+      col1: "",
+      col2: i18n.t('common.friday'),
+      col3: "Anjaneya swamy",
+    },
+    {
+      col1: "",
+      col2: i18n.t('common.saturday'),
+      col3: "Anjaneya swamy",
+    },
+    {
+      col1: "",
+      col2: i18n.t('common.sunday'),
+      col3: "Anjaneya swamy",
+    },
+  ];
+};
 
 const initialState = {
-  alankaraSchedule: generateAlankaraSchedule('en'),
+  alankaraSchedule: generateAlankaraSchedule(), // Initialize based on the current language
 };
 
 const alankaraSlice = createSlice({
@@ -51,24 +51,20 @@ const alankaraSlice = createSlice({
   initialState,
   reducers: {
     setAlankaraSchedule: (state, action) => {
-      state.alankaraSchedule = action.payload; // Set the alankara schedule
+      state.alankaraSchedule = action.payload; // Update the alankara schedule
     },
   },
 });
 
-
-
-// Action exports
 export const { setAlankaraSchedule } = alankaraSlice.actions;
 
-// Selector
+// Selector to access alankara schedule in components
 export const selectAlankaraSchedule = (state) => state.alankara.alankaraSchedule;
 
-// Middleware should call this function
-export const generateAndSetAlankaraSchedule = (language) => (dispatch) => {
-  const updatedSchedule = generateAlankaraSchedule(language);
+// Thunk to update the alankara schedule based on the current language
+export const updateAlankaraSchedule = () => (dispatch) => {
+  const updatedSchedule = generateAlankaraSchedule();
   dispatch(setAlankaraSchedule(updatedSchedule));
-  console.log("AlankaraSchedule changed")
 };
 
 export default alankaraSlice.reducer;

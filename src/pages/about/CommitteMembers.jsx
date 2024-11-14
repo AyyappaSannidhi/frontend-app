@@ -1,10 +1,10 @@
 import Heading from '../../components/Heading';
 import MemberCard from '../../components/MemberCard';
-import translations from '../../js/translations/mainTranslations';
-import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 const CommitteeMembers = () => {
-  const language = useSelector((state) => state.language.currentLanguage);
+  const { t } = useTranslation();
+
   const members = [
     {
       imageUrl: '', // Leave empty to show placeholder
@@ -74,7 +74,7 @@ const CommitteeMembers = () => {
   return (
     <div>
     <Heading
-    heading={translations.commmitteMembers[language]}
+    heading={t('common.commmitteMembers')}
     marginTop={"mt-40"}
     />
         <div style={styles.listContainer}>

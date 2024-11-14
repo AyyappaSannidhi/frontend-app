@@ -1,14 +1,15 @@
 // alankaraMiddleware.js
-import { setLanguage } from '../slice/languageSlice';
-import { generateAndSetAlankaraSchedule } from '../slice/alankaraSlice';
+import { updateAlankaraSchedule } from '../slice/alankaraSlice';
+import i18n from 'i18next';
 
-const alankaraMiddleware = (store) => (next) => (action) => {
-  next(action);
+const alankaraMiddleware = (store) => {
+  // Listen to language changes
+  i18n.on('languageChanged', () => {
+    // Dispatch the action to update the alankara schedule when the language changes
+    store.dispatch(updateAlankaraSchedule());
+  });
 
-  if (action.type === setLanguage.type) {
-    const currentLanguage = store.getState().language.currentLanguage; // Assuming your language slice has the current language
-    store.dispatch(generateAndSetAlankaraSchedule(currentLanguage)); // Dispatch the action to update schedule
-  }
+  return (next) => (action) => next(action); // Standard middleware pattern
 };
 
 export default alankaraMiddleware;

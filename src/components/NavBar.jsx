@@ -3,57 +3,50 @@ import Logo from "../assets/images/logo.png";
 import DesktopMenu from "../components/DesktopMenu"; 
 import MobMenu from "../components/MobMenu";
 import { useState, useEffect, useRef } from "react"; 
-import { useSelector, useDispatch } from "react-redux";
-import { setLanguage } from "../store/slice/languageSlice"; // Import action
-import translations from "../js/translations/mainTranslations";
-import LoginIn from '../components/LogIn'; // Import the modal component
+import LoginIn from '../components/LogIn';
 import { Link } from "react-router-dom";
 import routes from "../js/routes";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const NavBar = () => {
-  const language = useSelector((state) => state.language.currentLanguage);
-  const dispatch = useDispatch();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   
-  const [isDropdownOpen, setDropdownOpen] = useState(false);  // State to track dropdown visibility
-  const [isModalOpen, setModalOpen] = useState(false); // State for modal visibility
-  const dropdownRef = useRef(null);  // Reference to the dropdown container
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
+  const dropdownRef = useRef(null);
   const navBarMenu = useNavbarMenu();
 
-  const handleLanguageChange = (lang) => {
-    dispatch(setLanguage(lang));
-    setDropdownOpen(false); // Close dropdown after language selection
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+    setDropdownOpen(false);
   };
 
-  // Close dropdown if clicked outside of the dropdown area
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setDropdownOpen(false); // Close dropdown when clicking outside
+      setDropdownOpen(false);
     }
   };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);  // Listen for clicks outside
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);  // Clean up event listener on unmount
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
   return (
     <div>
-      
-
       {/* Main Navbar */}
       <header className="h-16 fixed top-0 inset-x-0 bg-orange-600 z-30 mt-7">
         <nav className="flex justify-between items-center mx-auto h-full px-4 md:px-6">
           <Link to={routes.indexRoute}>
             <div className="flex items-center">
               <img src={Logo} alt="company logo" className="w-10 mr-2" />
-              <div className="flex flex-col">
-                <p className="text-lg hidden lg:block text-white">SASSS</p>
-                <p className="text-ms text-white lg:hidden">SASSS</p>
-              </div>
+              <p className="text-lg hidden lg:block text-white">{t('common.sasss')}</p>
+              <p className="text-ms text-white lg:hidden">SASSS</p>
             </div>
           </Link>
 
@@ -64,26 +57,23 @@ const NavBar = () => {
           </ul>
 
           <div className="flex items-center gap-x-2 md:gap-x-3 lg:gap-x-5 relative">
-            {/* Donate Button */}
             <Link to={routes.donateRoute}>
               <button
                 aria-label="donate"
-                className="bg-transparent text-white font-semibold px-4 py-2 rounded-full border-2 border-white flex items-center justify-center gap-2 hover:bg-orange-500 transition duration-300 text-sm"
-                >
-                {translations.Donate[language]}
+                className="bg-transparent text-white font-semibold px-4 py-2 rounded-full border-2 border-white hover:bg-orange-500 transition duration-300 text-sm"
+              >
+                {t('common.donate')}
               </button>
             </Link>
 
-            {/* Login Button with Round Shape and Guest User Picture */}
             <button
               onClick={() => setModalOpen(true)}
               aria-label="login"
-              className="bg-transparent text-white font-semibold px-4 py-2 rounded-full border-2 border-white flex items-center justify-center gap-2 hover:bg-orange-500 transition duration-300 text-sm"
+              className="bg-transparent text-white font-semibold px-4 py-2 rounded-full border-2 border-white hover:bg-orange-500 transition duration-300 text-sm"
             >
-              {translations.logIn[language]}
+              {t('common.logIn')}
             </button>
 
-            {/* Mobile Menu */}
             <div className="lg:hidden">
               <MobMenu Menus={navBarMenu} />
             </div>
@@ -92,29 +82,29 @@ const NavBar = () => {
       </header>
 
       {/* Small Navbar */}
-      <div className="bg-orange-700 text-white fixed top-0 inset-x-0 z-40  flex justify-between items-center px-4 md:px-6">
-      <p className="text-ms hidden lg:block text-white">Sri Ayyappa Swamy Seva Sannidhi</p>
-      <p className="text-xs text-white lg:hidden">Sri Ayyappa Swamy Seva Sannidhi</p>
+      <div className="bg-orange-700 text-white fixed top-0 inset-x-0 z-40 flex justify-between items-center px-4 md:px-6">
+        <p className="text-ms hidden lg:block text-white">Sri Ayyappa Swamy Seva Sannidhi</p>
+        <p className="text-xs text-white lg:hidden">Sri Ayyappa Swamy Seva Sannidhi</p>
         <div className="relative">
-        <button
-              onClick={() => setDropdownOpen(!isDropdownOpen)}  // Toggle dropdown visibility on click
-              className="text-sm font-semibold px-3 py-1 flex items-center"
-            >
-              <FontAwesomeIcon icon={faLanguage} className="mr-2" />  {/* Icon on the left */}
-              {language === 'en' ? 'English' : language === 'kn' ? 'ಕನ್ನಡ' : 'తెలుగు'}
-        </button>
+          <button
+            onClick={() => setDropdownOpen(!isDropdownOpen)}
+            className="text-sm font-semibold px-3 py-1 flex items-center"
+          >
+            <FontAwesomeIcon icon={faLanguage} className="mr-2" />
+            {currentLanguage === 'en' ? 'English' : currentLanguage === 'kn' ? 'ಕನ್ನಡ' : 'తెలుగు'}
+          </button>
           {isDropdownOpen && (
             <div 
               ref={dropdownRef}
-              className="absolute right-0 mt-2 w-32 bg-white border border-gray-300 rounded-md shadow-lg transition-all duration-300 ease-in-out z-50"
+              className="absolute right-0 mt-2 w-32 bg-white border border-gray-300 rounded-md shadow-lg z-50"
             >
-              <button onClick={() => handleLanguageChange('en')} className="text-black block w-full text-left px-3 py-1 text-sm font-bold hover:bg-orange-500 hover:text-white transition duration-200">
+              <button onClick={() => changeLanguage('en')} className="text-black block w-full text-left px-3 py-1 text-sm font-bold hover:bg-orange-500 hover:text-white">
                 English
               </button>
-              <button onClick={() => handleLanguageChange('kn')} className="text-black block w-full text-left px-3 py-1 text-sm font-bold hover:bg-orange-500 hover:text-white transition duration-200">
+              <button onClick={() => changeLanguage('kn')} className="text-black block w-full text-left px-3 py-1 text-sm font-bold hover:bg-orange-500 hover:text-white">
                 ಕನ್ನಡ
               </button>
-              <button onClick={() => handleLanguageChange('te')} className="text-black block w-full text-left px-3 py-1 text-sm font-bold hover:bg-orange-500 hover:text-white transition duration-200">
+              <button onClick={() => changeLanguage('te')} className="text-black block w-full text-left px-3 py-1 text-sm font-bold hover:bg-orange-500 hover:text-white">
                 తెలుగు
               </button>
             </div>
