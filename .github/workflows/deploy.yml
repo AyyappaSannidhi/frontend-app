@@ -43,6 +43,7 @@ jobs:
       - name: Terraform Apply to Test
         env:
           TF_VAR_environment: "test"
+          TF_VAR_website_url: ${{ secrets.WEBSITE_URL_TEST }}
           TF_VAR_s3_bucket_name: ${{ secrets.TEST_S3_BUCKET_NAME }}
         run: terraform apply -auto-approve
         working-directory: ./terraform
@@ -104,6 +105,7 @@ jobs:
       - name: Terraform Apply to Production
         env:
           TF_VAR_environment: "production"
+          TF_VAR_website_url: ${{ secrets.WEBSITE_URL_PROD }}
           TF_VAR_s3_bucket_name: ${{ secrets.PROD_S3_BUCKET_NAME }}
         run: terraform apply -auto-approve
         working-directory: ./terraform
