@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import translations from "../js/translations/mainTranslations";
 import routes from "../js/routes";
 import Heading from './Heading';
 import TextBlock from './TextBlock';
 import Button from './Button';
 import LazyImageWrapper from "./LazyImageWrapper";
-import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+
 
 const TextWithImage = ({ heading, textPoints, imageUrl, fullList = true }) => {
+  const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(false);
-  const language = useSelector((state) => state.language.currentLanguage); // Redux selector for language
 
   useEffect(() => {
     const handleResize = () => {
@@ -33,7 +33,7 @@ const TextWithImage = ({ heading, textPoints, imageUrl, fullList = true }) => {
             <TextBlock textPoints={textPoints} />
             {
               !fullList && (
-                <Button text={translations.readMore[language]} url={routes.aboutRoute} />
+                <Button text={t('common.readMore')} url={routes.aboutRoute} />
               )
             }
           </div>
@@ -54,7 +54,7 @@ const TextWithImage = ({ heading, textPoints, imageUrl, fullList = true }) => {
             <TextBlock textPoints={textPoints} />
             {
               !fullList && (
-                <Button text={translations.readMore[language]} url={routes.aboutRoute} />
+                <Button text={t('common.readMore')} url={routes.aboutRoute} />
               )
             }
           </div>

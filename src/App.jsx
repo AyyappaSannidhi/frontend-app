@@ -12,11 +12,9 @@ import PictureGallery from './pages/gallery/PictureGallery';
 import VideoGallery from './pages/gallery/VideoGallery';
 import TempleSeva from './pages/seva/TempleSeva';
 import KumaraSwamySeva from './pages/seva/KumaraSwamySeva';
-import AyyappaMala from './pages/ayyappa_deeksha/AyyappaMala';
-import AyyappaJapam from './pages/ayyappa_deeksha/AyyappaJapam';
-import StepsDeeksha from './pages/ayyappa_deeksha/StepsDeeksha';
-import DeekshaGuideLines from './pages/ayyappa_deeksha/DeekshaGuideLines';
-import HousePoojaGuideLines from './pages/ayyappa_deeksha/HousePoojaGuideLines';
+import AyyappaDeeksha from './pages/library/AyyappaDeeksha';
+import GuideLines from './pages/library/GuideLines';
+import AyyappaDeekshaTitles from './pages/library/AyyappaDeekshaTitles';
 import Contact from './pages/about/Contact';
 import Donate from './pages/Donate';
 import LogIn from './components/LogIn';
@@ -31,6 +29,8 @@ import DonationPolicy from './pages/footer/DonationPolicy';
 import PrivacyAndDisclaimer from './pages/footer/PrivacyAndDisclaimer';
 import TermsAndConditions from './pages/footer/TermsAndConditions';
 import PoojaSponsors from './pages/PoojaSponsors';
+import NotFoundPage from './pages/NotFoundPage';
+import UsefullLinks from './pages/UsefullLinks';
 
 // ScrollToTop component
 const ScrollToTop = () => {
@@ -58,11 +58,9 @@ const App = () => {
         <Route path={routes.housePoojaRequestRoute} element={<HousePoojaRequest />} />
         <Route path={routes.templeSevaRoute} element={<TempleSeva />} />
         <Route path={routes.kumaraSwamySevaRoute} element={<KumaraSwamySeva />} />
-        <Route path={routes.ayyappaMalaRoute} element={<AyyappaMala />} />
-        <Route path={routes.ayyappaDhyanamJapamRoute} element={<AyyappaJapam />} />
-        <Route path={routes.stepsOfDeekshaRoute} element={<StepsDeeksha />} />
-        <Route path={routes.guidelinesToDeekshaRoute} element={<DeekshaGuideLines />} />
-        <Route path={routes.housePoojaGuidelinesRoute} element={<HousePoojaGuideLines />} />
+        <Route path={routes.ayyappaDeekshaRoute} element={<AyyappaDeeksha />} />
+        <Route path={routes.guideLinesRoute} element={<GuideLines />} />
+        <Route path={routes.guideLinesRoute} element={<AyyappaDeekshaTitles />} />
         <Route path={routes.contactRoute} element={<Contact />} />
         <Route path={routes.donateRoute} element={<Donate />} />
         <Route path={routes.logInRoute} element={<LogIn />} />
@@ -70,6 +68,9 @@ const App = () => {
         <Route path={routes.privacyAndDisclaimerRoute} element={<PrivacyAndDisclaimer />} />
         <Route path={routes.termsAndConditionsRoute} element={<TermsAndConditions />} />
         <Route path={routes.poojaSponsorsRoute} element={<PoojaSponsors />} />
+        <Route path={routes.ayyappaDeekshaTitlesRoute} element={<AyyappaDeekshaTitles />} />
+
+        <Route path='*' element={<NotFoundPage/>}/>
       </Route>
     )
   );

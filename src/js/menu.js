@@ -1,34 +1,32 @@
-import translations from './translations/mainTranslations';
 import routes from '../js/routes'
-import { useSelector } from 'react-redux';
-
+import { useTranslation } from 'react-i18next';
 
 export const useNavbarMenu = () =>{
-  const language = useSelector((state) => state.language.currentLanguage); // Redux selector for language
-
+  const { t } = useTranslation();
+  
   return [
     {
-      name: translations.home[language],
+      name: t('common.home'),
       url : routes.indexRoute
     },
   
     {
-      name: translations.about[language],
+      name: t('common.about'),
       subMenu: [
         {
-          name : translations.about[language],
+          name : t('common.about'),
           url: routes.aboutRoute
         },
         {
-          name : translations.commmitteMembers[language],
+          name : t('common.commmitteMembers'),
           url: routes.committeMembers,
         },
         {
-          name : translations.faq[language],
+          name : t('common.faq'),
           url: routes.faqRoute,
         },
         {
-          name : translations.contactUs[language],
+          name : t('common.contactUs'),
           url: routes.contactRoute,
         },
       ],
@@ -36,14 +34,14 @@ export const useNavbarMenu = () =>{
     },
   
     {
-      name : translations.gallery[language],
+      name : t('common.gallery'),
       subMenu: [
         {
-          name : translations.pictureGallery[language],
+          name : t('common.pictureGallery'),
           url:routes.pictureGalleryRoute
         },
         {
-          name : translations.videoGallery[language],
+          name : t('common.videoGallery'),
           url:routes.videoGalleryRoute
         },
       ],
@@ -51,18 +49,18 @@ export const useNavbarMenu = () =>{
     },
 
     {
-      name : translations.registrations[language],
+      name : t('common.registrations'),
       subMenu: [
         {
-          name : translations.malaDharanaRegistration[language],
+          name : t('common.malaDharanaRegistration'),
           url:routes.malaDharanaRegistrationRoute
         },
         {
-          name : translations.irumudiYatraRegistration[language],
+          name : t('common.irumudiYatraRegistration'),
           url:routes.irumudiYatraRegistrationRoute
         },
         {
-          name : translations.housePoojaRequest[language],
+          name : t('common.housePoojaRequest'),
           url:routes.housePoojaRequestRoute
         },
       ],
@@ -70,49 +68,47 @@ export const useNavbarMenu = () =>{
     },
 
     {
-      name : translations.sevaDetails[language],
+      name : t('common.sevaDetails'),
       subMenu: [
         {
-          name : translations.templeSeva[language],
+          name : t('common.templeSeva'),
           url:routes.templeSevaRoute
         },
         {
-          name : translations.kumaraSwamySeva[language],
+          name : t('common.kumaraSwamySeva'),
           url:routes.kumaraSwamySevaRoute
         },
       ],
       gridCols: 1,
     },
+    
   
     {
-      name : translations.ayyappaDeeksha[language],
+      name : t('common.library'),
       subMenu: [
         {
-          name : translations.sriSwamyAyyappaMala[language],
-          url: routes.ayyappaMalaRoute
+          name : t('common.ayyappaDeeksha'),
+          url: routes.ayyappaDeekshaRoute
         },
         {
-          name : translations.ayyappaDhyanamJapam[language],
-          url: routes.ayyappaDhyanamJapamRoute
+          name : t('common.guidelines'),
+          url: routes.guideLinesRoute
         },
         {
-          name : translations.stepsOfDeeksha[language],
-          url:routes.stepsOfDeekshaRoute
-        },
-        {
-          name : translations.guidelinesToDeeksha[language],
-          url: routes.guidelinesToDeekshaRoute
-        },
-        {
-          name : translations.housePoojaGuidelines[language],
-          url: routes.housePoojaGuidelinesRoute
+          name : t('common.ayyappaDeekshaTitles'),
+          url: routes.ayyappaDeekshaTitlesRoute
         },
       ],
       gridCols: 1,
     },
   
     {
-      name : translations.poojaSponsors[language],
+      name : t('common.useFullLinks'),
+      url: routes.useFullLinksRoute
+    },
+
+    {
+      name : t('common.poojaSponsors'),
       url: routes.poojaSponsorsRoute
     },
 

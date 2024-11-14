@@ -1,13 +1,12 @@
-import translations from "../../js/translations/mainTranslations";
 import Heading from "../../components/Heading";
-import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-  const language = useSelector((state) => state.language.currentLanguage);
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col items-center justify-center bg-gray-100 py-8">
-      <Heading heading={translations.contactUs[language]} marginTop="mt-0"/>
+      <Heading heading={t('common.contactUs')} marginTop="mt-0"/>
       <div className="flex flex-col lg:flex-row w-full max-w-7xl px-4 mt-10">
         {/* Left Side: Contact Details */}
         <div className="lg:w-1/2 flex flex-col space-y-4">

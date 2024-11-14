@@ -2,13 +2,8 @@ import AboutImage from "../assets/images/main.jpg";
 import Images from "../js/carousel";
 import TextWithImage from "../components/TextWithImage";
 import Hero from "../components/Hero";
-import translations from "../js/translations/mainTranslations";
 import { 
-  HomeHeading, 
-  HomeText,
-  dontInMala, 
-  dosInMala,
-  faqMenuItems 
+  years18
 } from "../js/data";
 import TwoTable from "../components/TwoTable";
 import TabMenu from "../components/TabMenu";
@@ -17,12 +12,15 @@ import { selectAlankaraSchedule } from '../store/slice/alankaraSlice';
 import { selectPoojaTimings } from '../store/slice/poojaTimingsSlice';
 import { makeTextBold } from "../components/common";
 import LazyImageWrapper from "../components/LazyImageWrapper";
-import  BannerImage from '../assets/images/banner.png'
-
+import  BannerImage from '../assets/images/banner.jpg'
+import Timeline from "../components/TimeLine";
+import Heading from "../components/Heading";
+import { useTranslation } from 'react-i18next';
 
 
 const HomePage = () => {
-  const language = useSelector((state) => state.language.currentLanguage);
+  const { t } = useTranslation(); // Access i18n instance
+
   const alankaraSchedule = useSelector(selectAlankaraSchedule);
   const poojaTimings = useSelector(selectPoojaTimings);
 
@@ -41,29 +39,39 @@ const HomePage = () => {
     col3: 'Pooja'
   };
 
+  const contents = [
+      makeTextBold(t('ayyappaDeeksha.dosInMala')),
+      makeTextBold(t('ayyappaDeeksha.dontInMala'))
+    ]
+
   return (
     <div>
       <LazyImageWrapper src={BannerImage}/>
       <TextWithImage
-        heading={HomeHeading[language]}
-        textPoints={HomeText[language]}
+        heading={t('homePage.heading')}
+        textPoints={t('homePage.text')}
         imageUrl={AboutImage}
         fullList={false}
       />
 
       <TabMenu
-        heading={translations.frequentlyAskedQuestions[language]}
-        dosContent={makeTextBold(dosInMala[language])}
-        dontsContent={makeTextBold(dontInMala[language])}
+        heading={t('common.frequentlyAskedQuestions')}
+        labels = {t('common.faqMenuItems')}
+        contents={contents}
         length={3}
         backGround="bg-gray-100"
         fullList={false}
-        menuItems = {faqMenuItems[language]}
+      />
+
+      <Heading heading={t('common.ayyappaDeekshaTitles')} marginTop={"mt-8"}/>
+      <Timeline years={years18} 
+        descriptions={t('ayyappaDeeksha.ayyappaDeekshaTitles')} 
+        fullList={false} 
       />
 
       <TwoTable
-        heading1={translations.alankaraSchedule[language]}
-        heading2={translations.poojaSchedule[language]}
+        heading1={t('common.alankaraSchedule')}
+        heading2={t('common.poojaSchedule')}
         headers1={headers1}
         headers2={headers2}
         showDateColumn1={showDateColumn1}
@@ -72,10 +80,8 @@ const HomePage = () => {
         table2={poojaTimings}
       />
 
-
-
       <Hero
-        heading={translations.pictureGallery[language]}
+        heading={t('common.pictureGallery')}
         images={Images}
       />
     </div>

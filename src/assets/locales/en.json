@@ -1,0 +1,196 @@
+{
+    "common" : {
+
+        "home" : "Home",
+        "about" : "About",
+        "sasss" : "SASSS",
+        "commmitteMembers" : "Commmitte Members",
+        "faq" : "Faq",
+
+        "gallery" : "Gallery",
+        "pictureGallery" : "Picture Gallery",
+        "videoGallery" : "Video Gallery",
+        
+        "alankaraSchedule" : "Alankara Schedule",
+        "poojaSchedule" : "Pooja Schedule",
+
+        "registrations" : "Registrations",
+        "malaDharanaRegistration" : "Mala Dharana Registration",
+        "irumudiYatraRegistration" : "Irumudi Yatra Registration",
+        "housePoojaRequest" : "House Pooja Request",
+
+        "ayyappaDeeksha" : "Ayappa Deeksha",
+        "sriSwamyAyyappaMala" : "Sri Swamy Ayyappa Mala",
+        "ayyappaDhyanamJapam" : "Ayyappa Dhyanam Japam",
+        "stepsOfDeeksha" : "18 steps of deeksha",
+        "guidelines" : "Guidelines",
+        "ayyappaDeekshaTitles" : "Titles of Swamy's Taking Deeksha",
+        "guidelinesToDeeksha" : "Guidelines to Deeksha",
+        "housePoojaGuidelines" : "House Pooja Guidelines",
+        "poojaSponsors" : "Pooja Sponsors",
+
+        "sevaDetails" : "Seva",
+        "useFullLinks" : "Usefull Links",
+        "templeSeva" : "Temple Seva",
+        "kumaraSwamySeva" : "Kumara Swamy Seva",
+        "library" : "Library",
+
+        "donate" : "Donate",
+        "logIn" : "Log In",
+        "contactUs" : "Contact Us",
+        "sriAyppaSwamySevaSannidhi" : "Sri Ayyappa Swamy Seva Sannidhi",
+        "ScrollingBannerText" : "Sri Ayyappa Swamy Seva Sannidhi",
+        "quickLinks" : "Quick Links",
+        "Information" : "Information",
+        "termsAndConditions" : "Terms & Conditions",
+        "privacyAndDisclaimer" : "Privacy and Disclaimer",
+        "donationPolicy" : "Donation Policy",
+        "readMore" : "Read More",
+        "monday" : "Monday",
+        "tuesday" : "Tuesday",
+        "wednesday" : "Wednesday",
+        "thursday" : "Thursday",
+        "friday" : "Friday",
+        "saturday" : "Saturday",
+        "sunday" : "Sunday",
+        "ganapathiPooja" : "Ganapathy Pooja",
+        "Pranayam" : "Pranayam",
+        "SankalpaPooja" : "Sankalpa Pooja",
+        "frequentlyAskedQuestions" : "Frequently Asked Questions (FAQ)",
+        "faqMenuItems" : ["Do's during the Ayyappa Swamy Vratham", "Do not's during the Ayyappa Swamy vratham"]
+    },
+
+    "homePage" :{
+        "heading" : ["Welcome to Sri Ayyappa Swamy Seva Sannidhi (SASSS)"],
+        "text" : [
+            "Prathistapana of Ayyappa Swamy - Manikanta was done on the auspicious day of 2nd June 2017 by Thazhamon Madom  from Shabarimalai.The idol was prepared using five metals gold, silver, lead, copper and iron which is called Panchaloha.",
+            "Bhajans are held every Saturday  and daily bhajans from November to January up to Sankranthi Devotees throng to temple to offer their prayers, perform special pooja's and on all Indian festivals days.",
+            "There is no age restriction for female devotees, anyone can visit this holy shrine."
+        ]
+    },
+
+    "ayyappaDeeksha" : {
+        "guideLinesMenuItems" : ["Deeksha GuideLines","House Pooja GuideLines"],
+        "ayyappaDeekshaMenuItems" : [ "Sri Swamy Ayyappa Mala","Vratham Details", "Sabarimala Pilgrimage" ],
+        "ayyappaDeekshaTitlesDescription" : [
+                "The following are the various titles given to persons who are taking ayyappa swamy deeksha depending on the number of times they are taking the deeksha.",
+                "The titles are symbolic for the 18 steps indicating the 18 years. Once the cycle completes the nineteenth year onwards it is counted from one again i.e the nineteenth year swamy is a kanne swamy again.",
+                "Narikela Swamy is the person who wears the mala for the 18th time, signifying the completion of 18 years of Ayyappa Deeksha.",
+                "In this final year, the devotee plants a coconut tree at Sabarimala during their Sabari Yatra, as part of the tradition.",
+                "The 18 steps leading to the temple symbolize the 18 hindrances or qualities that block spiritual growth, such as ego.",
+                "With each year of Deeksha, the devotee overcomes one hindrance, purifying themselves. By the 18th year, the last hindrance—usually considered ego—is removed.",
+                "This marks the devotee’s complete transformation, where they become one with the Swamy, no longer holding on to negative qualities.",
+                "By this stage, the devotee is seen as a 'Guru Swamy'—a guide who helps others on their spiritual journey.",
+                "The coconut, often used as a symbol in religious rituals, represents purity, and its breaking symbolizes the destruction of ego.",
+                "Offering oneself as a pure instrument in the Swamy’s hands, the devotee aligns with the 'Tatwamasi'—'You are That'—a core teaching at Sabarimala.",
+                "Thus, the Narikela Swamy, having transcended ego, plants a coconut tree in Sabarimala as a symbol of their total surrender and purification."
+        ],
+        "ayyappaDeekshaTitles" :[
+                "Kanne Swamy","Kathi Swamy","Ganta Swamy",
+                "Gada Swamy","Peru Swamy","Jyoti Swamy",
+                "Surya Swamy","Chandra Swamy","Trishula Swamy",
+                "Vishnu Chakra Swamy","Shankadhara Swamy","Nagabharana Swamy",
+                "Srihari Swamy","Padma Swamy","Sri Swamy",
+                "Sri Sabari Swamy","Omkaara Swamy","Narikela Swamy"
+        ],
+        "dosInMala" : [
+                "*Daily Rituals:* From the onset of Vratham, devotees are required to bathe twice a day—once at dawn and again at dusk—to purify both body and mind. During these times, offer a simple pooja, dedicating your prayers to Lord Ayyappa. Recite sacred hymns like Ayyappa/Sastha Ashtothram, and conclude your pooja by chanting the 108 Saranams with utmost devotion."
+                ,"*Brahmacharyam (Celibacy):* Uphold the vow of Brahmacharyam during the Vratham period, fostering purity in thoughts, speech, and actions. This discipline helps align you with the divine energy of Lord Ayyappa."
+                ,"*Simplicity in Diet:* Consume only what is essential to nourish the body. Avoid indulgence and engage in simple, sattvic foods as an offering to the divine presence within you."
+                ,"*Sacred Silence:* Limit speech to essential communication. Use your words with care, focusing your energy on silent devotion and contemplation of Lord Ayyappa."
+                ,"*Devotion in Duty:* No matter what tasks you are engaged in, carry them out with steadfast devotion to Lord Ayyappa. Let every action be an offering, a prayer at His sacred feet."
+                ,"*Universal Love:* Recognize the divine presence in all living beings. Treat every creature with compassion and kindness, for they are all manifestations of the same divine essence."
+                ,"*Constant Chanting:* Keep the sacred mantra, “Swamiye Saranam Ayyappa,” constantly in your thoughts and on your lips. Frequently chant it, especially when interacting with fellow devotees, to invoke the Lord's presence."
+                ,"*Satsang and Sangha:* Remain in the company of fellow Ayyappa devotees. Share in their bhakti and draw inspiration from their experiences, enhancing your own spiritual journey."
+                ,"*Active Participation:* Participate actively in poojas and bhajans. Allow the divine hymns and sacred rituals to uplift your soul and strengthen your connection with Lord Ayyappa."
+                ,"*Patience and Forbearance:* In moments of challenge, remain calm and composed. Face each difficulty with the gentle yet powerful chant, “Saranam Ayyappa,” and let the Lord guide you through it."
+                ,"*Respectful Address:* Address all men as “Ayyappa or Swami,” women and girls, including your wife, as “Maata,” and boys as “Manikanta.” This fosters unity and reminds us that we are all the children of the Lord."
+                ,"*Devotion in Every Thought, Word, and Deed:* Let every action, word, and thought be filled with deep devotion to Lord Ayyappa. Surrender yourself entirely at His lotus feet."
+                ,"*Sacred Attire:* Though no specific dress code is required, wearing black, blue, or saffron symbolizes your commitment to Deeksha and your devotion to the Lord."
+                ,"*Holy Marks:* Mark your forehead with Viboothi, Kumkumam, and Chandanam, serving as a constant reminder of your devotion and purity of purpose."
+        ],
+        "dontInMala" : [
+                "*Show Respect When Speaking:* Address others, particularly fellow Ayyappa devotees, in respectful terms, avoiding informal references like 'he,' 'she,' or 'it.' See each devotee as an embodiment of the divine and speak to them with reverence."
+                ,"*Steer Clear of Impurities:* From the beginning of Vratham until you return home after seeking Lord Ayyappa's blessings, refrain from alcohol, intoxicants, and non-vegetarian food. Nourish your body and spirit with pure, sattvic food."
+                ,"*Maintain Cleanliness in Habits:* Avoid smoking, chewing pan, and oil baths. These simple acts help maintain both physical and mental purity, deepening your spiritual connection with the Lord."
+                ,"*Keep Anger in Check:* When faced with upsetting situations, stay calm and composed. Don't let anger disturb your inner peace; instead, chant “Swamiye Saranam Ayyappa” to restore balance."
+                ,"*Act with Kindness and Compassion:* Avoid causing hurt to others through words or actions. Let every interaction be filled with kindness, reflecting the love and compassion of Lord Ayyappa."
+                ,"*Refrain from Death Ceremonies:* It's best to avoid attending death ceremonies during Vratham. If a close family member passes away, follow family customs, but for distant relatives, respect the mourning period without breaking Deeksha and seek guidance from your Guruswamy."
+                ,"*Avoid Teasing or Ridiculing:* Refrain from teasing or mocking any living being, human or otherwise. Recognize the divine essence in all creatures, and treat every being with respect and reverence."
+                ,"*Earn with Integrity:* Avoid dishonest means of making a living. Uphold dharma in all your financial activities, as purity in earnings nurtures purity in spirit."
+                ,"*Honor Fellow Devotees:* Never scold or disrespect another Ayyappa devotee. Treat each devotee as a form of Lord Ayyappa, respecting their faith and their spiritual journey."
+                ,"*Guide with Compassion, Not Criticism:* If you notice someone's mistake, offer gentle guidance instead of harsh criticism. Help them correct their actions with love, reflecting the Lord's compassion."
+                ,"*Avoid Negative Influences:* Stay away from activities or media that disrupt your peace of mind. Engage in practices like meditation, poojas, and bhajans that uplift your spiritual consciousness."
+                ,"*Strive to Avoid Sins:* Aim to avoid sinful thoughts, words, or actions. Purify your mind and heart, making yourself a worthy recipient of the Lord's grace."
+                ,"*Preserve Purity and Respect Boundaries:* Refrain from approaching or touching women during their menstrual cycle. If unintentional contact occurs, purify yourself with a bath and chant 108 Saranams."
+                ,"*Symbolize Renunciation in Appearance:* Avoid shaving and haircuts during Vratham as a symbol of renunciation and spiritual focus. If absolutely necessary for work, it is acceptable."
+                ,"*Moderate Your Sleep:* Limit your sleep, using extra time for meditation, chanting, or devotional practices. Rest adequately but avoid overindulgence."
+                ,"*Eat Mindfully:* Avoid eating outside as much as possible. Prepare fresh, simple meals at home, as the purity of food directly affects mental clarity and purity."
+                ,"*May the divine blessings of Lord Ayyappa guide you on a fulfilling and spiritually enlightening journey. Swamiye Saranam Ayyappa!*"
+        ],
+        "vrathamDetails" : [
+                "*The Practice of Vratham*: Ancient Hindu sages believed that periodic fasting, known as Vratham, cleanses the mind and body. By embracing an austere lifestyle and practicing restraint in thoughts, actions, and words, a person can rise above worldly limitations and move toward self-improvement, as the Bhagavad Gita suggests.",
+                "*Purity for Darshan*: A devotee seeking a vision (darshan) of Lord Ayyappan must maintain purity of mind and body. This requires observing a 41-day fast (Vratham), typically starting on the first day of the Malayalam month of Vrischikam, around mid-November. A first-time pilgrim to Sabarimala is referred to as a Kanni Ayyappan.",
+                "*Spiritual Discipline and Preparation*: The 41-day period of fasting emphasizes the importance of self-discipline and renunciation for those pursuing a deeper spiritual connection with the Divine. Devotees follow strict guidelines during this time to prepare themselves for the sacred journey to Sabarimala and to ascend the pathinettu padikal before entering the temple.",
+                "*Seeking Blessings*: Before beginning the 41-day Vratham, the devotee seeks the blessings of both parents and a Guru. An auspicious day is chosen to start, and on the eve of that day, the devotee performs poojas (prayers) to honor the family deity. This ritual includes offering a holy knot tied in yellow cloth containing a symbolic 1.25 currency units, symbolizing the family deity's approval to proceed with the Vratham."
+        ],
+        "AyyappaMala" : [
+                "*Preparation and Wearing of the Holy Mala*: Before the journey begins, devotees wear a beaded mala or garland, typically made of tulsi or rudraksha beads, symbolizing their detachment from material desires. Most start wearing the mala from the first day of Vrishchikam. While any day is appropriate, wearing it on a Saturday or on a day with the asterism Uthram—especially before Vrishchikam—adds auspiciousness. This alignment is revered as it marks the day Dharma Shastha (Lord Ayyappan) is believed to have been born on a Saturday with Uthram in Vrishchikam. Ideally, a Guruswami, an experienced devotee who has journeyed to Sabarimala numerous times, performs the mala-giving ceremony, usually within a temple or sacred place.",
+                "*Commitment to Austerity*: With the sacred mala worn, the devotee commits himself fully to Lord Ayyappan, surrendering his thoughts, words, and actions to the divine. The devotee then adopts a disciplined, ascetic lifestyle.",
+                "*Initiating the Fast*: On the first day, the devotee wakes before dawn, bathes, and offers prayers to the family deity, the Navagrahas (nine celestial bodies), and the holy mala. Accompanied by his Guru, he then proceeds to the temple to receive blessings and chants saranams as he formally begins his fast.",
+                "*Renunciation and Devotional Activities*: Devotees mirror Lord Ayyappan, embracing renunciation by avoiding social engagements and focusing solely on spiritual practices. This includes prayers, poojas, bhajans, temple visits, and service activities like cleaning temples, helping the needy, and attending spiritual discourses. Abstaining from indulgences, they eat only satvic food, avoiding meat, alcohol, drugs, betel, and smoking. Celibacy is strictly observed.",
+                "*Daily Rituals for 41 Days*: Devotees follow a set routine, starting with a pre-dawn bath, applying vibhooti and sandalwood paste, meditating, and singing hymns dedicated to Lord Ayyappan. They refrain from shaving, chant Dharma Shastha's name at least 108 times daily, and practice non-violence both physically and verbally. Fellow devotees are greeted as manifestations of the Lord himself. Devotees go about their fast quietly, without disturbing their household.",
+                "*Further Sacrifices and Practices*: Devotees do not apply oil to their hair or body during this period. They keep a tulsi leaf with them to ward off negative influences and temptations. They also abstain from sleeping on a bed and do not wear footwear, enduring the physical challenges as a mark of humility and devotion."
+        ],
+        "sabarimalaPilgrimage" : [
+                "*Start of the Pilgrimage: * The Sabarimala pilgrimage begins on the first day of the Malayalam month Vrischikam, which generally falls between November 14th and 17th. This marks the start of a spiritually significant journey for devotees.",
+                "*Significance of Makarasankranti: * The most revered day for Lord Ayyappan is Makarasankranti, which occurs on the first day of the Malayalam month Makara, usually between January 14th and 16th. This day is celebrated with great devotion and fervor.",
+                "*Miraculous Occurrences on Makarasankranti: * On Makarasankranti, miraculous events unfold every year. As the sacred jewels (Thiruvabharanam) are transported from the Old Pandalam Palace to Sabarimala, a holy eagle (Krishnaparunth) can be seen circling above the jewels, acting as a protector.",
+                "*The Krishnaparunth's Sacred Role: * The rare eagle, a divine symbol, follows the Thiruvabharanam procession, hovering over the Sannidhanam at Sabarimala, circling it nine times to honor Lord Ayyappan.",
+                "*Makara Jyothi - The Special Star: * During this divine moment, the sky is free from stars except for the special star, Makara Jyothi, which signifies a miraculous presence as the Lord receives his sacred jewels.",
+                "*The Jewel Adornment Ritual: * Once the jewels are placed on the golden body of Lord Ayyappan within the temple, devotees gather in large numbers outside, chanting 'Swamiye Saranam Ayyappa' in unison, marking the culmination of the sacred process.",
+                "*The Appearance of Makaravilakku: * After the Lord is adorned with the Thiruvabharanam, an effulgent light known as Makaravilakku shines three times on the hills of Ponnambalamedu, located opposite Sabarimala, completing the divine event."
+        ],
+        "deekshaGuidelines" : [
+                "*Swamiye Sharanam Ayyappa: * The chant of ‘Swamiye Sharanam Ayyappa’ is central to this spiritual discipline. Repeat it with devotion throughout the day.",
+                "*Bathing Routine: * Start and end your day with a bath using cold or room-temperature water, which is believed to purify the body and soul.",
+                "*Daily Temple Visits: * Make it a practice to visit the temple every day, especially in the early morning and evening hours.",
+                "*Pooja Rituals: * Perform pooja twice daily: once before sunrise and again after sunset. Begin your day with prayers to Lord Ganesh, Subramanyam, Durga, and Ayyappan.",
+                "*Chanting Hairivarasanam: * Chant the Hairivarasanam only after completing the evening pooja as part of your devotion.",
+                "*Naivedyam for Ayyappa: * Offering fruits as Naivedyam (offering) is considered acceptable and appropriate for Lord Ayyappa.",
+                "*Bath after Work: * Upon returning home in the evening from work, take a bath before you do anything else.",
+                "*Dress Code: * Wear saffron, blue, or preferably black clothes during your spiritual observance.",
+                "*Mala Discipline: * Keep the mala (sacred beads) on you at all times and never remove it.",
+                "*Fresh Clothes Daily: * Change into fresh clothes every day. It is advisable to have at least two pairs of black clothes and wash them daily.",
+                "*Breakfast: * Fruits are recommended for breakfast as they are considered pure and simple nourishment.",
+                "*Lunch: * Ensure to consume freshly cooked food before noon. Avoid leftovers from the previous day.",
+                "*Dinner: * For dinner, opt for light food such as upma or idli to maintain balance.",
+                "*Dietary Restrictions: * Avoid onions, garlic, eggs, and meat products. These are not permissible during the observance.",
+                "*Avoid Outside Food: * Completely refrain from eating outside food, ensuring that all meals are prepared with care and devotion.",
+                "*Annadanam Invitation: * If an Ayyappa devotee or a family friend invites you for Annadanam (meal offering), do not refuse. Ensure they have followed the cleanliness rituals and that women are not in their menstrual cycle.",
+                "*Preparing Meals: * When preparing meals, ensure to take a bath beforehand to maintain purity during the cooking process.",
+                "*Entertainment Avoidance: * Refrain from entertainment, focusing instead on spiritual growth and discipline.",
+                "*Control Anger and Speak Less: * Practice patience, control anger, and speak only when necessary.",
+                "*Addressing Others: * Always address women as 'Matha' (Mother) and men as 'Swamy' (Lord), regardless of their relationship to you.",
+                "*Brahmacharyam (Celibacy): * Maintain strict celibacy. Avoid any physical contact with your spouse during this time.",
+                "*Women’s Monthly Cycle: * During a woman's menstrual cycle, the husband or Swamy should prepare meals for everyone in the household.",
+                "*No Smoking or Drinking: * Smoking and drinking are prohibited as they hinder the spiritual discipline.",
+                "*Footwear Guidelines: * Avoid wearing footwear when possible. If you must, like at work, try to limit the use of shoes.",
+                "*Beard and Hair Care: * Avoid shaving your beard, combing your hair, or cutting nails during the vow period.",
+                "*Bhajan Participation: * Attend as many bhajans as possible during your deeksha (vow) time to deepen your connection with the divine.",
+                "*Tulasi Leaf: * Keep a Tulasi (holy basil) leaf with you as it is believed to protect you from negative or evil thoughts."
+        ],
+        "housePoojaGuidelines" : [
+                "*Morning and Evening Bath: * Take a bath with cold or room temperature water both in the morning and evening.",
+                "*Daily Temple Visit: * It is recommended to visit the temple every day, especially during the early morning and evening.",
+                "*Twice Daily Pooja: * Perform pooja twice a day, once before sunrise in the morning and once after sunset in the evening.",
+                "*Regular Pooja with Ashotharam: * Along with your usual pooja, recite Ashotharam (108 names) for Lord Ganesh, Subramanyam, Durga, and Ayyappan."
+        ]
+
+    
+    
+    
+    
+    
+    }
+}

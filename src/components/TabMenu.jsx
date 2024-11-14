@@ -2,29 +2,36 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Heading from "./Heading";
 import TextBlock from "./TextBlock";
-import translations from "../js/translations/mainTranslations";
-import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
-const TabMenu = ({ heading, dosContent, dontsContent, menuItems, backGround = "bg-white-100", fullList = true, length = 1000 }) => {
+const TabMenu = ({ 
+  heading, 
+  labels, 
+  contents, 
+  backGround = "bg-white-100", 
+  fullList = true, 
+  length = 1000 
+}) => {
 
-  const [selectedTab, setSelectedTab] = useState("dos");
-  const language = useSelector((state) => state.language.currentLanguage);
-  const contentToShow = selectedTab === "dos" ? dosContent.slice(0, length) : dontsContent.slice(0, length);
+  const [selectedTab, setSelectedTab] = useState(0); // Default to the first tab
+  const { t } = useTranslation(); // Access i18n instance
+
+  const contentToShow = contents[selectedTab]?.slice(0, length) || [];
 
   return (
     <div className={`w-full p-2 space-y-6 ${backGround}`}>
-      <Heading heading={heading} marginTop={'mt-8'}/>
+      <Heading heading={heading} marginTop={'mt-8'} />
       
       <div className="flex w-full justify-around bg-white text-gray-800 p-4 rounded-lg border border-gray-300 space-x-2">
-        {menuItems.map((tab, index) => (
+        {labels.map((label, index) => (
           <button
-            key={tab}
-            onClick={() => setSelectedTab(index === 0 ? "dos" : "donts")}
+            key={label} // Use label as key for simplicity
+            onClick={() => setSelectedTab(index)}
             className={`flex-1 px-4 py-2 text-center rounded border border-gray-300 transition-colors duration-300 ${
-              selectedTab === (index === 0 ? "dos" : "donts") ? "bg-orange-500 text-white" : "hover:bg-gray-200"
+              selectedTab === index ? "bg-orange-500 text-white" : "hover:bg-gray-200"
             }`}
           >
-            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            {label}
           </button>
         ))}
       </div>
@@ -37,7 +44,7 @@ const TabMenu = ({ heading, dosContent, dontsContent, menuItems, backGround = "b
           <div className="flex justify-end">
             <Link to="/faq">
               <button className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition duration-300">
-                {translations.readMore[language]}
+                {t('common.readMore')}
               </button>
             </Link>
           </div>

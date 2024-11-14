@@ -1,8 +1,97 @@
+export const ayyappaDeekshaTitlesDescription = {
+    'en' : [
+                "The following are the various titles given to persons who are taking ayyappa swamy deeksha depending on the number of times they are taking the deeksha.",
+                "The titles are symbolic for the 18 steps indicating the 18 years. Once the cycle completes the nineteenth year onwards it is counted from one again i.e the nineteenth year swamy is a kanne swamy again.",
+                "Narikela Swamy is the person who wears the mala for the 18th time, signifying the completion of 18 years of Ayyappa Deeksha.",
+                "In this final year, the devotee plants a coconut tree at Sabarimala during their Sabari Yatra, as part of the tradition.",
+                "The 18 steps leading to the temple symbolize the 18 hindrances or qualities that block spiritual growth, such as ego.",
+                "With each year of Deeksha, the devotee overcomes one hindrance, purifying themselves. By the 18th year, the last hindrance—usually considered ego—is removed.",
+                "This marks the devotee’s complete transformation, where they become one with the Swamy, no longer holding on to negative qualities.",
+                "By this stage, the devotee is seen as a 'Guru Swamy'—a guide who helps others on their spiritual journey.",
+                "The coconut, often used as a symbol in religious rituals, represents purity, and its breaking symbolizes the destruction of ego.",
+                "Offering oneself as a pure instrument in the Swamy’s hands, the devotee aligns with the 'Tatwamasi'—'You are That'—a core teaching at Sabarimala.",
+                "Thus, the Narikela Swamy, having transcended ego, plants a coconut tree in Sabarimala as a symbol of their total surrender and purification."
+            ],
+    'kn' : [
+        "ಅಯ್ಯಪ್ಪ ಸ್ವಾಮಿ ದೀಕ್ಷೆ ತೆಗೆದುಕೊಳ್ಳುವವರು ವಿವಿಧ ಹೆಸರನ್ನು ಪಡೆಯುತ್ತಾರೆ, ಇದು ಅವರು ತೆಗೆದುಕೊಳ್ಳುವ ದೀಕ್ಷೆಗಳ ಸಂಖ್ಯೆ ಪ್ರಕಾರ ನಿರ್ಧಾರವಾಗುತ್ತದೆ.",
+        "ಈ ಹೆಸರಗಳು 18 ಹಂತಗಳನ್ನು ಸೂಚಿಸುತ್ತವೆ, ಇದು 18 ವರ್ಷಗಳನ್ನು ಸೂಚಿಸುತ್ತದೆ. ಒಮ್ಮೆ ಸೈಕಲ್ ಮುಗಿದ ಮೇಲೆ ಹತ್ತಾರನೇ ವರ್ಷದಿಂದ ಮುರುವವರು ಮತ್ತೆ 'ಕನ್ನೆ ಸ್ವಾಮಿ' ಆಗಿ ಪರಿಗಣಿಸಲ್ಪಟ್ಟಿರುತ್ತಾರೆ.",
+        "ನಾರಿಕೇಳ ಸ್ವಾಮಿ ಎಂದರೆ 18ನೇ ಬಾರಿ ಮಾಳಾ ಧರಿಸುವವರು, ಇದು 18 ವರ್ಷಗಳ ಅಯ್ಯಪ್ಪ ದೀಕ್ಷೆಯ ಪೂರ್ಣತೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
+        "ಈ ಕೊನೆಯ ವರ್ಷದಲ್ಲಿ, ಭಕ್ತನು ಸಾಬರಿಮಲೆಯಲ್ಲಿ ತಮ್ಮ ಸಬರಿ ಯಾತ್ರೆಯಂದು ಒಂದು ತಾಳೆ ಮರವನ್ನು ನೆಟ್ಟುತ್ತಾನೆ, ಇದು ಪರಂಪರೆಯ ಭಾಗವಾಗಿದೆ.",
+        "ಹರಿಯಾಳಿ ದೇಗುಲವನ್ನು ತಲುಪುವ 18 ಹಂತಗಳು ನಮ್ಮ ಆಧ್ಯಾತ್ಮಿಕ ಬೆಳವಣಿಗೆಗೆ ಬಾರಿಯಾದ 18 ಅಡೆತಡೆಗಳನ್ನು ಅಥವಾ ಗುಣಗಳನ್ನು ಸೂಚಿಸುತ್ತವೆ, ಉದಾಹರಣೆಗೆ ಅಹಂಕಾರ.",
+        "ಪ್ರತಿ ವರ್ಷ ದೀಕ್ಷೆಯೊಂದಿಗೆ, ಭಕ್ತನು ಒಂದು ಅಡೆತಡೆಯನ್ನು ಕೈಬಿಟ್ಟುಕೊಳ್ಳುತ್ತಾನೆ, ತಮ್ಮನ್ನು ಶುದ್ಧಗೊಳಿಸುತ್ತಾನೆ. 18ನೇ ವರ್ಷಕ್ಕೆ, ಕೊನೆಯ ಅಡೆತಡೆ — ಸಾಮಾನ್ಯವಾಗಿ ಅಹಂಕಾರ — ದೂರವಾಗುತ್ತದೆ.",
+        "ಇದು ಭಕ್ತನ ಪೂರ್ಣ ಪರಿವರ್ತನೆವನ್ನು ಸೂಚಿಸುತ್ತದೆ, ಅವರು ಸ್ವಾಮಿಯೊಂದಿಗೆ ಏಕತ್ವವನ್ನು ಹೊಂದಿದ್ದಾರೆ, ಹಾನಿಕರ ಗುಣಗಳನ್ನು ಈಗ ನೀಡಿದ್ದರಂತೆ.",
+        "ಈ ಹಂತಕ್ಕೆ ಬರುವುದರಿಂದ, ಭಕ್ತನು 'ಗುರು ಸ್ವಾಮಿ' ಎಂದು ಪರಿಗಣಿಸಲ್ಪಟ್ಟಿರುತ್ತಾರೆ — ಇತರರಿಗೆ ಅವರ ಆಧ್ಯಾತ್ಮಿಕ ಯಾತ್ರೆಯಲ್ಲಿ ಮಾರ್ಗದರ್ಶನ ನೀಡುವವರು.",
+        "ತಾಳೆ, ಪ್ರತಿ ಧಾರ್ಮಿಕ ವಿಧಿಗಳಲ್ಲಿ ಸದಾ ಬಯಲಾಗಿ ಬಳಸಲಾಗುವ ಚಿಹ್ನೆಯಾಗಿದ್ದು, ಇದು ಶುದ್ಧತೆ ಸೂಚಿಸುತ್ತದೆ, ಮತ್ತು ಅದರ ಒಡೆಯುವಿಕೆ ಅಹಂಕಾರದ ನಾಶವನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
+        "ಆತ್ಮನನ್ನು ಸ್ವಾಮಿಯ ಹತ್ತಿರ ಶುದ್ಧವಾದ ಸಾಧನವಾಗಿ ಅರ್ಪಿಸುವ ಮೂಲಕ, ಭಕ್ತನು 'ತತ್ವಮಸಿ' — 'ನೀವು ಆತ್ಮ' ಎಂಬ ಒಂದು ಮಹತ್ವದ ಉಪದೇಶವನ್ನು ಅನುಸರಿಸುತ್ತಾನೆ.",
+        "ಹೀಗಾಗಿ, ನಾರಿಕೇಳ ಸ್ವಾಮಿ, ಅಹಂಕಾರವನ್ನು ಮೀರಿ, ತಮ್ಮ ಪೂರ್ಣ ಸರ್ವಸ್ವಾದಾನವನ್ನು ಮತ್ತು ಶುದ್ಧೀಕರಣವನ್ನು ಸೂಚಿಸುವವಾಗಿ ಸಾಬರಿಮಲೆಯಲ್ಲಿ ತಾಳೆ ಮರವನ್ನು ನೆಟ್ಟಿದ್ದಾರೆ."
+    ],
+    'te' : [
+               "అయ్యప్ప స్వామి దీక్ష తీసుకుంటున్న వ్యక్తులు తమను తీసుకున్న దీక్షల సంఖ్య ఆధారంగా వివిధ పేర్లు పొందుతారు.",
+  "ఈ పేర్లు 18 అడుగులను సూచిస్తాయి, ఇవి 18 సంవత్సరాలను సూచిస్తాయి. ఒకసారి సైకిల్ పూర్తి అయిన తర్వాత, తొమ్మిదవ సంవత్సరంలో వారు మళ్లీ 'కన్నె స్వామి'గా పరిగణించబడతారు.",
+  "నారికేళ స్వామి అనేది 18వసారి మాల ధరిస్తున్న వ్యక్తి, ఇది 18 సంవత్సరాల అయ్యప్ప దీక్ష పూర్తి కావడాన్ని సూచిస్తుంది.",
+  "ఈ చివరి సంవత్సరంలో, భక్తుడు సబరిమలలో తన సబరి యాత్రలో కొబ్బరి చెట్టు నాటతారు, ఇది సంప్రదాయం యొక్క భాగం.",
+  "18 అడుగులు దేవాలయాన్ని చేరుకోవడమేమిటంటే ఆధ్యాత్మిక ఎదుగుదలలో 18 అడ్డంకులు లేదా లక్షణాలను సూచిస్తాయి, ఉదాహరణకు అహంకారం.",
+  "ప్రతి సంవత్సరానికి దీక్షతో, భక్తుడు ఒక అడ్డంకిని దాటిపోతారు, తాము శుద్ధి చేసుకుంటారు. 18వ సంవత్సరానికి, చివరి అడ్డంకి — సాధారణంగా అహంకారం — తొలగించబడుతుంది.",
+  "ఇది భక్తుడి పూర్తి మార్పును సూచిస్తుంది, ఆయన స్వామితో ఏకత్వాన్ని పొందారు, ఇకపై ప్రతికూల లక్షణాలను తగిలించుకోరు.",
+  "ఈ స్థితిలో, భక్తుడు 'గురు స్వామి'గా పరిగణించబడతారు — ఇతరులకు వారి ఆధ్యాత్మిక ప్రయాణంలో మార్గదర్శనం ఇచ్చే వారు.",
+  "కొబ్బరి, ప్రతి యజ్ఞలో లేదా దేవత పూజలో బాగా ఉపయోగించబడే చిహ్నం, ఇది శుద్ధతను సూచిస్తుంది, మరియు దానిని కొయ్యడం అహంకారం వృత్తి యొక్క నాశనాన్ని సూచిస్తుంది.",
+  "ఆత్మను స్వామి చేతుల్లో శుద్ధమైన సాధనంగా అర్పించడం ద్వారా, భక్తుడు 'తత్వమసి' — 'నీవు ఆత్మ' అనే ప్రధాన ఉపదేశాన్ని అనుసరిస్తాడు.",
+  "అందువల్ల, నారికేళ స్వామి, అహంకారాన్ని అధిగమించి, తన పూర్తి సమర్పణను మరియు శుద్ధిని సూచిస్తూ సబరిమలలో కొబ్బరి చెట్టు నాటతారు."
+    ],
+
+}
+
+
+
+
+export const years18 = [
+    "1st","2nd","3rd","4st","5th","6th","7th","8th","9th",
+    "10th","11th","12th","13th","14th","15th","16th","17th","18th",
+]
+
+
+export const ayyappaDeekshaTitles = {
+'en':[
+            'Kanne Swamy','Kathi Swamy','Ganta Swamy',
+            'Gada Swamy','Peru Swamy','Jyoti Swamy',
+            'Surya Swamy','Chandra Swamy','Trishula Swamy',
+            'Vishnu Chakra Swamy','Shankadhara Swamy','Nagabharana Swamy',
+            'Srihari Swamy','Padma Swamy','Sri Swamy',
+            'Sri Sabari Swamy','Omkaara Swamy','Narikela Swamy',
+    ],
+
+'kn':[
+        'ಕನ್ನೆ ಸ್ವಾಮಿ','ಕಟ್ಟಿ ಸ್ವಾಮಿ','ಗಣಟ ಸ್ವಾಮಿ','ಗಡಾ ಸ್ವಾಮಿ','ಪೆರೂ ಸ್ವಾಮಿ',
+        'ಜ್ಯೋತಿ ಸ್ವಾಮಿ','ಸುರ್ಯ ಸ್ವಾಮಿ','ಚಂದ್ರ ಸ್ವಾಮಿ','ತ್ರಿಶೂಲ ಸ್ವಾಮಿ','ವಿಷ್ಣು ಚಕ್ರ ಸ್ವಾಮಿ',
+        'ಶಂಖಧಾರ ಸ್ವಾಮಿ','ನಾಗಭರಣ ಸ್ವಾಮಿ','ಶ್ರೀಹರಿ ಸ್ವಾಮಿ','ಪದ್ಮ ಸ್ವಾಮಿ',
+        'ಶ್ರೀ ಸ್ವಾಮಿ','ಶ್ರೀ ಸಬರಿ ಸ್ವಾಮಿ','ಓಂಕಾರ ಸ್ವಾಮಿ','ನಾರಿಕೇಲ ಸ್ವಾಮಿ'
+    ],
+
+'te':[
+        'కన్నే స్వామి','కట్టి స్వామి','గంట స్వామి','గడ స్వామి','పెరు స్వామి',
+        'జ్యోతి స్వామి','సూర్య స్వామి','చంద్ర స్వామి','త్రిశూల స్వామి','విష్ణు చక్ర స్వామి',
+        'శంకధారా స్వామి','నాగభరణ స్వామి','శ్రీహరి స్వామి','పద్మ స్వామి',
+        'శ్రీ స్వామి','శ్రీ సబరి స్వామి','ఓంకార స్వామి','నారికేళ స్వామి'
+    ]
+}
 
 export const faqMenuItems = {
     "en" : ["Do's during the Ayyappa Swamy Vratham", "Do not's during the Ayyappa Swamy vratham"],
     "kn" : ["Do's during the Ayyappa Swamy Vratham", "Do not's during the Ayyappa Swamy vratham"],
     "te" : ["Do's during the Ayyappa Swamy Vratham", "Do not's during the Ayyappa Swamy vratham"],
+}
+
+
+export const ayyappaDeekshaMenuItems = {
+    "en" : ["Sri Swamy Ayyappa Mala","Vratham Details", "Sabarimala Pilgrimage"],
+    "kn" : ["Sri Swamy Ayyappa Mala","Vratham Details", "Sabarimala Pilgrimage"],
+    "te" : ["Sri Swamy Ayyappa Mala","Vratham Details", "Sabarimala Pilgrimage"],
+}
+
+export const guideLinesMenuItems = {
+    "en" : ["Deeksha GuideLines","House Pooja GuideLines"],
+    "kn" : ["Deeksha GuideLines","House Pooja GuideLines"],
+    "te" : ["Deeksha GuideLines","House Pooja GuideLines"],
 }
 
 
@@ -142,3 +231,337 @@ export const dontInMala = {
                 ,"*శ్రీ అయ్యప్ప స్వామివారి దీవెనలతో మీ ఆధ్యాత్మిక యాత్ర ఆనందమయంగా మరియు పవిత్రంగా సాగాలని కోరుకుంటూ, స్వామియే శరణం అయ్యప్ప!*"
             ],
 }
+
+
+export const vrathamDetails = {
+
+    "en" :  [
+            "*The Practice of Vratham*: Ancient Hindu sages believed that periodic fasting, known as Vratham, cleanses the mind and body. By embracing an austere lifestyle and practicing restraint in thoughts, actions, and words, a person can rise above worldly limitations and move toward self-improvement, as the Bhagavad Gita suggests.",
+          
+            "*Purity for Darshan*: A devotee seeking a vision (darshan) of Lord Ayyappan must maintain purity of mind and body. This requires observing a 41-day fast (Vratham), typically starting on the first day of the Malayalam month of Vrischikam, around mid-November. A first-time pilgrim to Sabarimala is referred to as a Kanni Ayyappan.",
+          
+            "*Spiritual Discipline and Preparation*: The 41-day period of fasting emphasizes the importance of self-discipline and renunciation for those pursuing a deeper spiritual connection with the Divine. Devotees follow strict guidelines during this time to prepare themselves for the sacred journey to Sabarimala and to ascend the pathinettu padikal before entering the temple.",
+          
+            "*Seeking Blessings*: Before beginning the 41-day Vratham, the devotee seeks the blessings of both parents and a Guru. An auspicious day is chosen to start, and on the eve of that day, the devotee performs poojas (prayers) to honor the family deity. This ritual includes offering a holy knot tied in yellow cloth containing a symbolic 1.25 currency units, symbolizing the family deity's approval to proceed with the Vratham."
+            ],
+    
+    "kn" :  [
+               "*ವೃತದ ಪ್ರಾರ್ಥನೆ*: ಪ್ರಾಚೀನ ಹಿಂದು ಋಷಿಗಳು ನಿಯಮಿತ ಉಪವಾಸವು (ವೃತ) ಮಾನಸಿಕ ಮತ್ತು ಶಾರೀರಿಕ ಶುದ್ಧಿಕರ ತರುತ್ತದೆ ಎಂದು ನಂಬಿದ್ದರು. ಒಬ್ಬ ವ್ಯಕ್ತಿ ಆಲೋಚನೆ, ಕ್ರಿಯೆ ಮತ್ತು ಮಾತುಗಳಲ್ಲಿ ನಿಯಂತ್ರಣವನ್ನು ಅಭ್ಯಾಸ ಮಾಡುವ ಮೂಲಕ ಭೌತಿಕ ಮಿತಿಗಳನ್ನು ಮೀರಲು ಮತ್ತು ಆತ್ಮೋನ್ನತಿಗೆ ಪ್ರೇರಿತರಾಗಲು ನೆರವಾಗುತ್ತದೆ ಎಂಬುದಾಗಿ ಭಗವದ್ಗೀತೆ ಹೇಳುತ್ತದೆ.",
+
+                "*ದರ್ಶನಕ್ಕೆ ಶುದ್ಧತೆ*: ಶ್ರೀ ಅಯ್ಯಪ್ಪನ ದರ್ಶನಕ್ಕಾಗಿ ಭಕ್ತನು ಮನಸ್ಸು ಮತ್ತು ದೇಹದ ಶುದ್ಧತೆಯನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಬೇಕು. ಇದಕ್ಕಾಗಿ ೪೧ ದಿನಗಳ ವೃತವನ್ನು ಪಾಲಿಸಬೇಕು, ಇದು ಸಾಮಾನ್ಯವಾಗಿ ಮಾಲಯಾಳಂ ತಿಂಗಳಾದ ವೃಷ್ಚಿಕಂನ ಮೊದಲನೇ ದಿನದಿಂದ ಆರಂಭಗೊಳ್ಳುತ್ತದೆ, ಅಂದರೆ ನವೆಂಬರ್ ಮಧ್ಯದಲ್ಲಿ. ಸಬರಿಮಲೆಗೆ ಮೊದಲ ಬಾರಿಗೆ ತೆರಳುವ ಯಾತ್ರಿಕನನ್ನು ಕನ್ನಿ ಅಯ್ಯಪ್ಪನ ಎಂದು ಕರೆಯುತ್ತಾರೆ.",
+
+                "*ಆಧ್ಯಾತ್ಮಿಕ ಶಿಸ್ತು ಮತ್ತು ಸಿದ್ಧತೆ*: ೪೧ ದಿನಗಳ ವೃತ ಕಾಲಾವಧಿ ತಪಸ್ಸು ಮತ್ತು ತ್ಯಾಗದ ಮಹತ್ವವನ್ನು ಒತ್ತಿಹೇಳುತ್ತದೆ, ಇದು ದೈವದೊಂದಿಗೆ ಆಳವಾದ ಆಧ್ಯಾತ್ಮಿಕ ಸಂಪರ್ಕವನ್ನು ಬೆಳೆಸಲು ಪ್ರಯತ್ನಿಸುವವರಿಗೆ ಆವಶ್ಯಕ. ಈ ಸಮಯದಲ್ಲಿ ಭಕ್ತರು ಸಬರಿಮಲೆಯ ಪವಿತ್ರ ಯಾತ್ರೆಗೆ ತಯಾರಾಗಲು ಮತ್ತು ದೇವಾಲಯ ಪ್ರವೇಶಿಸುವ ಮುನ್ನ ಪತಿನೆಟ್ಟು ಪಡಿಕಲ್ ಏರುವಂತೆ ಕಠಿಣ ಮಾರ್ಗಸೂಚಿಗಳನ್ನು ಅನುಸರಿಸುತ್ತಾರೆ.",
+
+                "*ಅನುಮತಿಯ ಪ್ರಾರ್ಥನೆ*: ೪೧ ದಿನಗಳ ವೃತವನ್ನು ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು, ಭಕ್ತನು ತಾಯಿ, ತಂದೆ ಮತ್ತು ಗುರುಗಳ ಅನುಮತಿ ಮತ್ತು ಆಶೀರ್ವಾದವನ್ನು ಪಡೆಯುತ್ತಾನೆ. ವೃತವನ್ನು ಪ್ರಾರಂಭಿಸಲು ಶುಭ ದಿನವನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುತ್ತದೆ ಮತ್ತು ಆ ದಿನದ ಮುನ್ನ ದಿನ, ಕುಟುಂಬದ ದೇವತೆಗೆ ಪೂಜೆಯನ್ನು ಸಲ್ಲಿಸಲಾಗುತ್ತದೆ. ಈ ಪೂಜೆಯಲ್ಲಿ 1.25 ಮೌಲ್ಯದ ನಾಣ್ಯವನ್ನು ಹಳದಿ ಬಟ್ಟೆಯಲ್ಲಿ ಕಟ್ಟಿದ ಪವಿತ್ರ ಕಟ್ಟನ್ನು ಕುಟುಂಬದ ದೇವರಿಗೆ ಅರ್ಪಿಸುತ್ತಾರೆ, ಇದು ವೃತವನ್ನು ಪ್ರಾರಂಭಿಸಲು ಕುಟುಂಬದ ದೇವತೆಯ ಅನುಮತಿಯನ್ನು ಸೂಚಿಸುತ್ತದೆ."
+    ],
+    "te" :  [
+                "*వ్రత ప్రాముఖ్యత*: ప్రాచీన హిందూ ఋషులు శరీరానికి, మనసుకు శుద్ధిచేయడానికి నియమిత ఉపవాసం లేదా వ్రతం అవసరమని నమ్మారు. ఆలోచనలలో, చర్యలలో మరియు మాటలలో ఆచరణ వ్రతాన్ని అనుసరించడం ద్వారా, భౌతిక పరిమితులను అధిగమించి, ఆత్మీయ శ్రేయస్సు వైపు పురోగమించవచ్చని భగవద్గీత సూచిస్తోంది.",
+
+                "*దివ్య దర్శనం కోసం స్వచ్ఛత*: శ్రీవారి దర్శనం కోసం భక్తుడు మనస్సు, శరీరం శుద్ధి కొనసాగించాలి. దీనికోసం మలయాళ సంవత్సరంలోని వృష్శికం మొదటి రోజున, అంటే నవంబర్ మధ్యలో, సాధారణంగా 41 రోజుల వ్రతం ప్రారంభమవుతుంది. సబరిమలకు తొలిసారి వెళ్ళే యాత్రికుడు ‘కన్ని అయ్యప్ప’ అని పిలవబడతాడు.",
+
+                "*ఆధ్యాత్మిక శిష్టాచారం మరియు సిద్ధత*: 41 రోజుల వ్రత కాలం తపస్సు మరియు నియమం యొక్క ప్రాముఖ్యతను స్పష్టంగా తెలియజేస్తుంది, ఇది దైవంతో గాఢమైన ఆధ్యాత్మిక సంబంధాన్ని అన్వేషించాలనుకునే వారికి ముఖ్యమైనది. ఈ కాలంలో భక్తులు సబరిమలకు పవిత్ర యాత్రకు సిద్ధం కావడానికి మరియు ఆలయ ప్రాంగణంలోకి ప్రవేశించే ముందు పతినెట్టుపడికల్ పైకి ఎక్కేందుకు కఠిన నియమావళిని పాటిస్తారు.",
+
+                "*అనుమతిని కోరడం*: 41 రోజుల వ్రతాన్ని ప్రారంభించడానికి ముందు, భక్తుడు తల్లిదండ్రుల మరియు గురువుల అనుమతిని తీసుకోవాలి. వ్రత ప్రారంభానికి శుభముహూర్తం నిర్ణయించబడుతుంది, మరియు ఆ రోజు ముందురోజు కుటుంబ దేవతకు పూజలు చేస్తారు. ఈ పూజలో 1.25 విలువ కలిగిన నాణేలను పసుపు రంగు వస్త్రంలో కట్టిన పవిత్ర కట్టను కుటుంబ దేవతకు సమర్పిస్తారు, ఇది వ్రతం ప్రారంభించడానికి దేవత యొక్క అనుమతిని సూచిస్తుంది."
+    ],
+    
+    }
+
+
+    export const AyyappaMala = {
+
+        "en" :  [
+                    "*Preparation and Wearing of the Holy Mala*: Before the journey begins, devotees wear a beaded mala or garland, typically made of tulsi or rudraksha beads, symbolizing their detachment from material desires. Most start wearing the mala from the first day of Vrishchikam. While any day is appropriate, wearing it on a Saturday or on a day with the asterism Uthram—especially before Vrishchikam—adds auspiciousness. This alignment is revered as it marks the day Dharma Shastha (Lord Ayyappan) is believed to have been born on a Saturday with Uthram in Vrishchikam. Ideally, a Guruswami, an experienced devotee who has journeyed to Sabarimala numerous times, performs the mala-giving ceremony, usually within a temple or sacred place.",
+
+                    "*Commitment to Austerity*: With the sacred mala worn, the devotee commits himself fully to Lord Ayyappan, surrendering his thoughts, words, and actions to the divine. The devotee then adopts a disciplined, ascetic lifestyle.",
+
+                    "*Initiating the Fast*: On the first day, the devotee wakes before dawn, bathes, and offers prayers to the family deity, the Navagrahas (nine celestial bodies), and the holy mala. Accompanied by his Guru, he then proceeds to the temple to receive blessings and chants saranams as he formally begins his fast.",
+
+                    "*Renunciation and Devotional Activities*: Devotees mirror Lord Ayyappan, embracing renunciation by avoiding social engagements and focusing solely on spiritual practices. This includes prayers, poojas, bhajans, temple visits, and service activities like cleaning temples, helping the needy, and attending spiritual discourses. Abstaining from indulgences, they eat only satvic food, avoiding meat, alcohol, drugs, betel, and smoking. Celibacy is strictly observed.",
+
+                    "*Daily Rituals for 41 Days*: Devotees follow a set routine, starting with a pre-dawn bath, applying vibhooti and sandalwood paste, meditating, and singing hymns dedicated to Lord Ayyappan. They refrain from shaving, chant Dharma Shastha's name at least 108 times daily, and practice non-violence both physically and verbally. Fellow devotees are greeted as manifestations of the Lord himself. Devotees go about their fast quietly, without disturbing their household.",
+
+                    "*Further Sacrifices and Practices*: Devotees do not apply oil to their hair or body during this period. They keep a tulsi leaf with them to ward off negative influences and temptations. They also abstain from sleeping on a bed and do not wear footwear, enduring the physical challenges as a mark of humility and devotion."
+                ],
+        
+        "kn" :  [
+                    "*ಪವಿತ್ರ ಮಾಳಾ ಧಾರಣೆ ಮತ್ತು ಪೂರ್ವಸಿದ್ಧತೆ*: ಯಾತ್ರೆಗೆ ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು, ಭಕ್ತರು ಬೂತು ಅಥವಾ ರುದ್ರಾಕ್ಷ beads ಬೆತ್ತಲಾಗುವ ಮಾಳೆಯನ್ನು ಧರಿಸುತ್ತಾರೆ, ಇದು ಭೌತಿಕ ಆಸಕ್ತಿಗಳಿಂದ ಅವರ ವಿನಾಯಿತಿ ಸಂಕೇತವಾಗಿದೆ. ಬಹುಮತ ಭಕ್ತರು ಈ ಮಾಳೆಯನ್ನು ವೃಶ್ಚಿಕಮಾಸದ ಪ್ರಥಮ ದಿನದಿಂದ ಧರಿಸೋದು ಪ್ರಾರಂಭಿಸುತ್ತಾರೆ. ಯಾವುದೇ ದಿನವೂ ಸರಿಯಾದರೂ, ಅದನ್ನು ಶನಿವಾರ ಅಥವಾ ಉದ್ರಾಮ ನಕ್ಷತ್ರವಿರುವ ದಿನಗಳಲ್ಲಿ ಧರಿಸುವುದು ಶುಭಕಾರಕವೆಂದು ಪರಿಗಣಿಸಲಾಗುತ್ತದೆ. ಈ ಸಂಗತಿಗಳ ಸರಣಿ ಒಂದು ದಿನದಲ್ಲಿ ಸಾದರಿಯಾಗುವುದು ಬಹುಮಾನವಾಗಿರುವುದರಿಂದ, ಈ ದಿನಗಳಲ್ಲಿ ಒಂದನ್ನು ಆಯ್ಕೆಮಾಡಲಾಗುತ್ತದೆ. ಸಾಮಾನ್ಯವಾಗಿ ಭಕ್ತನು ಗುರುವಿನಿಂದ ಮಾಳೆಯನ್ನು ಪಡೆಯುತ್ತಾನೆ, ಯಾರು ಹಲವಾರು ಬಾರಿ сабಾರಿಮಲೆಗೆ ಹೋಗಿದವರು. ಈ ವಿಧಿ ಸಾಮಾನ್ಯವಾಗಿ ದೇವಸ್ಥಾನದ ಅಥವಾ ಪವಿತ್ರ ಸ್ಥಳದೊಳಗೆ ನಡೆಯುತ್ತದೆ.",
+
+                    "*ಆಧ್ಯಾತ್ಮಿಕ ಶಕ್ತಿಗೆ ಸಮರ್ಪಣೆ*: ಪವಿತ್ರ ಮಾಳೆಯನ್ನು ಧರಿಸಿದ ನಂತರ, ಭಕ್ತನು ತನ್ನ ಎಲ್ಲಾ ಚಿಂತನೆಗಳು, ಮಾತುಗಳು ಮತ್ತು ಕ್ರಿಯೆಗಳನ್ನು ದೇವರಲ್ಲಿ ಸಮರ್ಪಿಸುತ್ತದೆ. ಇದು ಅವನನ್ನು ಶಾಸ್ತ್ರಾರ್ಥಿಕ ಪ್ರಭಾವದಿಂದ ನಿವೃತ್ತಿ ಹೊಂದಲು ಮತ್ತು ಆಶ್ರಮದ ಜೀವನವನ್ನು ಅನುಸರಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ.",
+                
+                    "*ವ್ರತಪೂಜೆ ಪ್ರಾರಂಭ*: ಮೊದಲ ದಿನ ಭಕ್ತನು ಮುಂಜಾನೆ ಪ್ರೇಮದಿಂದ ಉತ್ಥಾನಗೊಂಡು, ಸ್ನಾನ ಮಾಡಿ, ಕುಟುಂಬದ ದೇವತೆ, ನವಗ್ರಹಗಳು (ಊರಿಗೊಂದು ಹತ್ತಾರು ಗ್ರಹಗಳು) ಮತ್ತು ಪವಿತ್ರ ಮಾಳೆಗೆ ಪೂಜೆ ಸಲ್ಲಿಸುತ್ತಾನೆ. ನಂತರ ಅವನು ತನ್ನ ಗುರು ಜೊತೆಗೆ ದೇವಾಲಯಕ್ಕೆ ತೆರಳಿ ಮಾಳೆಯನ್ನು ಪಡೆದ ನಂತರ ಸರನಾಮಗಳನ್ನು ಹಾರೈಸುತ್ತಾನೆ.",
+                
+                    "*ತೀವ್ರ ತ್ಯಾಗ ಮತ್ತು ಭಕ್ತಿಗೆ*: ಭಕ್ತರು ದೇವರು ಆಯ್ಯಪ್ಪನನ್ನಂತೆ, ಸಾಮಾಜಿಕ ಚಟುವಟಿಕೆಯಿಂದ ದೂರವಿರುತ್ತಾರೆಯೆಂದು ನಿರ್ಧರಿಸಿ ಪೂಜಾ, ಭಜನಗಳು, ದೇವಾಲಯದ ಭೇಟಿಗಳು ಮತ್ತು ದಾನ ಕಾರ್ಯಗಳನ್ನು ತಮ್ಮ ದಿನಚರಿಯಾಗಿ ಅನುಸರಿಸುತ್ತಾರೆ. ಅವರು ಮಾಂಸಾಹಾರ, ಮದ್ಯಪಾನ, ಮದ್ದು, ಪಾನಿ ಗಡ್ಡ, ಮತ್ತು ಧೂಮಪಾನದಿಂದ ದೂರವಿರುತ್ತಾರೆ. ಏಕೆಂದರೆ ಅವನು ಸಾತ್ವಿಕ ಆಹಾರವನ್ನು ಮಾತ್ರ ಸೇವಿಸನು.",
+                
+                    "*ದೈನಂದಿನ ವಿಧಿಗಳು (41 ದಿನಗಳ ಕಾಲ)*: ಭಕ್ತರು ಪ್ರತಿದಿನವೂ ಮುಂಜಾನೆ ಸ್ನಾನ ಮಾಡಿ, ವಿಷ್ಣು ದೇವತೆಯ ಗುರುತು, ಸಂಡಲ ಹಚ್ಚುವದು ಮತ್ತು ಧ್ಯಾನದಲ್ಲಿ ಹಾರೈಸುವ ಮೂಲಕ ಅವನನ್ನು ಪೂಜಿಸುತ್ತಾರೆ. ಅವರು ಹತ್ತಿರದ ಶುದ್ಧಿಕರಣವನ್ನು ಮಾಡಿ, ಪೌರಾಣಿಕ ಗ್ರಂಥಗಳನ್ನು ಶ್ರವಣಿಸುತ್ತಾರೆ. ಸ್ವಚ್ಛತೆ ಮತ್ತು ಉಪವಾಸ ನಿಜವಾದ ದ್ಯಾನ ಮತ್ತು ಪ್ರಾರ್ಥನೆಯಲ್ಲಿ ಯತ್ನಿಸುತ್ತಾರೆ.",
+                
+                    "*ಅದರ ಮುಂದೆ ತ್ಯಾಗಗಳು ಮತ್ತು ಅನುಷ್ಠಾನಗಳು*: ಅವನು ತನ್ನ ದೇಹ ಮತ್ತು ಕೂದಲು ಮೇಲೆ ಎಣ್ಣೆ ಹಚ್ಚುವುದಿಲ್ಲ. ಅವನು ಯಾವ ಪಾದರಕ್ಷೆಗಳನ್ನೂ ಧರಿಸುವುದಿಲ್ಲ ಮತ್ತು ದುರದೃಷ್ಟಗಳನ್ನು ಮತ್ತು ವ್ಯವಹಾರಗಳನ್ನು ತಡೆಯಲು ತುಲಸಿ ಎಲೆಗಳನ್ನು ಹೊಂದಿರುತ್ತಾನೆ. ಅವನು ತಮ್ಮ ದೇಹ ಹಾಗೂ ಮನಸ್ಸು ಅಥವಾ ಜೀವನದಲ್ಲಿ ಯಾವುದೇ ಬಿಕ್ಕಟ್ಟಿಗೆ ಬರಬಾರದು."
+        ],
+        "te" :  [
+                    "*పవిత్ర మాల ధారణ మరియు సిద్ధాంతం*: యాత్ర ప్రారంభం కాకముందు, భక్తులు తులసి లేదా రుద్రాక్ష బ珠లతో కూడిన మాలను ధరించి భౌతిక ప్రపంచపు అభిలాషలను అధిగమించే సంకేతంగా ఉంచుతారు. ఎక్కువ మంది భక్తులు ఈ మాలను వృష్చికమాసం ప్రారంభంలో మొదలు పెడతారు. శనివారం లేదా ఉద్రామ నక్షత్రంలో మాల ధరించడం శుభకరంగా భావించబడుతుంది. ఈ మూడు అంశాలు ఒకే రోజు కలిసే ఘటనా మాత్రమే rar కలవడం వలన, వాటిలో ఏదో ఒకటి ఎంపిక చేసుకుంటారు. సాధారణంగా భక్తుడు గూరుస్వామి నుండి మాల పొందుతారు, ఇతను సబారిమల‌కు అనేక సార్లు వెళ్లిన వ్యక్తి. ఈ విధి సాధారణంగా దేవాలయాల లేదా పవిత్ర స్థలాలలో నిర్వహించబడుతుంది.",
+
+                    "*ఆధ్యాత్మిక శక్తికి అంకితం*: పవిత్ర మాల ధరించిన తరువాత, భక్తుడు తన అన్ని ఆలోచనలు, మాటలు మరియు చర్యలను దైవానికి అంకితం చేస్తాడు. ఇది అతడిని శాస్త్రక్రియలలో స్థితి చెందడానికి మరియు శాంతి జీవితం అవలంబించడానికి ప్రారంభం చేస్తుంది.",
+
+                    "*వ్రతాన్ని ప్రారంభించడం*: మొదటి రోజు, భక్తుడు ఉదయాన్నే లేచి, స్నానం చేసి, కుటుంబ దేవత, నవగ్రహాలు (తమ అంగీకారం కోసం అంకితంగా) మరియు పవిత్ర మాలకు పూజలు అందిస్తాడు. తరువాత, అతడు తన గురుతో కలిసి దేవాలయానికి వెళ్లి, సరణం చెప్పడం ద్వారా మాలను పొందుతాడు.",
+
+                    "*తీవ్ర త్యాగం మరియు భక్తి*: భక్తులు ఆయ్యప్పను పోలి సామాజిక చర్యల నుంచి తప్పుకుంటారు మరియు అనేక ధ్యానాలు, పూజలు, భజనాలు, దేవాలయ సందర్శనలు మరియు దానం చేస్తారు. వారు మాంసాహారం, మద్యం, మందులు, పానీలాపాలు మరియు పొగాకు నుండి తప్పించుకుంటారు. వారు సాత్విక ఆహారాన్ని మాత్రమే తింటారు.",
+
+                    "*రోజువారీ విధులు (41 రోజులు)*: భక్తులు ప్రతిరోజూ ఉదయాన్నే స్నానం చేసి, విష్ణు దేవుని శరీరానికి ఉద్భవం, చందనం, పూత పూసి దైవాన్ని ప్రార్థిస్తారు. సాంప్రదాయ కార్యక్రమాలు, శుభ్రత చేస్తూ తమ దైనందిన ప్రయత్నాలలో భాగస్వామ్యంగా ఉంటారు.",
+
+                    "*తదుపరి త్యాగాలు మరియు అనుశాసనలు*: భక్తులు తమ శరీరానికి నూనె వేసుకోరు. వారు ఎప్పుడూ పాదరక్షలు ధరించరు మరియు తులసి ఆకును ప్రస్తుతిస్తారు, ఇది దుష్ట ప్రభావాలు మరియు గ్లామర్ నుండి దూరంగా ఉంచుతుంది. వారు తాము శరీరం, మనసు లేదా జీవితం లో ఎటువంటి విఘటనలకుz"
+        ],
+        
+        }
+
+        export const sabarimalaPilgrimage = {
+
+            "en" :  [
+
+                "*Start of the Pilgrimage: * The Sabarimala pilgrimage begins on the first day of the Malayalam month Vrischikam, which generally falls between November 14th and 17th. This marks the start of a spiritually significant journey for devotees.",
+  
+                "*Significance of Makarasankranti: * The most revered day for Lord Ayyappan is Makarasankranti, which occurs on the first day of the Malayalam month Makara, usually between January 14th and 16th. This day is celebrated with great devotion and fervor.",
+                
+                "*Miraculous Occurrences on Makarasankranti: * On Makarasankranti, miraculous events unfold every year. As the sacred jewels (Thiruvabharanam) are transported from the Old Pandalam Palace to Sabarimala, a holy eagle (Krishnaparunth) can be seen circling above the jewels, acting as a protector.",
+                
+                "*The Krishnaparunth's Sacred Role: * The rare eagle, a divine symbol, follows the Thiruvabharanam procession, hovering over the Sannidhanam at Sabarimala, circling it nine times to honor Lord Ayyappan.",
+                
+                "*Makara Jyothi - The Special Star: * During this divine moment, the sky is free from stars except for the special star, Makara Jyothi, which signifies a miraculous presence as the Lord receives his sacred jewels.",
+                
+                "*The Jewel Adornment Ritual: * Once the jewels are placed on the golden body of Lord Ayyappan within the temple, devotees gather in large numbers outside, chanting 'Swamiye Saranam Ayyappa' in unison, marking the culmination of the sacred process.",
+                
+                "*The Appearance of Makaravilakku: * After the Lord is adorned with the Thiruvabharanam, an effulgent light known as Makaravilakku shines three times on the hills of Ponnambalamedu, located opposite Sabarimala, completing the divine event."
+                    ],
+            
+            "kn" :  [
+                       "*ಪಣ್ಯಯಾತ್ರೆಯ ಪ್ರಾರಂಭ: * ಸಬರಿಮಲಾ ಪಣ್ಯಯಾತ್ರೆ ಮಲಯಾಳಂ ತಿಂಗಳ ವಿಜಯಿಕಮ್ ಮೊದಲ ದಿನದಲ್ಲಿ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ, ಇದು ಸಾಮಾನ್ಯವಾಗಿ ನವೆಂಬರ್ 14 ರಿಂದ 17 ರವರೆಗೆ ಆಗುತ್ತದೆ. ಇದು ಭಕ್ತರಿಗೆ ಆಧ್ಯಾತ್ಮಿಕವಾಗಿ ಮಹತ್ವದ ಒಂದು ಪ್ರಯಾಣದ ಪ್ರಾರಂಭವನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
+  
+                        "*ಮಕರ ಸಂಕ್ರಾಂತಿ ಮಹತ್ವ: * ಐಯಪ್ಪನಿಗೆ ಅತ್ಯಂತ ಪವಿತ್ರವಾದ ದಿನ ಮಕರ ಸಂಕ್ರಾಂತಿ, ಇದು ಮಲಯಾಳಂ ತಿಂಗಳ ಮಕರ ಮೊದಲ ದಿನದಲ್ಲಿ ನಡೆಯುತ್ತದೆ, ಸಾಮಾನ್ಯವಾಗಿ ಜನವರಿ 14 ರಿಂದ 16 ರವರೆಗೆ. ಈ ದಿನವು ಭಕ್ತಿಯಿಂದ ಹಾಗೂ ಪೂಜೆಯಿಂದ ಹರ್ಷದಿಂದ ಹಬ್ಬಿಸಲಾಗಿದೆ.",
+                        
+                        "*ಮಕರ ಸಂಕ್ರಾಂತಿ ಮಹಿಮೆ: * ಪ್ರತಿವರ್ಷವೂ makar ಸಂಕ್ರಾಂತಿಯಂದು ಅದ್ಭುತ ಘಟನೆಗಳು ನಡೆಯುತ್ತವೆ. ಪಂಡಲಂ ಪ್ಯಾಲೇಸ್‌ನಿಂದ ಸಬರಿಮಲಾಕ್ಕೆ ಪವಿತ್ರ ಕಮಳುಗಳು (ತಿರುವಭರಣಂ) ಸಾಗಿಸುವಾಗ, ಪವಿತ್ರ ಆದೇಶದ ಪಟವು (ಕ್ರಿಶ್ಣಪರುಂಜ್) ಅವುಗಳ ಮೇಲೆಯೇ ತಿರುಗುತ್ತದೆ, ಇದು ಅವುಗಳನ್ನು ರಕ್ಷಿಸುವುದಾಗಿ ತೋರಿಸುತ್ತದೆ.",
+                        
+                        "*ಕ್ರಿಶ್ಣಪರುಂಜ್ ಪವಿತ್ರ ಪಾತ್ರ: * ಇದು ಬಹುಪಾಲು ಹತ್ತಿರ ಜನರ ಮಧ್ಯೆ ಕಾಣಿಸಿಕೊಳ್ಳದ ಅತ್ಯಂತ ವೈಶಿಷ್ಟ್ಯವಾದ ಹಕ್ಕಿಯು, ಪವಿತ್ರ ಕಮಳುಗಳ ಪ್ರಕ್ರಿಯೆಗಳನ್ನು ಅನುಸರಿಸುತ್ತದೆ, ಸನ್ನಿಧಾನದಲ್ಲಿ ಸಬರಿಮಲಾದ ಮೇಲೆ ಏಳು ಬಾರಿ ತಿರುಗುತ್ತದೆ.",
+                        
+                        "*ಮಕರ ಜ್ಯೋತಿ - ವಿಶೇಷ ನಕ್ಷತ್ರ: * ಈ ದಿವ್ಯ ಕ್ಷಣದಲ್ಲಿ, ಆಕಾಶದಲ್ಲಿ ಯಾವುದೇ ನಕ್ಷತ್ರಗಳು ಕಾಣಿಸಿಕೊಂಡಿರುವುದಿಲ್ಲ ಹೊರತುಮಾಕರ ಜ್ಯೋತಿಯ ವಿಶೇಷ ನಕ್ಷತ್ರವೇನು ಇಲ್ಲದೆ, ಇದು ಅದ್ಭುತ ಉಸ್ತುವಾರಿ ಮತ್ತು ದಿವ್ಯ ಇರಾದೆಯನ್ನು ತೋರಿಸುತ್ತದೆ.",
+                        
+                        "*ಆಭರಣ ಧರಿಸುವ ಪೂಜೆ: * ಐಯಪ್ಪನ ಅವರ ಪ್ರಭಾವದಲ್ಲಿ ಆಭರಣಗಳನ್ನು ದೇವರ ಕೊರಗೊಂಬಿನಲ್ಲಿ ಇಡಲು ಪ್ರಕ್ರಿಯೆ ಪೂರ್ಣಗೊಂಡ ನಂತರ, ಭಕ್ತರು ಹೊರಗೊಮ್ಮಲುಗಳಲ್ಲಿಯೂ 'ಸ್ವಾಮಿಯೇ ಶರಣಂ ಆಯಪ್ಪ' ಎಂಬ ಧ್ವನಿಯನ್ನು ಒತ್ತಾರೆ.",
+                        
+                        "*ಮಕರವಿಲ್ಲಕ್ಕು - ನಗುಹರಿದು ಹೋಗುವ ಬೆಳಕು: * ತಿರುಭರಣಂ ಧರಿಸಿದ ನಂತರ, ಸಬರಿಮಲಾದ ಪಕ್ಕದ ಹೊತ್ತಿಯ ಮೇಲ್ಭಾಗದಲ್ಲಿ ಪೊನ್ನಂಬಾಲಮೇಡು ಪ್ರದೇಶದಲ್ಲಿ ಮಕರವಿಲ್ಲಕ್ಕು ಎಂಬ ಬೆಳಕು ಮೂರು ಬಾರಿ ಹಾರುತ್ತದೆ."
+            ],
+            "te" :  [
+                        "*యాత్ర ప్రారంభం: * సబరిమల యాత్ర మలయాళం నెల విరిచికమ్ మొదటి రోజు మొదలవుతుంది, ఇది సాధారణంగా నవంబర్ 14 నుండి 17 మధ్య జరుగుతుంది. ఇది భక్తుల కోసం ఆధ్యాత్మికంగా ముఖ్యమైన ప్రయాణం ప్రారంభం.",
+                        "*మకర సంక్రాంతి యొక్క ప్రాముఖ్యత: * అయ్యప్పుని కోసం అత్యంత పవిత్రమైన రోజు మకర సంక్రాంతి, ఇది మలయాళం నెల మకర మొదటి రోజున జరుగుతుంది, సాధారణంగా జనవరి 14 నుండి 16 మధ్య. ఈ రోజు భక్తితో మరియు పూజతో ఎంతో ఆహ్లాదకరంగా జరుపుకుంటారు.",
+                        "*మకర సంక్రాంతి వైశిష్ట్యం: * ప్రతి సంవత్సరం మకర సంక్రాంతి రోజున అద్భుతమైన సంఘటనలు చోటు చేసుకుంటాయి. పండలంలో ఉన్న పాత పండల రాజవాసం నుండి సబరిమలాకు పవిత్ర ఆభరణాలను (తిరువభరణం) తరలించేటప్పుడు, పవిత్ర గరుడ (కృష్ణపరుంధ) ఆభరణాల మీద చుట్టుకుంటూ వాటిని కాపాడుతుంటుంది.",
+                        "*కృష్ణపరుంధ పవిత్ర పాత్ర: * ఈ అరుదైన పక్షి, అత్యంత అరుదుగా ప్రజల మధ్య దృశ్యమవుతుంది, అయితే ఈ పవిత్ర పక్షి తిరువభరణం ప్రాసెషన్‌ను అనుసరిస్తూ, సన్నిధానంలో సబరిమల వద్ద తొమ్మిది సార్లు చుట్టుకుంటుంది.",
+                        
+                        "*మకర జ్యోతీ - ప్రత్యేక నక్షత్రం: * ఈ పవిత్ర క్షణంలో, ఆకాశంలో మిగతా నక్షత్రాలు కనపడవు, ఒక్క మకర జ్యోతీ అనే ప్రత్యేక నక్షత్రం మాత్రమే ఉంటది, ఇది దివ్య ఉనికి మరియు పవిత్ర శక్తిని సూచిస్తుంది.",
+                        
+                        "*ఆభరణాల అలంకరణ: * ఒకసారి ఆభరణాలు దేవుడి బంగారు శరీరంపై ఉంచిన తరువాత, భక్తులు బయట పెద్ద సంఖ్యలో సేకరించి 'స్వామియే శరణం అయ్యప్ప' అంటూ గానమాడుతారు.",
+                        
+                        "*మకరవిలక్కు - వెలుగుద్యోతం: * తిరువభరణం ధరించిన తరువాత, సబరిమల యొక్క ప్రతిచూపును ఎదురుగా ఉన్న కొండలపై పన్నంబలమేడులో మకరవిలక్కు అనే వెలుగుతో మూడు సార్లు మెరుస్తుంది."
+            ],
+            
+            }
+
+export const deekshaGuidelines = {
+
+                "en" :  [
+    
+                    "*Swamiye Sharanam Ayyappa: * The chant of ‘Swamiye Sharanam Ayyappa’ is central to this spiritual discipline. Repeat it with devotion throughout the day.",
+  
+  "*Bathing Routine: * Start and end your day with a bath using cold or room-temperature water, which is believed to purify the body and soul.",
+  
+  "*Daily Temple Visits: * Make it a practice to visit the temple every day, especially in the early morning and evening hours.",
+  
+  "*Pooja Rituals: * Perform pooja twice daily: once before sunrise and again after sunset. Begin your day with prayers to Lord Ganesh, Subramanyam, Durga, and Ayyappan.",
+  
+  "*Chanting Hairivarasanam: * Chant the Hairivarasanam only after completing the evening pooja as part of your devotion.",
+  
+  "*Naivedyam for Ayyappa: * Offering fruits as Naivedyam (offering) is considered acceptable and appropriate for Lord Ayyappa.",
+  
+  "*Bath after Work: * Upon returning home in the evening from work, take a bath before you do anything else.",
+  
+  "*Dress Code: * Wear saffron, blue, or preferably black clothes during your spiritual observance.",
+  
+  "*Mala Discipline: * Keep the mala (sacred beads) on you at all times and never remove it.",
+  
+  "*Fresh Clothes Daily: * Change into fresh clothes every day. It is advisable to have at least two pairs of black clothes and wash them daily.",
+  
+  "*Breakfast: * Fruits are recommended for breakfast as they are considered pure and simple nourishment.",
+  
+  "*Lunch: * Ensure to consume freshly cooked food before noon. Avoid leftovers from the previous day.",
+  
+  "*Dinner: * For dinner, opt for light food such as upma or idli to maintain balance.",
+  
+  "*Dietary Restrictions: * Avoid onions, garlic, eggs, and meat products. These are not permissible during the observance.",
+  
+  "*Avoid Outside Food: * Completely refrain from eating outside food, ensuring that all meals are prepared with care and devotion.",
+  
+  "*Annadanam Invitation: * If an Ayyappa devotee or a family friend invites you for Annadanam (meal offering), do not refuse. Ensure they have followed the cleanliness rituals and that women are not in their menstrual cycle.",
+  
+  "*Preparing Meals: * When preparing meals, ensure to take a bath beforehand to maintain purity during the cooking process.",
+  
+  "*Entertainment Avoidance: * Refrain from entertainment, focusing instead on spiritual growth and discipline.",
+  
+  "*Control Anger and Speak Less: * Practice patience, control anger, and speak only when necessary.",
+  
+  "*Addressing Others: * Always address women as 'Matha' (Mother) and men as 'Swamy' (Lord), regardless of their relationship to you.",
+  
+  "*Brahmacharyam (Celibacy): * Maintain strict celibacy. Avoid any physical contact with your spouse during this time.",
+  
+  "*Women’s Monthly Cycle: * During a woman's menstrual cycle, the husband or Swamy should prepare meals for everyone in the household.",
+  
+  "*No Smoking or Drinking: * Smoking and drinking are prohibited as they hinder the spiritual discipline.",
+  
+  "*Footwear Guidelines: * Avoid wearing footwear when possible. If you must, like at work, try to limit the use of shoes.",
+  
+  "*Beard and Hair Care: * Avoid shaving your beard, combing your hair, or cutting nails during the vow period.",
+  
+  "*Bhajan Participation: * Attend as many bhajans as possible during your deeksha (vow) time to deepen your connection with the divine.",
+  
+  "*Tulasi Leaf: * Keep a Tulasi (holy basil) leaf with you as it is believed to protect you from negative or evil thoughts."
+                        
+],
+                
+                "kn" :  [
+                           "*ಸ್ವಾಮಿಯೆ ಶರಣಂ ಆಯಪ್ಪ: * ‘ಸ್ವಾಮಿಯೆ ಶರಣಂ ಆಯಪ್ಪ’ ಎಂಬ ಹೃದಯಪೂರ್ವಕ ಧಾರ್ಮಿಕ ನಾಮವನ್ನು ದಿನದ నಾದಿಯಲ್ಲಿ ಕೇಳಿ.",
+  
+  "*ನದಿಯ ಶುದ್ಧಿಕರಣೆ: * ಪ್ರತಿ ದಿನವನ್ನು ಮುಂಜಾನೆಯಿಂದ ಮತ್ತು ಸಂಜೆಗೂ ಚಳಿಗಾಲದ ಅಥವಾ ಕೊಠಡಿಯ ತಂಪಾದ ನೀರಿನಿಂದ ಸ್ನಾನ ಮಾಡಿ.",
+  
+  "*ದಿನಸ್ಪೂರ್ತಿ ದೇವಾಲಯ ದರ್ಶನ: * ಪ್ರತಿದಿನವೂ ದೇವಾಲಯವನ್ನು ಭೇಟಿಕೊಡುವುದು ಆದರ್ಶವಾಗಿದೆ, ವಿಶೇಷವಾಗಿ ಮುಂಜಾನೆಯಿಂದ ಮತ್ತು ಸಂಜೆ ಸಮಯದಲ್ಲಿ.",
+  
+  "*ಪೂಜಾ ವಿಧಿ: * ಪ್ರತಿದಿನವೂ ಪೂಜೆಯನ್ನು ಎರಡು ಬಾರಿ ಮಾಡಬೇಕು: ಒಂದು ಹೊತ್ತಿಗೆ ಮುಂಜಾನೆಯಿಂದ ಮತ್ತು ಮತ್ತೊಮ್ಮೆ ಸಂಜೆಗಾಲದಲ್ಲಿ. ಗಣೇಶ, ಸುಬ್ರಹ್ಮಣ್ಯ, ದುರ್ಗಾ ಮತ್ತು ಆಯಪ್ಪನಿಗೆ ವಿಶೇಷ ಪೂಜೆ ಸಲ್ಲಿಸಬೇಕು.",
+  
+  "*ಹರಿವರಾಸನಂ ಪಠಣ: * ಹರಿವರಾಸನಂ ಪಠಣವನ್ನು ಸಂಪೂರ್ಣ ಸಂಜೆ ಪೂಜೆಗೆ ಬಳಿಕವೇ ಮಾಡಬೇಕು.",
+  
+  "*ನೈವೇದ್ಯ ಸಮರ್ಪಣೆ: * ಆಯಪ್ಪನಿಗೆ ಹಣ್ಣುಗಳನ್ನು ನೈವೇದ್ಯವಾಗಿ ಅರ್ಪಿಸಬಹುದು.",
+  
+  "*ಕಾರ್ಯದಿಂದ ಮನೆಗೆ ಬಂದ ನಂತರ ಸ್ನಾನ ಮಾಡುವುದು: * ನಿಮ್ಮ ಕೆಲಸದಿಂದ ಮನೆಗೆ ಹಿಂದಿರುಗಿದಾಗ, ಮೊದಲಿಗೆ ಸ್ನಾನ ಮಾಡಿ.",
+  
+  "*ಪ لباسಧಾರಣ: * ಗುರು, ನೀಲಿ ಅಥವಾ ಕಪ್ಪು ಬಟ್ಟೆಗಳು ಧರಿಸುವುದು ಅತ್ಯಂತ ಪ್ರಾಮುಖ್ಯವಾಗಿದೆ.",
+  
+  "*ಮಾಲೆ ಧಾರಣೆ: * ಮಾಲೆಯನ್ನು ಯಾವಾಗಲೂ ಧರಿಸಿ, ಅದನ್ನು ತೆಗೆದುಹಾಕಬೇಡಿ.",
+  
+  "*ಹೆಚ್ಚು ಬಟ್ಟೆಗಳು: * ಪ್ರತಿದಿನವೂ ಹೊಸ ಬಟ್ಟೆಗಳು ಧರಿಸಬೇಕು. ಎರಡು ಜೋಡಿ ಕಪ್ಪು ಬಟ್ಟೆಗಳು ಇಟ್ಟುಕೊಂಡು ಪ್ರತಿದಿನವೂ ತಲುಪಿಸಬೇಕು.",
+  
+  "*ಉಪಹಾರ: * ಹಣ್ಣುಗಳು ಉಪಹಾರವನ್ನು ಅನುಮೋದಿತವಿವರವಾಗಿ ಸೇವಿಸಬೇಕು.",
+  
+  "*ಮಧ್ಯಾಹ್ನ ಭೋಜನ: * ಮಧ್ಯಾಹ್ನದ ಮೊದಲು ಹೊಸಮುಗಿದ ಆಹಾರ ಸೇವಿಸಬೇಕು.",
+  
+  "*ರಾತ್ರಿ ಭೋಜನ: * ರಾತ್ರಿ ಲಘು ಆಹಾರ ಸೇವಿಸಬೇಕು: ಉಪ್ಮಾ ಅಥವಾ ಇಡ್ಲಿ.",
+  
+  "*ಆಹಾರ ನಿಯಮಗಳು: * ಈರುಳ್ಳಿ, ಬೆಳ್ಳುಳ್ಳಿ, ಮೊಟ್ಟೆ ಅಥವಾ ಮಾಂಸಭಕ್ಷ್ಯಗಳು ಸೇವಿಸಲು ಅನುಮತಿಸದವು.",
+  
+  "*ಬಳಿಕಿನ ಆಹಾರ: * ಹೊರಗಿನ ಆಹಾರದಿಂದ ದೂರವಿರಬೇಕು.",
+  
+  "*ಅಣ್ಣಾದಾನ ಆಹ್ವಾನ: * ಯಾವು ಆಯಪ್ಪ ಸ್ವಾಮಿ ಅಥವಾ ಕುಟುಂಬದ ಸ್ನೇಹಿತರು ಆಹ್ವಾನ ನೀಡಿದರೆ ಅದನ್ನು ನಿರಾಕರಿಸಬೇಡಿ.",
+  
+  "*ಆಹಾರ ತಯಾರಿಸುವುದು: * ಆಹಾರವನ್ನು ತಯಾರಿಸುವಾಗ ಸ್ನಾನ ಮಾಡಿ ಮತ್ತು ಶುದ್ಧತೆ ಕಾಯ್ದುಕೊಳ್ಳಿ.",
+  
+  "*ಮನೋರಂಜನೆ: * ಮನೋರಂಜನೆಯನ್ನು ತಪ್ಪಿಸಬೇಕು.",
+  
+  "*ಕೋಪ ಮತ್ತು ಮಾತು: * ಕೋಪವನ್ನು ನಿಯಂತ್ರಿಸಿ, ಕಡಿಮೆ ಮಾತಾಡಿ.",
+  
+  "*ಹೆಣ್ಣುಗಳನ್ನು ಮಾತೆ, ಗಂಡನ್ನು ಸ್ವಾಮಿ ಎಂದು ಕರೆಯಿರಿ: * ಮಹಿಳೆಗಳನ್ನು ಮಾತೆ ಎಂದೂ, ಗಂಡುಗಳನ್ನು ಸ್ವಾಮಿ ಎಂದೂ ಉದ್ದೇಶಿಸಿ.",
+  
+  "*ಬ್ರಹ್ಮಚರ್ಯ: * ಬ್ರಹ್ಮಚರ್ಯವನ್ನು ಪಾಲಿಸಿ, ನಿಮ್ಮ ಸಂಗಾತಿಯನ್ನು ಸ್ಪರ್ಶಿಸಬೇಡಿ.",
+  
+  "*ಮಾಸಿಕ ಚಕ್ರ: * ಮಹಿಳೆಯ ಮಾಸಿಕ ಚಕ್ರದ ಸಮಯದಲ್ಲಿ, ಸ್ವಾಮಿ ಅಹಾರವನ್ನು ತಯಾರಿಸಬೇಕು.",
+  
+  "*ಸ್ಮೋಕಿಂಗ್ ಮತ್ತು ಪಾನೀಯ: * ಸ್ಮೋಕಿಂಗ್ ಮತ್ತು ಪಾನೀಯಗಳನ್ನು ತಪ್ಪಿಸಬೇಕು.",
+  
+  "*ಚಪ್ಪಲ್ ಧಾರಣೆ: * ಚಪ್ಪಲನ್ನು ತಪ್ಪಿಸಬೇಕು.",
+  
+  "*ಹುಬ್ಬು ಮತ್ತು ಕೂದಲು: * ಮೂಣ ಮತ್ತು ಕೂದಲು ಕತ್ತರಿಸುವುದನ್ನು ತಪ್ಪಿಸಬೇಕು.",
+  
+  "*ಭಜನೆಗೆ ಹಾಜರಾಗುವುದು: * ಭಜನೆಗಳನ್ನು ಹಾಜರಾಗಲು ಪ್ರಯತ್ನಿಸು.",
+  
+  "*ತುಳಸಿ ಎಲೆ: * ತುಳಸಿ ಎಲೆ ನಿಮ್ಮೊಂದಿಗೆ ಇರಿಸು."
+                ],
+                "te" :  [
+                            "*స్వామియే శరణం ఆయప్ప: * ‘స్వామియే శరణం ఆయప్ప’ అనే భక్తి నామాన్ని రోజు మొత్తం భక్తితో పఠించండి.",
+  
+  "*స్నానం: * ప్రతిరోజూ ఉదయం మరియు సాయంత్రం చల్లటి లేదా గదీ నీటితో స్నానం చేయాలి.",
+  
+  "*దినచర్య ఆలయ దర్శనం: * ప్రతి రోజు ఆలయానికి వెళ్లండి, ముఖ్యంగా ఉదయం మరియు సాయంత్రం.",
+  
+  "*పూజ విధి: * ప్రతి రోజు రెండు సార్లు పూజ చేయండి: ఒకటి ఉదయం మరియు మరొకటి సాయంత్రం. గణేశ్, సుబ్రమణ్య, దుర్గ మరియు ఆయప్పనికి పూజ చేయండి.",
+  
+  "*హరివరాసనం పఠనం: * హరివరాసనం పఠనం సాయంత్రం పూజ తర్వాత చేయాలి.",
+  
+  "*నైవేద్య అర్పణ: * ఆయప్పనికి ఫలాలు నైవేద్యంగా అర్పించవచ్చు.",
+  
+  "*పని ముగిసిన తర్వాత స్నానం చేయడం: * పని ముగించాక ఇంటికి వచ్చినప్పుడు, ముందుగా స్నానం చేయండి.",
+  
+  "*వస్త్రధారణ: * సఫ్రాన్, నీలం లేదా నలుపు రంగు వస్త్రాలు ధరించండి.",
+  
+  "*మాల ధరించడం: * మాలను ఎప్పటికీ తీసుకోకండి.",
+  
+  "*ప్రతి రోజు కొత్త వస్త్రాలు ధరించడం: * ప్రతి రోజు కొత్త వస్త్రాలు ధరించండి. కనీసం రెండు జంటల నలుపు వస్త్రాలు ఉంచి వాటిని ప్రతిరోజూ కడగాలి.",
+  
+  "*ఉపాహారం: * ఉపాహారంగా ఫలాలు తీసుకోవడం ఉత్తమం.",
+  
+  "*మధ్యాహ్న భోజనం: * మధ్యాహ్నం నూనె వంటకాలు మరియు పెరుగుతో వంట చేసి భోజనం చేయాలి.",
+  
+  "*రాత్రి భోజనం: * రాత్రి తేలికగా వంటలు చేసుకోవాలి, ఉదా: ఉప్మా, ఇడ్లీ.",
+  
+  "*ఆహార నియమాలు: * ఉల్లిపాయ, వెల్లుల్లి, గుడ్లు, మాంసం మరియు మాంసాహారాలు తీసుకోవడం నిషేధం.",
+  
+  "*బయటి ఆహారం: * బయటి ఆహారాన్ని పూర్తిగా తప్పించండి.",
+  
+  "*అన్నదాన ఆహ్వానం: * ఏ ఎయ్యప్ప స్వామి లేదా కుటుంబ సభ్యులు అన్నదానం కోసం ఆహ్వానిస్తే, దయచేసి తిరస్కరించకండి.",
+  
+  "*ఆహారం తయారీ: * ఆహారం తయారు చేసే ముందు, స్నానం చేయడం మరియు శుద్ధి పాటించడం అవసరం.",
+  
+  "*మంచి మనసు కలిగి ఉండటం: * వినోదం, కోపం మరియు మాటలు తగ్గించడం.",
+  
+  "*స్త్రీలను ‘మాత’ అని, పురుషులను ‘స్వామి’ అని పిలవడం.",
+  
+  "*బ్రహ్మచర్యం పాటించడం: * బ్రహ్మచర్యం పాటించి, భార్యను, లేదా ఇతరులను తాకడం తప్పించండి.",
+  
+  "*సంతాన ధర్మం: * మహిళలు వారి సంతాన ధర్మాన్ని పాటిస్తూ, వారు ఆలయంలో నెమ్మదిగా భోజనం చేయాలి.",
+  
+  "*స్మోకింగ్, పానీయాలు: * మత్తు, స్మోకింగ్, పానీయాలు వాడటం తప్పించాలి.",
+  
+  "*చప్పల లేకపోవడం: * సాధ్యమైనంత వరకు చప్పలు వేసుకోవడం నివారించండి.",
+  
+  "*మూణి మరియు జుట్టు కత్తిరించడం: * జుట్టు మరియు ముఖాన్ని కత్తిరించడం తప్పించండి.",
+  
+  "*భజనాలు: * భజనాలకు హాజరయ్యే ప్రయత్నం చేయండి.",
+  
+  "*తులసి ఆకు: * తులసి ఆకు మీతో ఉంచండి."
+                ],
+                
+                }
+
+export const housePoojaGuidelines = {
+
+                    "en" :  [
+        
+                        "*Morning and Evening Bath: * Take a bath with cold or room temperature water both in the morning and evening.",
+  
+  "*Daily Temple Visit: * It is recommended to visit the temple every day, especially during the early morning and evening.",
+  
+  "*Twice Daily Pooja: * Perform pooja twice a day, once before sunrise in the morning and once after sunset in the evening.",
+  
+  "*Regular Pooja with Ashotharam: * Along with your usual pooja, recite Ashotharam (108 names) for Lord Ganesh, Subramanyam, Durga, and Ayyappan."
+                            ],
+                    
+                    "kn" :  [
+                               "*ಊರದ ಮತ್ತು ಸಂಜೆ ಸ್ನಾನ: * ಬೆಳಿಗ್ಗೆ ಮತ್ತು ಸಂಜೆ, ತಂಪಾದ ಅಥವಾ ಕೋಣೆ ತಾಪಮಾನದ ನೀರಿನಿಂದ ಸ್ನಾನ ಮಾಡಿ.",
+  
+  "*ದೈನಿಕ ದೇವಾಲಯ ಭೇಟಿಯು: * ಪ್ರತಿದಿನವೂ ದೇವಾಲಯಕ್ಕೆ ಭೇಟಿ ನೀಡುವುದು ಶ್ರೇಷ್ಠ, ವಿಶೇಷವಾಗಿ ಬೆಳಿಗ್ಗೆ ಮತ್ತು ಸಂಜೆ.",
+  
+  "*ದ್ವಾದಶ ಕಾಲದ ಪೂಜೆಯು: * ಪ್ರತಿದಿನವೂ ಎರಡು ಬಾರಿ ಪೂಜೆ ಮಾಡುವುದು, ಒಂದು ಬೆಳಿಗ್ಗೆ ಸೂರ್ಯೋದಯದ ಮೊದಲು ಮತ್ತು ಒಂದು ಸಂಜೆ ಸೂರ್ಯಾಸ್ತದ ನಂತರ.",
+  
+  "*ನಿಯಮಿತ ಪೂಜೆ ಮತ್ತು ಆಶೋತಾರಂ: * ನಿಮ್ಮ ನಿಯಮಿತ ಪೂಜೆಗೆ ಗಣೇಶ್, ಸುಬ್ರಮಣ್ಯ, ದುರ್ಗಾ ಮತ್ತು ಆಯಪ್ಪನಿಗೆ ಆಶೋತಾರಂ (108 ನಾಮಗಳು) ಹೇಳಿ."
+                    ],
+                    "te" :  [
+                                "*ప్రభాత మరియు సాయంత్రపు స్నానం: * ఉదయం మరియు సాయంత్రం, చల్లని లేదా గదిని తాపన తేచిన నీటితో స్నానం చేయండి.",
+  
+  "*ప్రతిరోజూ దేవాలయ సందర్శన: * ప్రతిరోజూ దేవాలయానికి సందర్శన చేయడం ఉత్తమం, ముఖ్యంగా ఉదయం మరియు సాయంత్రం.",
+  
+  "*రోజుకి రెండు సార్లు పూజ: * ఉదయం సూర్యోదయానికి ముందు మరియు సాయంత్రం సూర్యాస్తమయానికి తర్వాత పూజ చేయండి.",
+  
+  "*నియమిత పూజ మరియు ఆశోతారం: * మీ ప్రతిరోజు పూజతో పాటు గణేశ్, సుబ్రహ్మణ్య, దుర్గా మరియు ఆయప్పన్ కి ఆశోతారం (108 నామాలు) చెప్పండి."
+                    ],
+                    
+                    }

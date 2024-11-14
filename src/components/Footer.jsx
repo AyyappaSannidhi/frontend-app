@@ -1,20 +1,19 @@
 import logo from '../assets/images/logo.png';
-import translations from "../js/translations/mainTranslations";
-import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 import routes from "../js/routes";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
-  const language = useSelector((state) => state.language.currentLanguage);
+  const { t } = useTranslation(); // Access i18n instance
 
   return (
     <footer className="w-full bg-gray-800 p-8"> {/* Changed background color to dark gray */}
       <div className="flex flex-row flex-wrap items-center justify-between gap-y-6 gap-x-12 text-center text-white"> {/* Changed text color to white */}
         <div className="flex items-center"> {/* Use flexbox to align items */}
           <img src={logo} alt="company logo" className="w-10 mr-2" /> {/* Add a margin to the right of the image */}
-            <p>Sri Ayyappa Swamy Seva Sannidhi (SASSS)</p>
+            <p>{t('common.sriAyppaSwamySevaSannidhi')}</p>
         </div>
         
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
@@ -23,7 +22,7 @@ const Footer = () => {
               to={routes.contactRoute}
               className="font-normal transition-colors hover:text-orange-500 focus:text-orange-500" // Changed hover color to orange
             >
-              {translations.contactUs[language]}
+              {t('common.contactUs')}
             </Link>
           </li>
           <li>
@@ -31,7 +30,7 @@ const Footer = () => {
               to={routes.termsAndConditionsRoute}
               className="font-normal transition-colors hover:text-orange-500 focus:text-orange-500" // Changed hover color to orange
             >
-              {translations.termsAndConditions[language]}
+              {t('common.termsAndConditions')}
             </Link>
           </li>
           <li>
@@ -39,7 +38,7 @@ const Footer = () => {
               to={routes.privacyAndDisclaimerRoute}
               className="font-normal transition-colors hover:text-orange-500 focus:text-orange-500" // Changed hover color to orange
             >
-              {translations.privacyAndDisclaimer[language]}
+              {t('common.privacyAndDisclaimer')}
             </Link>
           </li>
           <li>
@@ -47,7 +46,7 @@ const Footer = () => {
               to={routes.donationPolicyRoute}
               className="font-normal transition-colors hover:text-orange-500 focus:text-orange-500" // Changed hover color to orange
             >
-              {translations.donationPolicy[language]}
+              {t('common.donationPolicy')}
             </Link>
           </li>
           <li>
@@ -55,7 +54,15 @@ const Footer = () => {
               to={routes.faqRoute}
               className="font-normal transition-colors hover:text-orange-500 focus:text-orange-500" // Changed hover color to orange
             >
-              {translations.faq[language]}
+              {t('common.faq')}
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={routes.useFullLinksRoute}
+              className="font-normal transition-colors hover:text-orange-500 focus:text-orange-500" // Changed hover color to orange
+            >
+              {t('common.useFullLinks')}
             </Link>
           </li>
         </ul>

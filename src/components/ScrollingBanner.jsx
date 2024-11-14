@@ -1,9 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import React from "react";
-import translations from "../js/translations/mainTranslations";
 
 const ScrollingBanner = () => {
+  const { t } = useTranslation();
 
-  const scrollingText = translations.ScrollingBannerText['en'];
+  const scrollingText = t('common.ScrollingBannerText');
     return (
 <div className="overflow-hidden fixed w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white text-lg font-semibold h-10 flex items-center z-20" style={{ top: "5.7rem" }}>
       <div

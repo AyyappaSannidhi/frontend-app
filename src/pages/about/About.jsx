@@ -1,17 +1,15 @@
 import TextWithImage from "../../components/TextWithImage"
 import AboutImage from "../../assets/images/main.jpg";
-import {  HomeText } from "../../js/data";
-import { useSelector } from 'react-redux';
-import translations from "../../js/translations/mainTranslations";
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
-const language = useSelector((state) => state.language.currentLanguage); // Redux selector for language
+  const { t } = useTranslation();
 
 return (
   <div>
     <TextWithImage
-          heading={translations.SASSS[language]}
-          textPoints={HomeText[language]}
+          heading={t('common.sriAyppaSwamySevaSannidhi')}
+          textPoints={t('homePage.text')}
           imageUrl={AboutImage}
         />
     </div>

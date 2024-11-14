@@ -1,14 +1,14 @@
-// alankaraMiddleware.js
-import { setLanguage } from '../slice/languageSlice';
 import { generateAndSetPoojaTimings } from '../slice/poojaTimingsSlice';
+import i18n from 'i18next';
 
-const poojaTimingsMiddleware = (store) => (next) => (action) => {
-  next(action);
+const poojaTimingsMiddleware = (store) => {
+  // Listen for language changes in i18n
+  i18n.on('languageChanged', () => {
+    // Dispatch the action to update pooja timings when the language changes
+    store.dispatch(generateAndSetPoojaTimings());
+  });
 
-  if (action.type === setLanguage.type) {
-    const currentLanguage = store.getState().language.currentLanguage; // Assuming your language slice has the current language
-    store.dispatch(generateAndSetPoojaTimings(currentLanguage)); // Dispatch the action to update schedule
-  }
+  return (next) => (action) => next(action); // Standard middleware pattern
 };
 
 export default poojaTimingsMiddleware;
