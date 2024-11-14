@@ -12,7 +12,7 @@ i18n
     debug: true,
     returnObjects: true,
     backend: {
-      loadPath: '/src/assets/locales/{{lng}}.json', // Update the path if needed
+      loadPath: '/locales/{{lng}}.json', // Update the path if needed
     },
     interpolation: {
       escapeValue: false, // React already escapes values
