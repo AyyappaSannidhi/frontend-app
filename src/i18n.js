@@ -8,9 +8,10 @@ i18n
   .use(LanguageDetector) // Detect user’s language
   .use(initReactI18next) // Initializes i18next for React
   .init({
-    fallbackLng: 'en', // Default language if translation not available
     debug: true,
     returnObjects: true,
+    lng: 'en', //default language
+    fallbackLng: 'en', // Default language if translation not available
     backend: {
       loadPath: '/locales/{{lng}}.json', // Update the path if needed
     },
