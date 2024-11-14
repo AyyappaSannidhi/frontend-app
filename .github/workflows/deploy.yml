@@ -35,6 +35,7 @@ jobs:
       - name: Terraform Plan (Test)
         env:
           TF_VAR_environment: "test"
+          TF_VAR_website_url: ${{ secrets.WEBSITE_URL_TEST }}
           TF_VAR_s3_bucket_name: ${{ secrets.TEST_S3_BUCKET_NAME }} 
         run: terraform plan
         working-directory: ./terraform
@@ -72,7 +73,6 @@ jobs:
     needs: build-and-deploy-to-test-env
     environment:
       name: production
-      url: https://www.ayyappasannidhi.com
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -96,6 +96,7 @@ jobs:
       - name: Terraform Plan (Production)
         env:
           TF_VAR_environment: "production"
+          TF_VAR_website_url: ${{ secrets.WEBSITE_URL_PROD }}
           TF_VAR_s3_bucket_name: ${{ secrets.PROD_S3_BUCKET_NAME }} 
         run: terraform plan
         working-directory: ./terraform

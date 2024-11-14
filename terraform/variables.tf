@@ -8,6 +8,11 @@ variable "environment" {
   type        = string
 }
 
+variable "website_url" {
+  description = "The environment url"
+  type        = string
+}
+
 variable "s3_ip_addresses" {
   description = "List of IP addresses to allow for access to the S3 bucket"
   type        = list(string)

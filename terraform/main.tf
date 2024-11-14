@@ -1,4 +1,3 @@
-# S3 Bucket for static website hosting
 resource "aws_s3_bucket" "website" {
   bucket = var.s3_bucket_name
 }
@@ -39,6 +38,17 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
       }
     ]
   })
+}
+
+resource "aws_s3_bucket_cors_configuration" "website_cors" {
+  bucket = aws_s3_bucket.website.id
+
+  cors_rule {
+    allowed_headers = ["*"]
+    allowed_methods = ["GET"]
+    allowed_origins = [var.website_url]
+    expose_headers  = []
+  }
 }
 
 locals {
