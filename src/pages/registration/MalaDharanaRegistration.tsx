@@ -1,10 +1,30 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { SyntheticEvent } from 'react';
 
 const MalaDharanaRegistration = () => {
   const { t } = useTranslation();
 
-  const [formData, setFormData] = useState({
+  const handleChange = (e: SyntheticEvent) => {
+    const target = e.target as HTMLInputElement;
+    const { name, value, type, checked } = target;
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? checked : value,
+    });
+  };
+
+
+  const handleSubmit = (e :SyntheticEvent) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
+  interface FormData {
+    [key: string]: string | boolean;
+  }
+  
+  const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
     gothram: '',
@@ -16,19 +36,6 @@ const MalaDharanaRegistration = () => {
     endDate: '',
     isKanniSwami: false,
   });
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === 'checkbox' ? checked : value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
 
   const handleClear = () => {
     setFormData({
@@ -71,7 +78,7 @@ const MalaDharanaRegistration = () => {
               <input
                 type={type}
                 name={name}
-                value={formData[name]}
+                value={formData[name].toString()}
                 onChange={handleChange}
                 pattern={pattern}
                 className="mt-1 block w-full border border-gray-300 p-2 rounded-md"
@@ -83,10 +90,10 @@ const MalaDharanaRegistration = () => {
             <label className="block text-sm font-medium text-gray-700">Full Address</label>
             <textarea
               name="address"
-              value={formData.address}
+              value={formData.address.toString()}
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 p-2 rounded-md"
-              rows="3"
+              rows={3}
               required
             />
           </div>
@@ -95,7 +102,7 @@ const MalaDharanaRegistration = () => {
             <input
               type="text"
               name="city"
-              value={formData.city}
+              value={formData.city.toString()}
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 p-2 rounded-md"
               required
@@ -109,7 +116,7 @@ const MalaDharanaRegistration = () => {
               <input
                 type="date"
                 name={name}
-                value={formData[name]}
+                value={formData[name].toString()}
                 onChange={handleChange}
                 className="mt-1 block w-full border border-gray-300 p-2 rounded-md"
                 required
@@ -120,7 +127,7 @@ const MalaDharanaRegistration = () => {
             <input
               type="checkbox"
               name="isKanniSwami"
-              checked={formData.isKanniSwami}
+              checked={Boolean(formData.isKanniSwami)}
               onChange={handleChange}
               className="mr-2"
             />
