@@ -1,4 +1,4 @@
-import { configureStore, Middleware, MiddlewareAPI, Dispatch, AnyAction } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import alankaraReducer from './slice/alankaraSlice';
 import poojaTimingsReducer from './slice/poojaTimingsSlice';
 import alankaraMiddleware from './middleWare/alankaraMiddleware';

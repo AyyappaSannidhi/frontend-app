@@ -14,7 +14,7 @@ export const makeTextBold = (textsArray: any) => {
   }
 
   // If textsArray is an array of strings, process each string
-  return textsArray.map((text, index) => {
+  return textsArray.map((text : string, index : number) => {
     const parts: string[] = text.split(/(\*[^*]+\*)/); // Split based on *bold* text
 
     return (

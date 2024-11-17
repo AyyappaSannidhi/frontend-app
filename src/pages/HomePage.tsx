@@ -24,8 +24,8 @@ const HomePage = () => {
   const alankaraSchedule = useSelector(selectAlankaraSchedule);
   const poojaTimings = useSelector(selectPoojaTimings);
 
-  const showDateColumn1 = alankaraSchedule.some(item => item.date);
-  const showDateColumn2 = poojaTimings.some(item => item.date);
+  const showDateColumn1 = alankaraSchedule.some((item: any) => item.date);
+  const showDateColumn2 = poojaTimings.some((item: any) => item.date);
 
   const headers1 = {
     col1: 'Date',
@@ -46,17 +46,17 @@ const HomePage = () => {
 
   return (
     <div>
-      <LazyImageWrapper src={BannerImage}/>
+      <LazyImageWrapper src={BannerImage} alt={""}/>
       <TextWithImage
         heading={t('homePage.heading')}
-        textPoints={t('homePage.text')}
+        textPoints={t('homePage.text') as any}
         imageUrl={AboutImage}
         fullList={false}
       />
 
       <TabMenu
         heading={t('common.frequentlyAskedQuestions')}
-        labels = {t('common.faqMenuItems')}
+        labels = {t('common.faqMenuItems') as any}
         contents={contents}
         length={3}
         backGround="bg-gray-100"
@@ -65,7 +65,7 @@ const HomePage = () => {
 
       <Heading heading={t('common.ayyappaDeekshaTitles')} marginTop={"mt-8"}/>
       <Timeline years={years18} 
-        descriptions={t('ayyappaDeeksha.ayyappaDeekshaTitles')} 
+        descriptions={t('ayyappaDeeksha.ayyappaDeekshaTitles') as any} 
         fullList={false} 
       />
 
@@ -75,7 +75,7 @@ const HomePage = () => {
         headers1={headers1}
         headers2={headers2}
         showDateColumn1={showDateColumn1}
-        showDateColum2={showDateColumn2}
+        showDateColumn2={showDateColumn2}
         table1={alankaraSchedule}
         table2={poojaTimings}
       />

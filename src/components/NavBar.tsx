@@ -11,7 +11,7 @@ import { faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { clearUser } from "../store/slice/userSlice";
-import { store } from "../store/store";
+import * as storeModule from "../store/store";
 
 const NavBar: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -24,7 +24,7 @@ const NavBar: React.FC = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navBarMenu = useNavbarMenu();
 
-  const { user } = useSelector((state: store) => state.user); // Access user state from Redux
+  const { user } = useSelector((state : storeModule.RootState) => state.user); // Access user state from Redux
   const dispatch = useDispatch();
 
   const changeLanguage = (language: string): void => {

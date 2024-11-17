@@ -18,7 +18,9 @@ const MainLayout: React.FC = () => {
       <ToastContainer />
       <BackToTopButton />
       <AddTopMargin />
-      <Outlet style={{ paddingTop: "2.5rem" }} />
+      <div style={{ paddingTop: "2.5rem" }}>
+        <Outlet />
+      </div>
       <Footer />
     </>
   );

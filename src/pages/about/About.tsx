@@ -9,7 +9,7 @@ return (
   <div>
     <TextWithImage
           heading={t('common.sriAyppaSwamySevaSannidhi')}
-          textPoints={t('homePage.text')}
+          textPoints={t('homePage.text') as any}
           imageUrl={AboutImage}
         />
     </div>
