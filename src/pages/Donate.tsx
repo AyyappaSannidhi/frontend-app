@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Heading from '../components/Heading';
 import { useTranslation } from 'react-i18next';
+import { SyntheticEvent } from 'react';
 
 const Donate = () => {
   const { t } = useTranslation(); // Access i18n instance
@@ -14,18 +15,17 @@ const Donate = () => {
     amount: '', // Added amount field
   });
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (e: SyntheticEvent) => {
+    const { name, value, type, checked } = (e.target as HTMLInputElement);
     setFormData((prevData) => ({
       ...prevData,
       [name]: type === 'checkbox' ? checked : value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
     console.log(formData);
-    alert("Form submitted successfully!");
   };
 
   return (

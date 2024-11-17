@@ -2,10 +2,8 @@ import { GoogleLogin } from "@react-oauth/google";
 import jwt_decode from "jwt-decode";
 import { useDispatch } from "react-redux";
 import { setUser } from "../store/slice/userSlice";
+import { CredentialResponse } from "@react-oauth/google";
 
-interface CredentialResponse {
-  credential: string;
-}
 
 interface decodedValues { 
   id: string
@@ -18,9 +16,13 @@ const GoogleLoginButton = () => {
   const dispatch = useDispatch();
 
   const handleSuccess = (credentialResponse: CredentialResponse) => {
-    const decoded : decodedValues = jwt_decode(credentialResponse.credential);
-    dispatch(setUser(decoded));
-    console.log("User Info:", decoded);
+    if (credentialResponse.credential) {
+      const decoded: decodedValues = jwt_decode(credentialResponse.credential);
+      dispatch(setUser(decoded));
+      console.log("User Info:", decoded);
+    } else {
+      console.log("No credential received");
+    }
   };
 
   const handleError = () => {

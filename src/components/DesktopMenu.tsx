@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 interface SubMenu {
   name: string;
@@ -20,8 +22,7 @@ interface DesktopMenuProps {
 
 const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
   const [isHover, setIsHover] = useState(false);
-  const menuRef = useRef(null); // No need to explicitly type if TypeScript can infer the type
-
+  const menuRef = useRef<HTMLLIElement>(null);
   const subMenuAnimate = {
     enter: { opacity: 1, rotateX: 0, transition: { duration: 0.5 }, display: "block" },
     exit: { opacity: 0, rotateX: -15, transition: { duration: 0.5 }, transitionEnd: { display: "none" } },
@@ -54,7 +55,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
       >
         {menu.name} 
         {/* Remove or conditionally hide ChevronDown */}
-        {hasSubMenu && false && <ChevronDown className="mt-[0.9px] group-hover/link:rotate-180 duration-200" />}
+        {hasSubMenu && false && <FontAwesomeIcon icon={faChevronDown} className="mt-[0.9px] group-hover/link:rotate-180 duration-200" />}
       </Link>
 
       {hasSubMenu && (

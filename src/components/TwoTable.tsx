@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
 import CommonTable from "./CommonTable";
 import Heading from './Heading';
-import routes from "../scripts/routes";
+import { TableHeaders } from "./CommonTable";
 
 interface TwoTableProps {
   heading1: string;
   heading2: string;
-  headers1: string[];
-  headers2: string[];
+  headers1: TableHeaders;
+  headers2: TableHeaders;
   showDateColumn1: boolean;
   showDateColumn2: boolean;
   table1: any[]; // Adjust the type according to your table data structure
@@ -26,7 +25,6 @@ const TwoTable: React.FC<TwoTableProps> = ({
 }) => {
   return (
     <div className="w-full lg:w-[90%] p-4 mx-auto">
-      <Link to={routes.poojaScheduleRoute}>
         <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-8">
           <div className="w-full lg:w-1/2 flex flex-col items-center">
             <Heading heading={heading1} />
@@ -42,7 +40,6 @@ const TwoTable: React.FC<TwoTableProps> = ({
             </div>
           </div>
         </div>
-      </Link>
     </div>
   );
 };

@@ -18,7 +18,6 @@ import GuideLines from "./pages/library/GuideLines";
 import AyyappaDeekshaTitles from "./pages/library/AyyappaDeekshaTitles";
 import Contact from "./pages/about/Contact";
 import Donate from "./pages/Donate";
-import LogIn from "./components/LogIn";
 import routes from "./scripts/routes";
 import Faq from "./pages/about/Faq";
 import MalaDharanaRegistration from "./pages/registration/MalaDharanaRegistration";
@@ -61,7 +60,6 @@ const App: React.FC = () => {
                 <Route path={routes.guideLinesRoute} element={<AyyappaDeekshaTitles />} />
                 <Route path={routes.contactRoute} element={<Contact />} />
                 <Route path={routes.donateRoute} element={<Donate />} />
-                <Route path={routes.logInRoute} element={<LogIn />} />
                 <Route path={routes.donationPolicyRoute} element={<DonationPolicy />} />
                 <Route
                     path={routes.privacyAndDisclaimerRoute}

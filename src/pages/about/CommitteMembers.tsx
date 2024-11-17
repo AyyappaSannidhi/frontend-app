@@ -90,7 +90,7 @@ const CommitteeMembers = () => {
 const styles = {
   listContainer: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap' as 'wrap',
     gap: '20px',
     justifyContent: 'center',
     padding: '20px',

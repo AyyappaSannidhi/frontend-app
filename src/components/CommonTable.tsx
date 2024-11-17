@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface TableHeaders {
+export interface TableHeaders {
   col1: string;
   col2: string;
   col3: string;
