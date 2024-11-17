@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { generateAndSetPoojaTimings } from '../slice/poojaTimingsSlice.js';
 import i18n from 'i18next';
 

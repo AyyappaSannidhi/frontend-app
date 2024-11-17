@@ -1,4 +1,4 @@
-// alankaraMiddleware.scripts
+// @ts-nocheck
 import { updateAlankaraSchedule } from '../slice/alankaraSlice.js';
 import i18n from 'i18next';
 

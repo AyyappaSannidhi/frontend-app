@@ -3,7 +3,7 @@ import Loader from './Loader';
 
 interface LazyImageWrapperProps extends ImgHTMLAttributes<HTMLImageElement> {
   src: string;
-  alt: string;
+  alt?: string;
   className?: string;
 }
 
