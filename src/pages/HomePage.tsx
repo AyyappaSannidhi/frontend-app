@@ -40,10 +40,10 @@ const HomePage = () => {
   };
 
   const contents = [
-      makeTextBold(t('ayyappaDeeksha.dosInMala')),
-      makeTextBold(t('ayyappaDeeksha.dontInMala'))
+      makeTextBold(t('ayyappaDeeksha.dosInMala') as any ),
+      makeTextBold(t('ayyappaDeeksha.dontInMala') as any )
     ]
-
+    
   return (
     <div>
       <LazyImageWrapper src={BannerImage} alt={""}/>

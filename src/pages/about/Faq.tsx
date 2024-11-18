@@ -5,12 +5,10 @@ import { makeTextBold } from "../../components/common";
 const Faq = () => {
   const { t } = useTranslation();
   
-  // Ensure the contents is an array of strings
-  const contents: string[][] = [
-    makeTextBold(t('common.dosInMala') as any),
-    makeTextBold(t('common.dontInMala') as any),
+  const contents = [
+    makeTextBold(t('ayyappaDeeksha.dosInMala') as any),
+    makeTextBold(t('ayyappaDeeksha.dontInMala') as any),
   ];
-
   return (
     <div>
       <TabMenu
