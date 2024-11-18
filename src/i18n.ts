@@ -5,7 +5,7 @@ import Backend from 'i18next-http-backend';
 
 // Define the i18n configuration options type
 const i18nConfig: InitOptions = {
-    debug: true,
+    debug: false,
     returnObjects: true,
     lng: 'en', // Default language
     fallbackLng: 'en', // Default language if translation not available

@@ -23,7 +23,7 @@ const TabMenu: React.FC<TabMenuProps> = ({
 }) => {
   const [selectedTab, setSelectedTab] = useState<number>(0); // Default to the first tab
   const { t } = useTranslation(); // Access i18n instance
-
+  
   const contentToShow = contents[selectedTab]?.slice(0, length) || [];
 
   return (
