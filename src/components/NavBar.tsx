@@ -3,8 +3,7 @@ import Logo from "../assets/images/logo.png";
 import DesktopMenu from "../components/DesktopMenu";
 import MobMenu from "../components/MobMenu";
 import { useState, useEffect, useRef } from "react";
-import LoginIn from "../components/LogIn";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import routes from "../scripts/routes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage } from "@fortawesome/free-solid-svg-icons";
@@ -12,19 +11,20 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { clearUser } from "../store/slice/userSlice";
 import * as storeModule from "../store/store";
+import { setUser } from "../store/slice/userSlice";
 
 const NavBar: React.FC = () => {
   const { t, i18n } = useTranslation();
   const currentLanguage: string = i18n.language;
-
+  const [isLoading, setIsLoading] = useState(true);
   const [isDropdownOpen, setDropdownOpen] = useState<boolean>(false);
   const [isProfileDropdownOpen, setProfileDropdownOpen] = useState<boolean>(false);
-  const [isModalOpen, setModalOpen] = useState<boolean>(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navBarMenu = useNavbarMenu();
+  const navigate = useNavigate(); // Hook for navigation
 
-  const { user } = useSelector((state : storeModule.RootState) => state.user); // Access user state from Redux
+  const { user } = useSelector((state: storeModule.RootState) => state.user);
   const dispatch = useDispatch();
 
   const changeLanguage = (language: string): void => {
@@ -42,18 +42,28 @@ const NavBar: React.FC = () => {
   const handleLogout = (): void => {
     dispatch(clearUser());
     setProfileDropdownOpen(false);
+    localStorage.removeItem("user");
   };
 
   useEffect(() => {
-    if (user) {
-      setModalOpen(false);
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const user = JSON.parse(storedUser);
+      dispatch(setUser(user));
     }
+    setIsLoading(false);
+  }, [dispatch]);
 
+  useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [user]);
+  }, []);
+
+  if (isLoading) {
+    return null; // Or a loading spinner, if needed
+  }
 
   return (
     <div>
@@ -106,7 +116,7 @@ const NavBar: React.FC = () => {
               </div>
             ) : (
               <button
-                onClick={() => setModalOpen(true)}
+                onClick={() => navigate(routes.loginRoute)} // Navigate to the login page
                 aria-label="login"
                 className="bg-transparent text-white font-semibold px-4 py-2 rounded-full border-2 border-white hover:bg-orange-500 transition duration-300 text-sm"
               >
@@ -164,8 +174,6 @@ const NavBar: React.FC = () => {
           )}
         </div>
       </div>
-
-      <LoginIn isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 };

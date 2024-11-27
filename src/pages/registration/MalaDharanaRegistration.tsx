@@ -1,165 +1,242 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { SyntheticEvent } from 'react';
+import { Formik, Field, Form } from 'formik';
+import * as Yup from 'yup';
 
 const MalaDharanaRegistration = () => {
-  const { t } = useTranslation();
+  const [totalDays, setTotalDays] = useState(0);
 
-  const handleChange = (e: SyntheticEvent) => {
-    const target = e.target as HTMLInputElement;
-    const { name, value, type, checked } = target;
-    setFormData({
-      ...formData,
-      [name]: type === 'checkbox' ? checked : value,
-    });
-  };
-
-
-  const handleSubmit = (e :SyntheticEvent) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
-  interface FormData {
-    [key: string]: string | boolean;
-  }
-  
-  const [formData, setFormData] = useState<FormData>({
-    firstName: '',
-    lastName: '',
-    gothram: '',
-    phoneNumber: '',
-    email: '',
-    address: '',
-    city: '',
-    startDate: '',
-    endDate: '',
-    isKanniSwami: false,
+  const validationSchema = Yup.object({
+    fullName: Yup.string().required('Full Name is required'),
+    gothram: Yup.string().required('Gothram is required'),
+    mobileNumber: Yup.string()
+      .matches(/^\d{10}$/, 'Mobile number should be 10 digits')
+      .required('Mobile Number is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    address: Yup.string().required('Address is required'),
+    startDate: Yup.date().required('Start Date is required'),
+    endDate: Yup.date().required('End Date is required'),
+    totalDaysOfMalaDharan: Yup.number().min(0, 'Total days cannot be negative').required(),
   });
 
-  const handleClear = () => {
-    setFormData({
-      firstName: '',
-      lastName: '',
-      gothram: '',
-      phoneNumber: '',
-      email: '',
-      address: '',
-      city: '',
-      startDate: '',
-      endDate: '',
-      isKanniSwami: false,
-    });
+  const handleDateChange = (startDate, endDate, setFieldValue) => {
+    if (startDate && endDate) {
+      const start = new Date(startDate);
+      const end = new Date(endDate);
+      const days = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+      setTotalDays(days >= 0 ? days : 0);
+      setFieldValue("totalDaysOfMalaDharan", days >= 0 ? days : 0);  // Update Formik's field value
+    }
   };
 
   return (
-    <div className="flex flex-wrap p-6 bg-gray-100 min-h-screen">
-      {/* Left side with form */}
-      <div className="w-full md:w-1/2 p-4 bg-white shadow-md rounded-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-6">
-          {t('common.malaDharanaRegistration')}
-        </h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Input fields */}
-          {[
-            { label: 'First Name', name: 'firstName', type: 'text' },
-            { label: 'Last Name (Surname)', name: 'lastName', type: 'text' },
-            { label: 'Gothram', name: 'gothram', type: 'text' },
-            {
-              label: 'Phone Number (India only)',
-              name: 'phoneNumber',
-              type: 'tel',
-              pattern: '[0-9]{10}',
-            },
-            { label: 'Email', name: 'email', type: 'email' },
-          ].map(({ label, name, type, pattern }) => (
-            <div key={name}>
-              <label className="block text-sm font-medium text-gray-700">{label}</label>
-              <input
-                type={type}
-                name={name}
-                value={formData[name].toString()}
-                onChange={handleChange}
-                pattern={pattern}
-                className="mt-1 block w-full border border-gray-300 p-2 rounded-md"
-                required
-              />
-            </div>
-          ))}
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Full Address</label>
-            <textarea
-              name="address"
-              value={formData.address.toString()}
-              onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 p-2 rounded-md"
-              rows={3}
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">City</label>
-            <input
-              type="text"
-              name="city"
-              value={formData.city.toString()}
-              onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 p-2 rounded-md"
-              required
-            />
-          </div>
-          {['startDate', 'endDate'].map((name, i) => (
-            <div key={name}>
-              <label className="block text-sm font-medium text-gray-700">
-                {i === 0 ? 'Mala Dharana Start Date' : 'Mala Dharana End Date'}
-              </label>
-              <input
-                type="date"
-                name={name}
-                value={formData[name].toString()}
-                onChange={handleChange}
-                className="mt-1 block w-full border border-gray-300 p-2 rounded-md"
-                required
-              />
-            </div>
-          ))}
-          <div className="flex items-center">
-            <input
-              type="checkbox"
-              name="isKanniSwami"
-              checked={Boolean(formData.isKanniSwami)}
-              onChange={handleChange}
-              className="mr-2"
-            />
-            <label className="text-sm font-medium text-gray-700">
-              Are you wearing Mala for the first time (Kanni Swami)?
-            </label>
-          </div>
-          <div className="flex space-x-4 mt-4">
-            <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">
-              Submit
-            </button>
-            <button
-              type="button"
-              onClick={handleClear}
-              className="bg-gray-400 text-white px-4 py-2 rounded-md"
-            >
-              Clear
-            </button>
-          </div>
-        </form>
+    <div className="flex flex-col lg:flex-row gap-8 px-6 py-8 max-w-screen-xl mx-auto">
+      <div className="lg:w-7/12 border p-6 rounded shadow-md bg-white">
+        <h2 className="text-2xl font-bold text-gray-700 mb-4">Mala Dharana Registration</h2>
+
+        <Formik
+          initialValues={{
+            fullName: '',
+            gothram: '',
+            mobileNumber: '',
+            email: '',
+            address: '',
+            startDate: '',
+            endDate: '',
+            totalDaysOfMalaDharan: 0,
+            kanniSwamiCheck: false,
+            irumudiYatraInterest: false,
+          }}
+          validationSchema={validationSchema}
+          onSubmit={(values) => {
+            console.log('Form Submitted', values);
+            alert("form is under development!")
+          }}
+        >
+          {({ values, handleChange, handleBlur, errors, touched, setFieldValue }) => (
+            <Form className="space-y-6">
+              {/* Full Name */}
+              <div>
+                <label className="block text-gray-600 font-medium">Full Name</label>
+                <Field
+                  type="text"
+                  name="fullName"
+                  value={values.fullName}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className="border rounded w-full p-2"
+                />
+                {errors.fullName && touched.fullName && (
+                  <div className="text-red-500 text-sm">{errors.fullName}</div>
+                )}
+              </div>
+
+              {/* Gothram */}
+              <div>
+                <label className="block text-gray-600 font-medium">Gothram</label>
+                <Field
+                  type="text"
+                  name="gothram"
+                  value={values.gothram}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className="border rounded w-full p-2"
+                />
+                {errors.gothram && touched.gothram && (
+                  <div className="text-red-500 text-sm">{errors.gothram}</div>
+                )}
+              </div>
+
+              {/* Mobile Number */}
+              <div>
+                <label className="block text-gray-600 font-medium">Mobile Number</label>
+                <Field
+                  type="text"
+                  name="mobileNumber"
+                  value={values.mobileNumber}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className="border rounded w-full p-2"
+                />
+                {errors.mobileNumber && touched.mobileNumber && (
+                  <div className="text-red-500 text-sm">{errors.mobileNumber}</div>
+                )}
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-gray-600 font-medium">Email</label>
+                <Field
+                  type="email"
+                  name="email"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className="border rounded w-full p-2"
+                />
+                {errors.email && touched.email && (
+                  <div className="text-red-500 text-sm">{errors.email}</div>
+                )}
+              </div>
+
+              {/* Address */}
+              <div>
+                <label className="block text-black font-medium">Address</label>
+                <Field
+                  type="text"
+                  name="address"
+                  value={values.address}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className="border rounded w-full p-2 text-black"
+                />
+                {errors.address && touched.address && (
+                  <div className="text-red-500 text-sm">{errors.address}</div>
+                )}
+              </div>
+
+              {/* Start Date */}
+              <div>
+                <label className="block text-gray-600 font-medium">Start Date</label>
+                <Field
+                  type="date"
+                  name="startDate"
+                  value={values.startDate}
+                  onChange={(e) => {
+                    handleChange(e);
+                    handleDateChange(e.target.value, values.endDate, setFieldValue);
+                  }}
+                  onBlur={handleBlur}
+                  className="border rounded w-full p-2"
+                />
+                {errors.startDate && touched.startDate && (
+                  <div className="text-red-500 text-sm">{errors.startDate}</div>
+                )}
+              </div>
+
+              {/* End Date */}
+              <div>
+                <label className="block text-gray-600 font-medium">End Date</label>
+                <Field
+                  type="date"
+                  name="endDate"
+                  value={values.endDate}
+                  onChange={(e) => {
+                    handleChange(e);
+                    handleDateChange(values.startDate, e.target.value, setFieldValue);
+                  }}
+                  onBlur={handleBlur}
+                  className="border rounded w-full p-2"
+                />
+                {errors.endDate && touched.endDate && (
+                  <div className="text-red-500 text-sm">{errors.endDate}</div>
+                )}
+              </div>
+
+              {/* Total Days */}
+              <div>
+                <label className="block text-bold text-black font-medium">Total Days of Mala Dharan</label>
+                <div className="border rounded w-full p-2">{totalDays}</div>
+              </div>
+
+              {/* Kanni Swami Checkbox */}
+              <div>
+                <label className="flex items-center space-x-2">
+                  <Field
+                    type="checkbox"
+                    name="kanniSwamiCheck"
+                    checked={values.kanniSwamiCheck}
+                    onChange={handleChange}
+                    className="h-5 w-5"
+                  />
+                  <span className="text-gray-600">Kanni Swami</span>
+                </label>
+              </div>
+
+              {/* Irumudi Yatra Checkbox */}
+              <div>
+                <label className="flex items-center space-x-2">
+                  <Field
+                    type="checkbox"
+                    name="irumudiYatraInterest"
+                    checked={values.irumudiYatraInterest}
+                    onChange={handleChange}
+                    className="h-5 w-5"
+                  />
+                  <span className="text-gray-600">Irumudi Yatra Interest</span>
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-500 text-white font-medium py-2 rounded hover:bg-blue-600"
+              >
+                Submit
+              </button>
+            </Form>
+          )}
+        </Formik>
       </div>
 
-      {/* Right side with text */}
-      <div className="w-full md:w-1/2 p-4 bg-white shadow-md rounded-lg mt-6 md:mt-0">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Mala Dharana Overview</h2>
-        <p className="text-gray-700">
-          The Mala Dharana ritual marks the beginning of a spiritual journey
-          towards the Sabarimala pilgrimage. Devotees observe strict practices
-          and undertake vows to purify their mind, body, and soul. Please fill
-          out the registration form to officially begin your journey.
-        </p>
+      {/* Right Side - Info or Instructions */}
+      <div className="lg:w-7/12 min-h-screen flex flex-col">
+        <div className="flex-1 border p-6 rounded shadow-md bg-gray-50 flex flex-col mb-4">
+          <h2 className="text-xl font-bold text-gray-700 mb-4">Instructions</h2>
+          <p className="text-gray-600 flex-grow">
+            Please fill out the form with accurate details. Ensure that the start and end dates are
+            correct to calculate the total days for Mala Dharan. Check the boxes for additional
+            details like Kanni Swami and Irumudi Yatra if applicable.
+          </p>
+        </div>
+
+        <div className="flex-1 border p-6 rounded shadow-md bg-gray-50 flex flex-col">
+          <h2 className="text-xl font-bold text-gray-700 mb-4">Additional Information</h2>
+          <p className="text-gray-600 flex-grow">
+            Additional information, such as Kanni Swami and Irumudi Yatra interest, can be added here.
+          </p>
+        </div>
       </div>
+
+
     </div>
   );
 };
