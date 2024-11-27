@@ -26,5 +26,6 @@
   "exclude": [
     "src/store/middleWare/alankaraMiddleware.ts",
     "src/store/middleWare/poojaTimingsMiddleware.ts",
+    "src/pages/registration/MalaDharanaRegistration.tsx",
   ]
 }
