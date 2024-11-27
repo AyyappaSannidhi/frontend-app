@@ -18,13 +18,13 @@ const MalaDharanaRegistration = () => {
     totalDaysOfMalaDharan: Yup.number().min(0, 'Total days cannot be negative').required(),
   });
 
-  const handleDateChange = (startDate, endDate, setFieldValue) => {
+  const handleDateChange = (startDate: string, endDate: string, setFieldValue: Function) => {
     if (startDate && endDate) {
       const start = new Date(startDate);
       const end = new Date(endDate);
-      const days = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+      const days = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
       setTotalDays(days >= 0 ? days : 0);
-      setFieldValue("totalDaysOfMalaDharan", days >= 0 ? days : 0);  // Update Formik's field value
+      setFieldValue("totalDaysOfMalaDharan", days >= 0 ? days : 0);
     }
   };
 
@@ -70,70 +70,6 @@ const MalaDharanaRegistration = () => {
                 )}
               </div>
 
-              {/* Gothram */}
-              <div>
-                <label className="block text-gray-600 font-medium">Gothram</label>
-                <Field
-                  type="text"
-                  name="gothram"
-                  value={values.gothram}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className="border rounded w-full p-2"
-                />
-                {errors.gothram && touched.gothram && (
-                  <div className="text-red-500 text-sm">{errors.gothram}</div>
-                )}
-              </div>
-
-              {/* Mobile Number */}
-              <div>
-                <label className="block text-gray-600 font-medium">Mobile Number</label>
-                <Field
-                  type="text"
-                  name="mobileNumber"
-                  value={values.mobileNumber}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className="border rounded w-full p-2"
-                />
-                {errors.mobileNumber && touched.mobileNumber && (
-                  <div className="text-red-500 text-sm">{errors.mobileNumber}</div>
-                )}
-              </div>
-
-              {/* Email */}
-              <div>
-                <label className="block text-gray-600 font-medium">Email</label>
-                <Field
-                  type="email"
-                  name="email"
-                  value={values.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className="border rounded w-full p-2"
-                />
-                {errors.email && touched.email && (
-                  <div className="text-red-500 text-sm">{errors.email}</div>
-                )}
-              </div>
-
-              {/* Address */}
-              <div>
-                <label className="block text-black font-medium">Address</label>
-                <Field
-                  type="text"
-                  name="address"
-                  value={values.address}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className="border rounded w-full p-2 text-black"
-                />
-                {errors.address && touched.address && (
-                  <div className="text-red-500 text-sm">{errors.address}</div>
-                )}
-              </div>
-
               {/* Start Date */}
               <div>
                 <label className="block text-gray-600 font-medium">Start Date</label>
@@ -141,7 +77,7 @@ const MalaDharanaRegistration = () => {
                   type="date"
                   name="startDate"
                   value={values.startDate}
-                  onChange={(e) => {
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     handleChange(e);
                     handleDateChange(e.target.value, values.endDate, setFieldValue);
                   }}
@@ -160,7 +96,7 @@ const MalaDharanaRegistration = () => {
                   type="date"
                   name="endDate"
                   value={values.endDate}
-                  onChange={(e) => {
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     handleChange(e);
                     handleDateChange(values.startDate, e.target.value, setFieldValue);
                   }}
@@ -176,34 +112,6 @@ const MalaDharanaRegistration = () => {
               <div>
                 <label className="block text-bold text-black font-medium">Total Days of Mala Dharan</label>
                 <div className="border rounded w-full p-2">{totalDays}</div>
-              </div>
-
-              {/* Kanni Swami Checkbox */}
-              <div>
-                <label className="flex items-center space-x-2">
-                  <Field
-                    type="checkbox"
-                    name="kanniSwamiCheck"
-                    checked={values.kanniSwamiCheck}
-                    onChange={handleChange}
-                    className="h-5 w-5"
-                  />
-                  <span className="text-gray-600">Kanni Swami</span>
-                </label>
-              </div>
-
-              {/* Irumudi Yatra Checkbox */}
-              <div>
-                <label className="flex items-center space-x-2">
-                  <Field
-                    type="checkbox"
-                    name="irumudiYatraInterest"
-                    checked={values.irumudiYatraInterest}
-                    onChange={handleChange}
-                    className="h-5 w-5"
-                  />
-                  <span className="text-gray-600">Irumudi Yatra Interest</span>
-                </label>
               </div>
 
               <button
@@ -235,8 +143,6 @@ const MalaDharanaRegistration = () => {
           </p>
         </div>
       </div>
-
-
     </div>
   );
 };
