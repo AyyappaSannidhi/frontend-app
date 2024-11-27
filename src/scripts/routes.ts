@@ -22,6 +22,7 @@ const routes = {
     donationPolicyRoute : '/donation_policy',
     privacyAndDisclaimerRoute : '/privacy_disclaimer',
     faqRoute : '/faq',
+    loginRoute : '/login',
 }
 
 export default routes;
