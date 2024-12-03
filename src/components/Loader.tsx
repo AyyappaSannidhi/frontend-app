@@ -1,9 +1,13 @@
 import './css/Loader.css';
 
-const Loader: React.FC = () => {
+interface LoaderProps {
+  dots?: number;
+}
+
+const Loader: React.FC<LoaderProps> = ({dots = 8}) => {
   return (
     <div className="loader">
-      {[...Array(8)].map((_, i) => (
+      {[...Array(dots)].map((_, i) => (
         <div
           key={i}
           style={{

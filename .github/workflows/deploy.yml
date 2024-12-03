@@ -1,4 +1,4 @@
-name: Deploy to S3
+name: Build and Release to S3
 
 on:
   push:
@@ -6,10 +6,18 @@ on:
       - main
 
 env:
-  AWS_REGION: us-east-1
-
+  AWS_REGION: ${{ vars.AWS_REGION }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  GOOGLE_CLIENT_ID  : ${{ secrets.GOOGLE_CLIENT_ID }}
+  TEST_CLOUD_FLARE_ID  : ${{ secrets.TEST_CLOUD_FLARE_ID }}
+  PROD_CLOUD_FLARE_ID  : ${{ secrets.PROD_CLOUD_FLARE_ID }}
+  TEST_BACKEND_URL  : ${{ secrets.TEST_BACKEND_URL }}
+  PROD_BACKEND_URL  : ${{ secrets.PROD_BACKEND_URL }}
+  TEST_S3_BUCKET_NAME : ${{ secrets.TEST_S3_BUCKET_NAME }}
+  PROD_S3_BUCKET_NAME : ${{ secrets.PROD_S3_BUCKET_NAME }}
 jobs:
-  terraform-test-env:
+  build-and-deploy-to-test-env:
     runs-on: ubuntu-latest
     environment: test
     steps:
@@ -19,61 +27,27 @@ jobs:
       - name: Configure AWS credentials for test
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Install Terraform
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: 1.0.0
-
-      - name: Terraform Init (Test)
-        run: terraform init
-        working-directory: ./terraform
-
-      - name: Terraform Plan (Test)
+      - name: Build React App
         env:
-          TF_VAR_environment: "test"
-          TF_VAR_website_url: ${{ secrets.WEBSITE_URL_TEST }}
-          TF_VAR_s3_bucket_name: ${{ secrets.TEST_S3_BUCKET_NAME }} 
-        run: terraform plan
-        working-directory: ./terraform
-
-      - name: Terraform Apply to Test
-        env:
-          TF_VAR_environment: "test"
-          TF_VAR_website_url: ${{ secrets.WEBSITE_URL_TEST }}
-          TF_VAR_s3_bucket_name: ${{ secrets.TEST_S3_BUCKET_NAME }}
-        run: terraform apply -auto-approve
-        working-directory: ./terraform
-
-  build-and-deploy-to-test-env:
-    runs-on: ubuntu-latest
-    needs: terraform-test-env
-    environment: test
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Configure AWS credentials for test (again)
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
-
-      - name: Build and Upload to Test S3
+          VITE_GOOGLE_CLIENT_ID: ${{ env.GOOGLE_CLIENT_ID }}
+          VITE_CLOUD_FLARE_ID: ${{ env.TEST_CLOUD_FLARE_ID }}
+          VITE_BACKEND_URL: ${{ env.TEST_BACKEND_URL }}
         run: |
           npm install
           npm run build
-          aws s3 sync ./dist s3://${{ secrets.TEST_S3_BUCKET_NAME }} --delete
 
-  terraform-prod-env:
+      - name: Upload to Test S3
+        run: |
+          aws s3 sync ./build s3://${{ env.TEST_S3_BUCKET_NAME }} --delete
+
+  build-and-deploy-to-prod-env:
     runs-on: ubuntu-latest
     needs: build-and-deploy-to-test-env
-    environment:
-      name: production
+    environment: production
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -81,52 +55,19 @@ jobs:
       - name: Configure AWS credentials for production
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Install Terraform
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: 1.0.0
-
-      - name: Terraform Init (Production)
-        run: terraform init
-        working-directory: ./terraform
-
-      - name: Terraform Plan (Production)
+      - name: Build React App
         env:
-          TF_VAR_environment: "production"
-          TF_VAR_website_url: ${{ secrets.WEBSITE_URL_PROD }}
-          TF_VAR_s3_bucket_name: ${{ secrets.PROD_S3_BUCKET_NAME }} 
-        run: terraform plan
-        working-directory: ./terraform
-
-      - name: Terraform Apply to Production
-        env:
-          TF_VAR_environment: "production"
-          TF_VAR_website_url: ${{ secrets.WEBSITE_URL_PROD }}
-          TF_VAR_s3_bucket_name: ${{ secrets.PROD_S3_BUCKET_NAME }}
-        run: terraform apply -auto-approve
-        working-directory: ./terraform
-
-  build-and-deploy-to-prod-env:
-    runs-on: ubuntu-latest
-    needs: terraform-prod-env
-    environment: production
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Configure AWS credentials for production (again)
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
-
-      - name: Build and Upload to Production S3
+          VITE_GOOGLE_CLIENT_ID: ${{ env.GOOGLE_CLIENT_ID }}
+          VITE_CLOUD_FLARE_ID: ${{ env.PROD_CLOUD_FLARE_ID }}
+          VITE_BACKEND_URL: ${{ env.PROD_BACKEND_URL }}
         run: |
           npm install
           npm run build
-          aws s3 sync ./dist s3://${{ secrets.PROD_S3_BUCKET_NAME }} --delete
+
+      - name: Upload to Production S3
+        run: |
+          aws s3 sync ./build s3://${{ env.PROD_S3_BUCKET_NAME }} --delete

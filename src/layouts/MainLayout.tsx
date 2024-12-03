@@ -15,7 +15,15 @@ const MainLayout: React.FC = () => {
       <ScrollToTop />
       <NavBar />
       <ScrollingBanner />
-      <ToastContainer />
+      <ToastContainer
+        position="bottom-center"
+        className="fixed bottom-5 left-1/2 transform -translate-x-1/2 transition-transform ease-in-out"
+        style={{
+          maxWidth: '90%',
+          width: '350px',
+          marginTop: '30px'
+        }}
+      />
       <BackToTopButton />
       <AddTopMargin />
       <Outlet />
