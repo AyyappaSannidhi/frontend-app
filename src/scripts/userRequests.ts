@@ -112,3 +112,29 @@ export const sendOtp = async (email : string, captchaToken : string) => {
       return { status: 500, message: 'An unexpected error occurred.' };
     }
   };
+
+
+  export const logOutUser = async () => {
+    try {
+      const response = await fetch(`${constants.BACKEND_API_URL}/auth/logout`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+      const data = await response.json();
+      return { status: response.status, message : data.message };
+    } catch (error) {
+      return { status: 500, message: 'An unexpected error occurred.' };
+    }
+  };
+
+  export const fetchCarouselImages = async () => {
+    try {
+      const response = await fetch(`${constants.BACKEND_API_URL}/assets/carousel`);
+      const data = await response.json();
+      return { status: response.status , images: data.images};
+    } catch (error) {
+      return { status: 500, message: 'An unexpected error occurred.' };
+    }
+  };

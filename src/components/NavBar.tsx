@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearUser } from "../store/slice/userSlice";
 import * as storeModule from "../store/store";
 import { setUser } from "../store/slice/userSlice";
+import { logOutUser } from "../scripts/userRequests";
 
 const NavBar: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -43,6 +44,8 @@ const NavBar: React.FC = () => {
     dispatch(clearUser());
     setProfileDropdownOpen(false);
     localStorage.removeItem("user");
+    logOutUser();
+    navigate(routes.indexRoute);
   };
 
   useEffect(() => {

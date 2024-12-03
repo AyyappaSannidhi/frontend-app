@@ -1,5 +1,4 @@
 import AboutImage from "../assets/images/main.jpg";
-import Images from "../scripts/carousel";
 import TextWithImage from "../components/TextWithImage";
 import Hero from "../components/Hero";
 import { 
@@ -16,10 +15,13 @@ import  BannerImage from '../assets/images/banner.jpg'
 import Timeline from "../components/TimeLine";
 import Heading from "../components/Heading";
 import { useTranslation } from 'react-i18next';
+import { fetchCarouselImages } from "../scripts/userRequests";
+import { useEffect, useState } from "react";
 
 
 const HomePage = () => {
   const { t } = useTranslation(); // Access i18n instance
+  const [carouselImages, setCarouselImages] = useState<string[]>([]);
 
   const alankaraSchedule = useSelector(selectAlankaraSchedule);
   const poojaTimings = useSelector(selectPoojaTimings);
@@ -38,6 +40,20 @@ const HomePage = () => {
     col2: 'Timings',
     col3: 'Pooja'
   };
+
+  const getCarouselImages = async () => {
+    const response = await fetchCarouselImages();
+    if (response.status === 200){
+      setCarouselImages(response.images);
+    }
+    else{
+      setCarouselImages([]);
+    }
+  }
+  
+  useEffect(() => {
+    getCarouselImages();
+  }, []);
 
   const contents = [
       makeTextBold(t('ayyappaDeeksha.dosInMala') as any ),
@@ -82,7 +98,7 @@ const HomePage = () => {
 
       <Hero
         heading={t('common.pictureGallery')}
-        images={Images}
+        images={carouselImages}
       />
     </div>
   );
