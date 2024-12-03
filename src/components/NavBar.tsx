@@ -49,6 +49,7 @@ const NavBar: React.FC = () => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
       const user = JSON.parse(storedUser);
+      console.log(user);
       dispatch(setUser(user));
     }
     setIsLoading(false);
@@ -98,7 +99,11 @@ const NavBar: React.FC = () => {
                   onClick={() => setProfileDropdownOpen(!isProfileDropdownOpen)}
                   className="flex items-center"
                 >
-                  <img src={user.picture} alt="profile" className="w-10 h-10 rounded-full border-2" />
+                 <img
+                    src={user.picture || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'}
+                    alt="profile"
+                    className="w-10 h-10 rounded-full border-2"
+                  />
                 </button>
                 {isProfileDropdownOpen && (
                   <div

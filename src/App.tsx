@@ -32,8 +32,12 @@ import NotFoundPage from "./pages/NotFoundPage";
 import UsefullLinks from "./pages/UsefullLinks";
 
 // Add your Google Client ID here
-const GOOGLE_CLIENT_ID: string =
-    "1084014563628-424lileb39068t0nbb3tuliot94fcv2g.apps.googleusercontent.com"; //process.env.REACT_APP_GOOGLE_CLIENT_ID;
+const GOOGLE_CLIENT_ID: string | undefined = import.meta.env.VITE_GOOGLE_CLIENT_ID;
+if (!GOOGLE_CLIENT_ID) {
+    throw new Error('GOOGLE_CLIENT_ID is not defined in the environment variables');
+}
+console.log(import.meta.env);
+
 
 const App: React.FC = () => {
     const router = createBrowserRouter(
