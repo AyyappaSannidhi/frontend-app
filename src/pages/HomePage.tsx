@@ -17,11 +17,13 @@ import Heading from "../components/Heading";
 import { useTranslation } from 'react-i18next';
 import { fetchCarouselImages } from "../scripts/userRequests";
 import { useEffect, useState } from "react";
+import Loader from "../components/Loader";
 
 
 const HomePage = () => {
   const { t } = useTranslation(); // Access i18n instance
   const [carouselImages, setCarouselImages] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const alankaraSchedule = useSelector(selectAlankaraSchedule);
   const poojaTimings = useSelector(selectPoojaTimings);
@@ -52,7 +54,9 @@ const HomePage = () => {
   }
   
   useEffect(() => {
+    setIsLoading(true);
     getCarouselImages();
+    setIsLoading(false);
   }, []);
 
   const contents = [
@@ -96,11 +100,17 @@ const HomePage = () => {
         table2={poojaTimings}
       />
 
-      <Hero
-        heading={t('common.pictureGallery')}
-        images={carouselImages}
-      />
-    </div>
+      {
+          isLoading ? (
+            <div className="mt-32 mb-32"><Loader /></div>
+          ) : (
+            <Hero
+              heading={t('common.pictureGallery')}
+              images={carouselImages}
+            />
+          )
+      }
+      </div>
   );
 };
 
