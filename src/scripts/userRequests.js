@@ -76,7 +76,7 @@ export const sendOtp = async (email, captchaToken) => {
             {
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": `Bearer ${captchaToken}`, // Ensure it's formatted correctly
+                    "Authorization": captchaToken
                 },
             }
         );
