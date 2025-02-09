@@ -6,90 +6,64 @@ export const registerNewUser = async (values) => {
     try {
         const { bot_token, ...modifiedValues } = values
 
-        const response = await fetch(`${constants.BACKEND_API_URL}/user/register`, {
-            method: 'POST',
+        const response = await axios.post("user/register", modifiedValues, {
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': values.bot_token,
+                'Authorization': bot_token,
             },
-            body: JSON.stringify(modifiedValues),
         });
-
-        const data = await response.json();
-        return { status: response.status, message: data.message };
+        return { 
+          status: response.status, 
+          message: response.data.message 
+        };
     } catch (error) {
         return { status: 500, message: 'An unexpected error occurred.' };
     }
 };
 
-
+// website registered user login
 export const LoginNormalUser = async (values) => {
-    try {
-        const { bot_token, ...modifiedValues } = values
-        const response = await fetch(`${constants.BACKEND_API_URL}/auth/login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': values.bot_token,
-            },
-            body: JSON.stringify(modifiedValues),
-        });
-
-        const data = await response.json();
-        return { status: response.status, message: data.message , user: data.user };
-    } catch (error) {
-        return { status: 500, message: 'An unexpected error occurred.' };
-    }
-};
-
-export const CustomGoogleLogin = async (token) => {
-    try {
-        const response = await fetch(`${constants.BACKEND_API_URL}/auth/google_login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(token),
-        });
-
-        const data = await response.json();
-        return { status: response.status, message: data.message , user: data.user };
-    } catch (error) {
-        return { status: 500, message: 'An unexpected error occurred.' };
-    }
-};
-
-export const getPictureGallery = async (pageNumber, limit) => {
   try {
-    console.log("Making api call ----------------------")
-    const response = await axios.get(`/assets/picture_gallery/?page=${pageNumber}&limit=${limit}`);
-    console.log('API Response:', response); // Add this line to check the response structure
-    return { 
-      status: response.status,
-      images: response.data.images,
-      total_pages: response.data.total_pages,
-      next_page: response.data.next_page 
-    };
+      const { bot_token, ...modifiedValues } = values;
+      const response = await axios.post("auth/login", modifiedValues, {
+          headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${bot_token}`,
+          },
+      });
+      return { 
+          status: response.status, 
+          message: response.data.message, 
+          user: response.data.user 
+      };
   } catch (error) {
-    console.error('API Error:', error); // Log errors
-    return { status: 500, message: 'An unexpected error occurred.' };
+      return { 
+          status: error.response?.status || 500, 
+          message: error.response?.data?.message || "An unexpected error occurred." 
+      };
   }
 };
 
+// Google Auth login
+export const CustomGoogleLogin = async (token) => {
+    try {
+        const response = await axios.post("auth/google_login",token)
+        return { status: response.status, message: data.message , user: response.data.user };
+    } catch (error) {
+        return { status: 500, message: 'An unexpected error occurred.' };
+    }
+};
+
+// send OTP to user email
 export const sendOtp = async (email, captchaToken) => {
     try {
-      const response = await fetch(`${constants.BACKEND_API_URL}/auth/otp_request`, {
-        method: 'POST',
+      const response = await axios.post('auth/otp_request', email, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': captchaToken,
         },
-        body: JSON.stringify({
-            email : email
-        }),
-    });
-      const data = await response.json();
-      return { status: response.status, message : data.message };
+      });
+      return { status: response.status, message : response.data.message };
     } catch (error) {
       return { status: 500, message: 'An unexpected error occurred.' };
     }
@@ -97,46 +71,61 @@ export const sendOtp = async (email, captchaToken) => {
 
   export const verifyOtp = async (email, otp, captchaToken) => {
     try {
-      const response = await fetch(`${constants.BACKEND_API_URL}/auth/otp_verify`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': captchaToken,
-        },
-        body: JSON.stringify({
-            email,
-            otp
-        }),
-    });
-      const data = await response.json();
-      return { status: response.status, message : data.message, user: data.user };
+        const response = await axios.post(`${constants.BACKEND_API_URL}/auth/otp_verify`, 
+            { email, otp },
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${captchaToken}`, // Ensure it's formatted correctly
+                },
+            }
+        );
+
+        return { 
+            status: response.status, 
+            message: response.data.message, 
+            user: response.data.user 
+        };
     } catch (error) {
-      return { status: 500, message: 'An unexpected error occurred.' };
+        return { 
+            status: error.response?.status || 500, 
+            message: error.response?.data?.message || "An unexpected error occurred." 
+        };
     }
-  };
+};
 
-
+// logout user from backend perspective
   export const logOutUser = async () => {
     try {
-      const response = await fetch(`${constants.BACKEND_API_URL}/auth/logout`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    });
-      const data = await response.json();
-      return { status: response.status, message : data.message };
+      const response = await axios.post("auth/logout");
+      return { status: response.status, message : response.data.message };
     } catch (error) {
       return { status: 500, message: 'An unexpected error occurred.' };
     }
   };
 
+  // Fetch carousel images in home page
   export const fetchCarouselImages = async () => {
     try {
-      const response = await fetch(`${constants.BACKEND_API_URL}/assets/carousel`);
-      const data = await response.json();
-      return { status: response.status , images: data.images};
+      const response = await axios.get("assets/carousel");
+      return { status: response.status , images: response.data.images};
     } catch (error) {
+      return { status: 500, message: 'An unexpected error occurred.' };
+    }
+  };
+
+  // Fetch picture gallery
+  export const getPictureGallery = async (pageNumber, limit) => {
+    try {
+      const response = await axios.get(`assets/picture_gallery/?page=${pageNumber}&limit=${limit}`);
+      return { 
+        status: response.status,
+        images: response.data.images,
+        total_pages: response.data.total_pages,
+        next_page: response.data.next_page 
+      };
+    } catch (error) {
+      console.error('API Error:', error); // Log errors
       return { status: 500, message: 'An unexpected error occurred.' };
     }
   };
