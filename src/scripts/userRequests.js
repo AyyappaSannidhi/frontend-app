@@ -47,8 +47,8 @@ export const LoginNormalUser = async (values) => {
 // Google Auth login
 export const CustomGoogleLogin = async (token) => {
     try {
-        const response = await axios.post("auth/google_login",token)
-        return { status: response.status, message: data.message , user: response.data.user };
+        const response = await axios.post("auth/google_login",token);
+        return { status: response.status, message: response.data.message , user: response.data.user };
     } catch (error) {
         return { status: 500, message: 'An unexpected error occurred.' };
     }
@@ -57,7 +57,7 @@ export const CustomGoogleLogin = async (token) => {
 // send OTP to user email
 export const sendOtp = async (email, captchaToken) => {
     try {
-      const response = await axios.post('auth/otp_request', email, {
+      const response = await axios.post('auth/otp_request', { email }, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': captchaToken,
