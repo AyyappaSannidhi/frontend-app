@@ -32,9 +32,14 @@
         "sevaDetails" : "Seva",
         "useFullLinks" : "Usefull Links",
         "templeSeva" : "Temple Seva",
-        "kumaraSwamySeva" : "Kumara Swamy Seva",
+        "KanneSwamyPoojaDetails" : "Kanne Swamy Pooja Details",
+        "KanneSwamy" : "Kanne Swamy",
         "library" : "Library",
-
+        "resource" : "Resource",
+        "website" : "Website",
+        "charges" : "Charges",
+        "saturdaySpecialPooja" : "Saturday Special Pooja",
+        "ayyappaDeekshaSeva" : "Ayyappa Deeksha Seva",
         "donate" : "Donate",
         "logIn" : "Log In",
         "contactUs" : "Contact Us",
@@ -57,7 +62,23 @@
         "Pranayam" : "Pranayam",
         "SankalpaPooja" : "Sankalpa Pooja",
         "frequentlyAskedQuestions" : "Frequently Asked Questions (FAQ)",
-        "faqMenuItems" : ["Do's during the Ayyappa Swamy Vratham", "Do not's during the Ayyappa Swamy vratham"]
+        "faqMenuItems" : ["Do's during the Ayyappa Swamy Vratham", "Do not's during the Ayyappa Swamy vratham"],
+        "usefullLinksWebsite" : [
+                {
+                    "name" : "Official Sabarimala Website",
+                    "value" : "https://sabarimala.kerala.gov.in/"
+                },
+                {
+                    "name" : "Kerala State Road Transport Corporation",
+                    "value" : "https://www.keralartc.com/"
+                },
+                {
+                        "name" : "karnataka State Road Transport Corporation",
+                        "value" : "https://ksrtc.in/"
+                }
+                    
+            ]
+        
     },
 
     "homePage" :{
@@ -186,11 +207,173 @@
                 "*Twice Daily Pooja: * Perform pooja twice a day, once before sunrise in the morning and once after sunset in the evening.",
                 "*Regular Pooja with Ashotharam: * Along with your usual pooja, recite Ashotharam (108 names) for Lord Ganesh, Subramanyam, Durga, and Ayyappan."
         ]
+    },
+    "seva" : {
+        "sevaDetailsWithCharges" : [
+                {
+                    "name" : "ARCHANA",
+                    "value" : " ₹ 21"
+                },
+                {
+                    "name" : "GHEE DEEPA",
+                    "value" : " ₹ 51"
+                },
+                {
+                    "name" : "NIRANJANA",
+                    "value" : " ₹ 51"
+                },
+                {
+                    "name" : "KSHEERABHISHEKA",
+                    "value" : " ₹ 101"
+                },
+                {
+                    "name" : "USHA POOJA",
+                    "value" : " ₹ 101"
+                },
+                {
+                    "name" : "GANAPATHI HOMA",
+                    "value" : " ₹ 151"
+                },
+                {
+                    "name" : "VIBHOOTHI ABHISHEKA",
+                    "value" : " ₹ 201"
+                },
+                {
+                    "name" : "CHANDANA ABHISEHEKA",
+                    "value" : " ₹ 201"
+                },
+                {
+                    "name" : "SAHASRANAMA ARCHANE",
+                    "value" : " ₹ 201"
+                },
+                {
+                    "name" : "PANCHAMRUTHA ABHISHEKA",
+                    "value" : " ₹ 501"
+                },
+                {
+                    "name" : "GHEE ABHISHEKA 1/2 LTR",
+                    "value" : " ₹ 501"
+                },
+                {
+                    "name" : "GHEE ABHISHEKA 1 LTR",
+                    "value" : " ₹ 1001"
+                },
+                {
+                    "name" : "GHEE ABHISHEKA 1/2 LTR",
+                    "value" : " ₹ 501"
+                },
+                {
+                    "name" : "GHEE ABHISHEKA 1 LTR",
+                    "value" : " ₹ 1001"
+                },
+                {
+                    "name" : "ASTABISHEKA",
+                    "value" : " ₹ 1001"
+                },
+                {
+                    "name" : "CHUTTUVILAKKU",
+                    "value" : " ₹ 1001"
+                },
+                {
+                    "name" : "ONE DAY SEVA",
+                    "value" : " ₹ 2001"
+                },
+                {
+                    "name" : "SARVABHISHEKA",
+                    "value" : " ₹ 2001"
+                },
+                {
+                    "name" : "PUSHPALANAKARA",
+                    "value" : " ₹ 3001"
+                },
+                {
+                    "name" : "UDAYASTHAMANA POOJA",
+                    "value" : " ₹ 5001"
+                },
+                {
+                    "name" : "ANNADANA",
+                    "value" : "(______)"
+                },
+                {
+                    "name" : "TWO WHEELER POOJA",
+                    "value" : " ₹ 101"
+                },
+                {
+                    "name" : "FOUR WHEELER POOJA",
+                    "value" : " ₹ 201"
+                }
 
-    
-    
-    
-    
-    
+        ],
+        "saturdaySpecialSeva":[
+                {
+                    "name" : "SPECIAL POOJA",
+                    "value" : " ₹ 1001"
+                },
+                {
+                    "name" : "SPECIAL POOJA WITH PRASADAM",
+                    "value" : " ₹ 3001"
+                }
+        ],
+        "ayyappaDekshaSeva":[
+                {
+                    "name" : "AYYAPPA MALADHARANA",
+                    "value" : " ₹ 51"
+                },
+                {
+                    "name" : "IRUMUDI",
+                    "value" : " ₹ 601"
+                },
+                {
+                    "name" : "EXTRA MUDRA",
+                    "value" : " ₹ 201"
+                },
+                {
+                    "name" : "DEEKSHE MALA SET",
+                    "value" : "(______)"
+                },
+                {
+                    "name" : "DEEKSHE VASTRA",
+                    "value" : "(______)"
+                },
+                {
+                    "name" : "IRUMUDI BAG",
+                    "value" : "(______)"
+                },
+                {
+                    "name" : "DEEKSHE VASTRA",
+                    "value" : "(______)"
+                },
+                {
+                    "name" : "IRUMUDI BAG",
+                    "value" : "(______)"
+                },
+                {
+                    "name" : "YATRA BAG",
+                    "value" : "(______)"
+                },
+                {
+                    "name" : "SWAMY JANMA NAKSHATRA POOJA",
+                    "value" : "(______)"
+                }
+        ],
+        "kanneSwamyTabs" : [ "who is kanne swamy", "Mythology around kanne swamy", "Direction for kanne swamy"],
+        "whoIskanneswamy" : [
+                "*Kanne Swamy -* the person who is taking ayyappa swamy deeksha for the first time.",
+                "He has got a special place for himself among the ayyappa devotees. Because, lord ayyappa had given word for maalikapuramma that, he will marry her the year when kanne swamy doesnt come to his sannidanam.",
+                "Kanne Swamy is the choicest one for Lord ayyappa. Ayyappa loves to be in yoga mudra from where he can save his devotees and lift them up to the state of realising the 'Tattwamasi'.so he preferred not to get married and the year a kanne swamy comes to his abode, he can continue to be bachelor and not get married, thus continue his work of sitting in his yoga mudra.",
+                "A kanne swamy will pierce an arrow known as saram, during his sabari yatra at sarangutti as an indication that a kanne swamy had visited the sabari this year. Every year maalikapuramma is taken to this sarangutti to check if any kanne swamy had visited sabari and pierced a saram at sarangutti."
+        ],
+        "mythologolyAboutKanneSwamy" : [
+                "As kanne swamy is the choicest of ayyappa,there are so many instances where words spoken by kanne swamy turned out to be true.",
+                "So for this reason, kanne swamy should always think positively and speak positively. Guruswamy's always look for a kanne swamy in their troupe for sabari yatra.",
+                "It is thought that kanne swamy in a troupe is like lord ayyappa himself accompanying them. Most people will make the kanne swamy perform the puja in their padi pujas. Even in swamy pujas, kanne swamy is considered as a special guest as if ayyappa himself is attending the puja in the form of kanne swamy."
+        ],
+        "directionForKanneSwamy" : [
+                "Generally a person who is taking ayyappa swamy deeksha for the first time, will not be knowing anything and he might be taking deeksha for various reasons like - he might have seen his friends, relatives, neighbours, colleagues etc taking this deeksha, he might have prayed ayyappa that he will take the deeksha if some of his desire is fulfilled, he might have seen somebody transformed in their life after taking swamy deeksha,he might be having some wish which needs to be fulfilled etc. Whatever the reason may be, but it is clear and evident that one cannot take deeksha without the blessings and permission of ayyappa. The entire deeksha is bound with guru tattwa and self realisation, which is possible only with the guidance of a guru.",
+                "Even ayyappa is known as guruvan guru (Guru of gurus). For the same reason, the person who gives mandala deeksha to swamy's by putting mala and taking the swamys to sabari yatra is known as guru swamy.",
+                "so it is the responsibility of a kanne swamy to know the niyamalu (rules) of the deeksha and get answered all his doubts from guru swamy and perform the deeksha with devotion and sincerity.The experience one has from his sabari yatra depends on how he had performed his deeksha.",
+                "If one is sincere in his deeksha, he is bound to get transformed in his personal life in all aspects."
+        ]
+
     }
 }
