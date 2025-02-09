@@ -75,7 +75,7 @@ export const useNavbarMenu = () =>{
           url:routes.templeSevaRoute
         },
         {
-          name : t('common.KanneSwamyPoojaDetails'),
+          name : t('common.kumaraSwamySeva'),
           url:routes.kumaraSwamySevaRoute
         },
       ],

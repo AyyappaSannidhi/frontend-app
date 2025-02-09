@@ -5,9 +5,6 @@ import { constants } from '../constants';
 const axiosInstance = axios.create({
   baseURL: `${constants.BACKEND_API_URL}`, // Set your base URL
   withCredentials: true, // Include credentials (cookies with HTTP-only token)
-  headers: {
-    'Content-Type': 'application/json',
-  }
 });
 
 // Define the condition for including credentials

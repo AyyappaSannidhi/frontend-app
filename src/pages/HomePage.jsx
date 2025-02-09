@@ -18,7 +18,6 @@ import { useTranslation } from 'react-i18next';
 import { fetchCarouselImages } from "../scripts/userRequests";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
-import { useQuery } from '@tanstack/react-query';
 
 
 const HomePage = () => {
@@ -44,22 +43,21 @@ const HomePage = () => {
     col3: 'Pooja'
   };
 
-  const { data, isCarouselLoading, error } = useQuery({
-    queryKey: ['carousel_pictures'],
-    queryFn: () => fetchCarouselImages(),
-    keepPreviousData: true,
-    staleTime: 600000, // Cache for 10 minutes
-    refetchOnWindowFocus: false, // Don't refetch when window is focused
-    refetchOnMount: false, // Don't refetch when component mounts
-  });
+  const getCarouselImages = async () => {
+    const response = await fetchCarouselImages();
+    if (response.status === 200){
+      setCarouselImages(response.images);
+    }
+    else{
+      setCarouselImages([]);
+    }
+  }
   
   useEffect(() => {
-    if(data){
-      setIsLoading(true);
-      setCarouselImages(data?.images || []);
-      setIsLoading(false);
-    }
-  }, [data]);
+    setIsLoading(true);
+    getCarouselImages();
+    setIsLoading(false);
+  }, []);
 
   const contents = [
       makeTextBold(t('ayyappaDeeksha.dosInMala')),
@@ -103,7 +101,7 @@ const HomePage = () => {
       />
 
       {
-          isCarouselLoading ? (
+          isLoading ? (
             <div className="mt-32 mb-32"><Loader dots={3} /></div>
           ) : (
             <Hero

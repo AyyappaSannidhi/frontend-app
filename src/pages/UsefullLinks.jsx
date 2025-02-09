@@ -1,16 +1,17 @@
 import { useTranslation } from 'react-i18next';
-import Heading from '../components/Heading';
-import TwoColumnTable from '../components/TwoColumnTable';
+
 
 const UsefullLinks = () => {
   const { t } = useTranslation();
-  const data = t("common.usefullLinksWebsite", { returnObjects: true }) || [];
-  return (
-    <div className="flex flex-col items-center justify-center mb-12">
-      <Heading heading={t('common.useFullLinks')} marginTop={'mt-8'} />
-      <TwoColumnTable column1={t('common.resource')} column2={t('common.website')} data={data} column2Link = {true} />
-    </div>
-  );
-}
 
+    return (
+      <div className="flex flex-col items-center justify-center h-64 bg-gray-100">
+      <h1 className="text-3xl font-bold text-gray-800">
+      {t('common.useFullLinks')}
+      </h1>
+      <h2 className="text-2xl font-bold text-gray-800 mt-12">Under Development</h2>
+      <h3 className="text-1xl font-bold text-gray-800 mt-2">Check After Sometime</h3>
+      </div>
+    )
+}
 export default UsefullLinks;

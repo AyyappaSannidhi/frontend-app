@@ -21,12 +21,22 @@ const Contact = () => {
               </li>
               <li className="flex items-center">
                 <span className="font-medium text-gray-800">Email:</span> 
-                <span className="ml-2"> ayappasannidhi@gmail.com</span>
+                <span className="ml-2">xx - xx - xx</span>
               </li>
-              <li className="flex flex-col sm:flex-row sm:items-center">
+              <li className="flex items-center">
                 <span className="font-medium text-gray-800">Address:</span> 
-                <span className="ml-0 sm:ml-2">17th cross, 31st Main Rd, 6th Phase, J. P. Nagar, Bengaluru, Karnataka 560070</span>
-            </li>
+                <span className="ml-2">xx - xx - xx</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold text-gray-800 mt-8">
+            xx - xx - xx
+            </h2>
+            <ul className="text-lg text-gray-600 space-y-2 mt-4">
+              <li>xx - xx - xx</li>
+              <li>xx - xx - xx</li>
+              <li>xx - xx - xx</li>
             </ul>
           </div>
         </div>
@@ -37,7 +47,7 @@ const Contact = () => {
             <iframe
               title="Google Map Location"
               className="w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.962591488514!2d77.65086897544994!3d12.910125887399598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae149d8645dc5b%3A0x451ba2c58db28bed!2s17th%20Cross%20Rd%20%26%2031st%20Main%20Rd%2C%20Sector%202%2C%20HSR%20Layout%2C%20Bengaluru%2C%20Karnataka%20560102!5e0!3m2!1sen!2sin!4v1739095173724!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.180123991299!2d-74.00601508459433!3d40.71277597933178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a03b2577c3b%3A0x8f9a6b5c4c6c2c4f!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1632999382639!5m2!1sen!2sus"
               allowFullScreen={true}
               loading="lazy"
             ></iframe>

@@ -26,7 +26,6 @@ const Donate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    alert("Currently not accepting donations online");
   };
 
   return (
