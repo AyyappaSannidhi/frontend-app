@@ -28,7 +28,7 @@ export const LoginNormalUser = async (values) => {
       const response = await axios.post("auth/login", modifiedValues, {
           headers: {
               "Content-Type": "application/json",
-              "Authorization": `Bearer ${bot_token}`,
+              "Authorization": bot_token,
           },
       });
       return { 
